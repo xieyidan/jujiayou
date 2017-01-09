@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv = "X-UA-Compatible" cotent = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+    <title>房东招募</title>
+    <!--css样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/header.css" /><!--头部-->
+    <link rel="stylesheet" href="../css/fd_recruit.css" /><!--房东信息-->
+    <!--js-->
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/head_common.js"></script><!--头部-->
+</head>
+
+<body>
+    <!--  header  -->
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="../images/logo.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right nolink">
+                        <li class="service"><a href="javascript:void(0)" target="_blank"><img src="../images/index/header_call.png" alt="客服电话">400-047-6667</a></li>
+                        <li class="login"><a class="dl" href="javascript:void(0)">登录</a><span class="top_line"></span><a class="zc" href="javascript:void(0)">注册</a></li>
+                        <li class="house" style="margin-top:5px;"><a class="release" href="javascript:void(0)" target="_blank">免费发布房源</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right fk">
+                        <li class="service"><a href="javascript:void(0)" target="_blank"><img src="../images/index/header_call.png" alt="客服电话">400-047-6667</a></li>
+                        <li class="user-img"><a href="javascript:void(0)" target="_blank"><img src="../images/user/fangyuan_user.png" alt="用户头像"><span>用户名称</span></a>
+                           <ul class="fk-pulldown">
+                              <li><a href="javascript:void(0)">我的订单</a></li>
+                              <li><a href="javascript:void(0)">聊天记录</a></li>
+                              <li><a href="javascript:void(0)">我的收藏</a></li>
+                              <li><a href="javascript:void(0)">我的设置</a></li>
+                              <li><a class="log-out" href="javascript:void(0)">退出登录</a></li>
+                          </ul>
+                        </li>
+                       
+                        <li class="login"><a href="javascript:void(0)" target="_blank">我是房东</a>
+                           <ul class="fd-pulldown">
+                              <li class="no-dredge"><span>您尚未开通房东功能</span></li>
+                              <li><a class="my-dredge" href="javascript:void(0)">我要开通</a></li>
+                           </ul>
+                           <ul class="fd-dredge">
+                              <li><a href="javascript:void(0)">订单管理</a></li>
+                              <li><a href="javascript:void(0)">房源管理</a></li>
+                              <li><a href="javascript:void(0)">结算管理</a></li>
+                              <li><a href="javascript:void(0)">消息管理</a></li>
+                              <li><a href="javascript:void(0)">我的评价</a></li>
+                              <li><a href="javascript:void(0)">我的设置</a></li>
+                          </ul>
+                        </li>
+                        <li class="house" style="margin-top:5px;"><a class="release" href="javascript:void(0)" target="_blank">免费发布房源</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> <!--  header结束  -->
+	
+    <!--房东招募内容-->
+    <div class="recruit-cont">
+    	<img class="recruit-img" src="../images/user/fd_recruit.jpg">
+        <!--我要加入表单-->
+        <div class="recruit-form">
+            <form class="fd-form" method="post">
+                <p class="join-us">加入我们</p>
+                <div class="cont fa-name"><span>姓名</span><input type="text" ></div>
+                <div class="cont fa-tel"><span>电话</span><input type="text" ></div>
+                <div class="cont fd-address">
+                	<span>所在 <small>城市</small></span>
+                   
+                   <select id="selpro" onchange="Dochange();">
+                      <option value="0">省市</option>
+                   </select>
+                   <select id="selcity" onchange="Tochange();">
+                      <option value="0">城市</option>
+                   </select> 
+                </div>
+                <button type="submit" class="fd-btn">提交</button>
+            </form>
+        </div>
+       
+    </div>
+    
+</body>
+</html>

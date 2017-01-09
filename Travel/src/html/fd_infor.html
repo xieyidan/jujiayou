@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv = "X-UA-Compatible" cotent = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+    <title>房东信息验证</title>
+    <!--css样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fd_infor.css" /><!--房东信息验证-->
+    <!--js-->
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/fd_information.js"></script><!--房东信息验证-->
+</head>
+
+<body>
+	<!--头部-->
+    <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="../index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-left">
+                           <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                           <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </div>
+    <form>
+    <div class="fd-content">
+        <div class="fa-title">房东身份验证</div>
+        <div class="per">
+            <ul class="write-info">
+                <li class="fd-perinfo"></li>
+                <li class="fd-gathering"></li>
+                <div class="line_span">
+                    <span>请填写您的房东个人信息</span>
+                    <span>请填写您的收款方式</span>
+                </div>
+            </ul>
+         </div>
+         <div class="cont-1">
+         	
+            <ul id="cont-center">
+                <li>
+            		<samp>*</samp>
+                	<span>添加头像</span>
+		        	<span class="imghead"><img class="previewImg" src="../images/user/fangdongxinxi_touxiang_icon.png" >
+                		<input class="previewBtn" type="file" multiple />
+                	</span>
+                </li>
+                <li>
+                    <samp>*</samp>
+                    <span>昵称</span>
+                    <input class="fd-info" type="text" placeholder="请输入您的昵称"/>
+                    
+                </li>
+                <p class="common-prompt"></p>
+                <li>
+                    <samp>*</samp>
+                    <span>证件类型</span>
+                    <select class="fd-card">
+                        <option>身份证</option>
+                        <option>港澳通行证</option>
+                        <option>台湾通行证</option>
+                        <option>军官通行证</option>
+                        <option>护照</option>
+                     </select>
+                </li>
+                <li>
+                    <samp>*</samp>
+                    <span>证件号码</span>
+                    <input class="fd-info" type="text" placeholder="请输入您的证件号码"/>                   
+                </li>
+                <p class="common-prompt"></p>
+                 
+                <li>
+                    <samp>*</samp>
+                    <span>真实姓名</span>
+                    <input class="fd-info" type="text" placeholder="请输入您的真实姓名"/>
+                    
+                </li>
+                 <p class="common-prompt"></p>
+                 <li class="cardimg">
+                    <samp>*</samp>
+                    <span>手持证<small>件照片</small></span>
+                    <div class="pic zm-img">
+                    	<input class="pic-btn1" type="file" multiple />
+                    </div>
+                    <div class="pic fm-img">
+                    	<input class="pic-btn2" type="file" multiple />
+                    </div>
+                     <span class="img-word">正面</span>
+                     <span class="img-word" style="right:274px;">背面</span>
+                </li>
+            </ul>
+        <div class="div_btn">
+            <input class="btn_next" type="button" value="保存到下一步"/>
+        </div>
+        </div>
+        <div class="cont-2" style="display:none;">
+        <div class="select_tit">
+            <samp>*</samp><span>收款方式</span>
+            <select  class="select_xz" name="queryType" onchange="Cmd(this)">
+                <option value="1" name="queryType"> 支付宝</option>
+                <option value="2" name="queryType"> 银行卡</option>
+            </select>
+        </div>
+
+    <div class="select_cont">
+          <div id="div1">
+            <ul>
+            <p class="price">使用支付宝，收款能实时到账</p>
+            <li><samp>*</samp><span>支付宝账号</span><input class="div1" type="text" placeholder="请输入您的支付宝账号"><p class="common-prompt"></p></li>
+            <li><samp>*</samp><span>支付姓名</span><input class="div1" type="text"><p class="common-prompt"></p></li>
+            </ul>
+        </div>
+    
+        <div id="div2" style="display:none;">
+            <ul>
+            <p class="price">银行卡转账很慢，推荐您使用支付宝方式！</p>
+            <li>
+            <samp>*</samp>
+            <span>开户银行名称</span>
+             <select class="yh_name">
+                <option></option>
+                <option>中国建设银行</option>
+                <option>中国农业银行</option>
+                <option>中国工商银行</option>
+                <option>中国交通银行</option>
+             </select>
+             
+            <samp>*</samp>
+            <span>开户银行省份</span>
+             <select class="yh_name">
+                <option></option>
+                <option>中国建设银行</option>
+                <option>中国农业银行</option>
+                <option>中国工商银行</option>
+                <option>中国交通银行</option>
+             </select>
+            </li>
+            
+            
+             <li>
+            <samp>*</samp>
+            <span>开户银行城市</span>
+             <select class="yh_name">
+                <option></option>
+                <option>中国建设银行</option>
+                <option>中国农业银行</option>
+                <option>中国工商银行</option>
+                <option>中国交通银行</option>
+             </select>
+             
+            <samp>*</samp>
+            <span>开户支行名称</span>
+             <select class="yh_name">
+                <option></option>
+                <option>中国建设银行</option>
+                <option>中国农业银行</option>
+                <option>中国工商银行</option>
+                <option>中国交通银行</option>
+             </select>
+            </li>
+            
+            
+            <li>
+                <samp>*</samp>
+                <span>银行开户姓名</span>
+                <input class="yh_inp1" type="text"/>
+            </li>
+            
+            <li>
+                <samp>*</samp>
+                <span>银行开户账号</span>
+                <input class="yh_inp2" type="text"/>
+            </li>
+            
+            <li>
+                <samp>*</samp>
+                <span>再次确认账号</span>
+                <input class="yh_inp2" type="text"/>
+                <p class="common-prompt"></p>
+            </li>
+            
+            </ul>
+        
+        </div>
+      </div>
+      <div class="div_btn">
+        <input class="btn_Return" type="button" value="上一步"/>
+        <input class="btn_next" type="button" value="保存,开始上传房源资料"/>
+      </div>
+      </div>
+    </div>
+    
+
+    </form>
+</body>
+
+</html>

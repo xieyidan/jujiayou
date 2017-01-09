@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" cotent = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+
+    <title>居家游首页</title>
+    <!--CSS样式表-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/Index.css" /><!--首页-->
+    <link rel="stylesheet" href="assets/daterangepicker.css" /><!--日期-->
+    <link rel="stylesheet" href="css/header.css" /><!--头部-->
+    <link rel="stylesheet" href="css/footer.css" /><!--底部-->
+    <link rel="stylesheet" href="css/common.css" /><!--右侧悬浮-->
+    <link rel="stylesheet" href="css/hunguang_css.css" /><!--左下角-->
+    <link rel="stylesheet" href="css/citySelector.css" /><!--选择城市和目的地-->
+    <link rel="stylesheet" href="css/login.css" /><!--登录-->
+    <link rel="stylesheet" href="css/register.css" /><!--注册-->
+    <link rel="stylesheet" href="css/pwd_Reset.css" /><!--重设密码-->
+    <!--JS-->
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jquery-1.9.0.min.js"></script>
+    <script src="js/Index.js"></script><!--首页-->
+    <script src="js/common.js"></script><!--右侧悬浮-->
+    <script src="assets/moment.min.js"></script><!--日期-->
+    <script src="assets/jquery.daterangepicker.js"></script><!--日期-->
+    <script src="js/login.js"></script><!--登录-->
+    <script src="js/Commonality.js"></script><!--控件-->
+    <script>
+		$(function(){
+			//入住离开时间
+			$('#date-range3').dateRangePicker({
+					language:'cn',
+					startDate:'Y-m-d',
+					selectForward: true,
+					separator : '至',
+					autoClose: true,
+			});
+		});
+    </script>
+</head>
+<body>
+    <!--wrapper-->
+    <div class="wrapper">
+        <!--  header  -->
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="居家游logo"/></a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-left">
+                           <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                           <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right nolink">
+                        	<li class="service"><a href="javascript:void(0)" target="_blank"><img src="images/index/header_call.png" alt="客服电话">400-047-6667</a></li>
+                            <li class="login"><a class="dl" href="javascript:void(0)">登录</a><span class="top_line"></span><a class="zc" href="javascript:void(0)">注册</a></li>
+                            <li class="house"><a class="release" href="javascript:void(0)" target="_blank">免费发布房源</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right fk">
+                        	<li class="service"><a href="javascript:void(0)" target="_blank"><img src="images/index/header_call.png" alt="客服电话">400-047-6667</a></li>
+                            <li class="user-img"><a href="javascript:void(0)" target="_blank"><img src="images/user/user_icon.png" alt="用户头像"><span>用户名称</span></a>
+                               <ul class="fk-pulldown">
+							      <li><a href="javascript:void(0)">我的订单</a></li>
+								  <li><a href="javascript:void(0)">聊天记录</a></li>
+								  <li><a href="javascript:void(0)">我的收藏</a></li>
+								  <li><a href="javascript:void(0)">我的设置</a></li>
+                                  <li><a class="log-out" href="javascript:void(0)">退出登录</a></li>
+							  </ul>
+                            </li>
+                           
+                            <li class="login"><a href="javascript:void(0)" target="_blank">我是房东</a>
+                               <ul class="fd-pulldown">
+							      <li class="no-dredge"><span>您尚未开通房东功能</span></li>
+								  <li><a class="my-dredge" href="javascript:void(0)">我要开通</a></li>
+							   </ul>
+                               <ul class="fd-dredge">
+							      <li><a href="javascript:void(0)">订单管理</a></li>
+								  <li><a href="javascript:void(0)">房源管理</a></li>
+								  <li><a href="javascript:void(0)">结算管理</a></li>
+								  <li><a href="javascript:void(0)">消息管理</a></li>
+                                  <li><a href="javascript:void(0)">我的评价</a></li>
+                                  <li><a href="javascript:void(0)">我的设置</a></li>
+							  </ul>
+                            </li>
+                            <li class="house" style="margin-top:5px;"><a class="release" href="javascript:void(0)" target="_blank">免费发布房源</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div> <!--  header结束  -->
+        <!--banner轮播-->
+        <div class="banner">
+           <div class="banner-center">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- 轮播（Carousel） -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="javascript:void(0)"><img src="images/index/banner1.jpg" alt="日租房轮播图"></a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)"><img src="images/index/banner2.jpg" alt="日租房轮播图"></a>
+                    </div>
+                    <div class="item">
+                        <a href="javascript:void(0)"><img src="images/index/banner3.jpg" alt="日租房轮播图"></a>
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                   <img src="images/index/banner_btn_left_enter.png">
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                   <img src="images/index/banner_btn_right.png">
+                </a>
+            </div>
+            <!--搜索栏-->
+            <div class="search">
+                <div class="row">
+                  <ul>
+                    	<form method="get">
+                            <li class="select-city">
+                                <input class="form-control cityinput" id="citySelect" placeholder="请选择目的城市" >
+                            </li>
+                            <li class="select-time">
+								<input class="form-control" id="date-range3" name="time" placeholder="入住离开日期" >
+        					</li>
+                            <li class="select-num" style="overflow:hidden">
+                                <select class="form-control" id="numSelect" style=" margin-left:15px;">
+                                    <option value="">入住人数</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">9+</option>
+                                </select>
+                            </li>
+                            <li class="search-btn">
+                                <img class="search-img" src="images/index/searchBtn_icon.png" alt="搜索">
+                                <button type="submit" class="search-word">搜索</button>
+        					</li>
+                            
+                        </form>
+                    </ul>
+                   
+             </div> 
+            </div>
+           </div>
+		</div> 
+         
+        <!-- 居家游app下载 -->
+        <div class="Downapp" style="display:none;"><a href="javascript:void(0);" target="_blank"><img src="images/index/huodong.png" alt="居家游APP下载"></a></div>
+        <div class="Content">
+            <!-- 与美·同行 -->
+        	<section class="Content-list1">
+            	<div class="title">
+				  <h2>与美·同行</h2>
+				  <p>体验世间的美好</p>
+			    </div>
+                <div class="Content-city">
+                    <ul class="fold-wrap" id="sm">
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>北京</h4></div>
+                                <div class="pic-auto pic-auto1"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>广州</h4></div>
+                                <div class="pic-auto pic-auto2"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>贵阳</h4></div>
+                                <div class="pic-auto pic-auto3"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>昆明</h4></div>
+                                <div class="pic-auto pic-auto4"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>三亚</h4></div>
+                                <div class="pic-auto pic-auto5"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>厦门</h4></div>
+                                <div class="pic-auto pic-auto6"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>上海</h4></div>
+                                <div class="pic-auto pic-auto7"></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="mask-b"><h4>成都</h4></div>
+                                <div class="pic-auto pic-auto8"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section> 
+            <!--精美·家园-->
+            <section class="Content-list1">
+            	<div class="title">
+				  <h2>精美·家园</h2>
+				  <p>行在路上家在身边</p>
+			    </div>
+                <div class="Content-house">
+                	<ul class="house-wrap">
+                       <li class="house-li">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_01.png" alt="北京" onclick="javascript:location.href='html/house_detail.html#details'" />
+                                <img class="user" src="images/user/user_icon.png" alt="日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">豪华家庭房</span><small>￥660<span>/</span>晚</small></h3>
+                                <p class="room-num">两室两厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">北京</p>
+                              </div>
+							</a>
+						</li>
+                        <li class="house-li mleft">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_02.png" alt="南京"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="南京日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">樱花豪华温馨舒适房</span><small>￥388<span>/</span>晚</small></h3>
+                                <p class="room-num">三室两厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">南京</p>
+                              </div>
+							</a>
+						</li>
+                        <li class="house-li mleft">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_03.png" alt="环球中心新会展地铁口"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">环球中心新会展地铁口</span><small>￥338<span>/</span>晚</small></h3>
+                                <p class="room-num">一室一厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">四川</p>
+                              </div>
+							</a>
+						</li>
+                        
+                        <li class="house-li">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_04.png" alt="青岛"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="青岛日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">青岛驿豪公寓绝佳海景</span><small>￥348<span>/</span>晚</small></h3>
+                                <p class="room-num">三室两厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">青岛</p>
+                              </div>
+							</a>
+						</li>
+                        <li class="house-li mleft">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_05.png" alt="大连"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="大连日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house" >星海湾顶级奢华瞰海欧式套房</span><small>￥799<span>/</span>晚</small></h3>
+                                <p class="room-num">三室两厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">大连</p>
+                              </div>
+							</a>
+						</li>
+                        <li class="house-li mleft">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_06.png" alt="广州"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="广州发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">珠江欧式温馨小屋</span><small>￥398<span>/</span>晚</small></h3>
+                                <p class="room-num">两室一厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">广州</p>
+                              </div>
+							</a>
+						</li>
+                        
+                        <li class="house-li">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_07.png" alt="昆明"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">翠湖旁清新阳光两居</span><small>￥258<span>/</span>晚</small></h3>
+                                <p class="room-num">两室两厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">昆明</p>
+                              </div>
+							</a>
+						</li>
+                        <li class="house-li mleft">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_08.png" alt="南京"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="南京日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">南京之家 豪华温馨舒适</span><small>￥278<span>/</span>晚</small></h3>
+                                <p class="room-num">两室两厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">南京</p>
+                              </div>
+							</a>
+						</li>
+                        <li class="house-li mleft">
+							<a class="" href="javascript:void(0);" target="_blank">
+                              <div class="img-room">
+                              	<img class="homg-img" src="images/house/fangyuan_09.png" alt="武汉"  onclick="javascript:location.href='html/house_detail.html#details'"  />
+                                <img class="user" src="images/user/user_icon.png" alt="日租房发布者头像">
+                              </div>
+                              <div class="img-word">
+                              	<h3><span class="txt-house">PaPa公寓花园家庭影院</span><small>￥388<span>/</span>晚</small></h3>
+                                <p class="room-num">两室一厅套房</p>
+                                <p class="room-name"><img src="images/fangyuan_position.png" alt="房源位置">武汉</p>
+                              </div>
+							</a>
+						</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--房东招募-->
+        <div class="landlord-recruit"><a href="../User/Landlord/fd_recruit.html" target="_blank"><img src="images/index/zhaomufangdong_banner.png" alt="短租房房东招募"></a></div>
+        <!--分享.美好-->
+         <div class="Content">
+         	<section class="Content-list1">
+            	<div class="title">
+				  <h12>分享·美好</h2>
+				  <p>我找到我分享</p>
+			    </div>
+                <div class="Content-share">
+                    <ul class="share-wrap">
+						<li class="share">
+							<a href="javascript:void();" target="_blank"><img src="images/index/fenxiang_img_01.jpg" width="820px" height="326" alt="大理日租房"></a>
+						</li>
+						<li class="share mleft">
+							<a href="javascript:void();" target="_blank"><img src="images/index/fenxiang_img_02.jpg" alt="民宿预定"></a>
+						</li>
+
+						<li class="share">
+							<a href="javascript:void();" target="_blank"><img src="images/index/fenxiang_img_03.jpg" alt="武汉日租房"></a>
+						</li>
+						<li class="share mleft">
+							<a href="javascript:void();" target="_blank"><img src="images/index/fenxiang_img_04.jpg" alt="贵阳日租房"></a>
+						</li>
+
+					</ul>
+                </div>
+            </section>
+         </div>
+         <!-- 优质选择 -->
+         <div class="xuanzhe">
+            <div class="xuanzhe_cont">
+                <ul>
+                    <li><a href="javascript:void(0);" style= "cursor:default"><img src="images/index/fangyuan_icon.png" /><p>优质的房源</p></a></li>
+                    <li><a href="javascript:void(0);" style= "cursor:default"><img src="images/index/jiage_icon.png" /><p>心动的价格</p></a></li>
+                    <li><a href="javascript:void(0);" style= "cursor:default"><img src="images/index/dingdan_icon.png" style="height:36px;"/><p>退订的保障</p></a></li>
+                    <li><a href="javascript:void(0);" style= "cursor:default"><img src="images/index/kefu_icon.png"/><p>7x24小时服务</p></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--底部内容-->
+        <div class="footer_box">
+            <div class="footer_wrap">
+                <div class="footer_row">
+                    <ul class="footer_row_ul">
+                        <li><p>关于我们</p></li>
+                        <li><a href="javascript:void(0);" target="_blank">关于居家游</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">联系我们</a></li>
+                    </ul>
+                    <ul class="footer_row_ul">
+                        <li><p>加入我们</p></li>
+                        <li><a href="javascript:void(0);" target="_blank">职位招聘</a></li>
+                    </ul>
+                    <ul class="footer_row_ul">
+                        <li><p>服务条款</p></li>
+                        <li><a href="javascript:void(0);" target="_blank">免责声明</a></li>
+                        <li><a href="javascript:void(0);" target="_blank">版权声明</a></li>
+                        <!--<li><a href="/article/detail/id/15.html" target="_blank">社区指南</a></li>-->
+                        <li><a href="javascript:void(0);" target="_blank">会员条款</a></li>
+                    </ul>
+                    <ul class="footer_row_ul">
+                        <li><p>帮助中心</p></li>
+                        <li><a href="javascript:void(0);" target="_blank">网站地图 </a></li>
+                        <li><a href="javascript:void(0);" target="_blank">使用帮助 </a></li>
+                        <li><a href="javascript:void(0);" target="_blank">新手上路 </a></li>
+                    </ul>
+                    <ul class="footer_row_ul">
+                        <li class="we">
+                            <a class="WeCha" href="javascript:void(0)" target="_blank"><img src="images/index/weixin_icon.png" alt="居家游微信公众号"><div class="footer_er"></div></a>
+                            <a href="http://weibo.com/jujiayou" target="_blank"><img src="images/index/sina_icon.png" alt="居家游微博"></a>
+                        </li>
+                        <li><span class="hot24">24小时全国服务热线</span></li>
+                        <li><span class="phone">400-047-6667</span><span class="phone">0851-82215566</span></li>
+                    </ul>        
+                </div>
+                <div class="footer_end">
+                    <dl class="city-nav">
+                        <dt>热门城市：</dt>
+                        <dd>
+                            <a href="javascript:void(0)" target="_blank">贵阳短租房</a>
+                            <a href="javascript:void(0)" target="_blank">上海短租房</a>
+                            <a href="javascript:void(0)" target="_blank">武汉短租房</a>
+                            <a href="javascript:void(0)" target="_blank">成都短租房</a>
+                            <a href="javascript:void(0)" target="_blank">重庆短租房</a>
+                            <a href="javascript:void(0)" target="_blank">广州短租房</a>
+                            <a href="javascript:void(0)" target="_blank">西安短租房</a>
+                            <a href="javascript:void(0)" target="_blank">北京短租房</a>
+                            <a href="javascript:void(0)" target="_blank">南京短租房</a>
+                            <a href="javascript:void(0)" target="_blank">杭州短租房</a>
+                        </dd>
+                    </dl>
+                    <p>地址：贵州省贵阳市观山湖区高新区管委会都匀路89号金利大厦A栋2楼</p>
+                    <p>Copyright © 2016 Jujiayou All Rights Reserved
+                        <a href="http://www.miitbeian.gov.cn/" hidefocus="true" target="_blank"> &nbsp;黔ICP备16001483号-1</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--刷新底部出现-->
+    <div class="hun_guanggao">
+	<div class="da">
+    	<div class="da_guang">
+            <div class="close">
+                <img src="images/close.png" alt="手机客服端下载界面关闭" />
+            </div>
+            <div class="zong_left">
+            	<p>您随时随地的小管家</p>
+                <p>手机客户端方便更快捷</p>
+            </div>
+            <div class="da_neirong">
+            	<div class="neirong_left">
+                	<img src="images/ps.png" class="ipnoe_img" alt="酒店公寓app模板" />
+                    <div class="two_dimension ">
+                    	<div class="two_left">
+                        	<p>扫描下载</p>
+                            <img src="images/erweima.png" alt="民宿预定app下载" />
+                        </div>
+                        <div class="two_cont">
+                        	<p>关注微信公众号</p>
+                            <img src="images/chat.jpg" alt="短租房网站微信公众号" />
+                        </div>
+                        <div class="two_right">
+                        	<p>直接下载</p>
+                            <p class="anniu"><a href="javascript:void(0);">Android</a></p>
+                            <p class="anniu"><a href="javascript:void(0);" target="_blank">iPhone</a></p>
+                        </div>
+                    </div>
+                </div>
+            	<div class="neirong_right">
+                	<p>注册就送200元优惠券</p>
+                    <p>每次订房可抵房费10%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="xiao" style="display:none;"> 
+      <img src="images/xiao_img.png" alt="日租房网站手机端下载" />
+</div>
+
+<!--登录-->
+<div class="content-bg">
+    <div class="content">
+      <form class="login-form" method="post" action="#">
+        <!-- 登录类型 -->
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#shortcut" data-toggle="tab">手机快捷登录</a>
+            </li>
+            <li><a href="#common" data-toggle="tab">普通登录</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <!-- 快捷登录 -->
+            <div class="tab-pane fade in active" id="shortcut">
+                <div class="form-group tel">
+                    <label for="firstname" class="col-sm-2 control-label">手机号</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="cell-phone"  placeholder="请输入您的手机号">
+                        <span class="note-pwd"><a id="get-note" href="javascript:void(0);">获取短信验证码</a></span>
+                    </div>
+                    <span class="prompt prompt-phone"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">图片<br/>验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="pic-code"  placeholder="请输入图片验证码">
+                        <span class="verification"><a href="javascript:void(0);">图片验证码</a></span>
+                    </div>
+                    <span class="prompt prompt-piccode"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">手机<br/>验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="phone-code"  placeholder="请输入您手机收到的验证码">
+                    </div>
+                    <span class="prompt prompt-mobile"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox autologin" name="chk"><ins></ins><span>自动登录</span></div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" id="login-btn">登录</button>
+                    </div>
+                </div>
+                <div class="form-group m-mroup">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label for="lastname" class="dl-label">三方登录</label>
+                        <a class="Third-login chat-dl" href="javascript:void(0);"></a>
+                        <a class="Third-login weibo-dl" href="javascript:void(0);"></a>
+                        <a class="Third-login qq-dl" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+            </div>
+            <!--普通登录-->
+            <div class="tab-pane fade" id="common">
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">手机号</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="tel-phone"  placeholder="请输入您的手机号">
+                    </div>
+                    <span class="prompt prompt-tel"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">密码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="set-pwd"  placeholder="请输入密码">
+                    </div>
+                    <span class="prompt prompt-pwd"></span>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox autologin" name="chk"><ins></ins><span>自动登录</span></div>
+                    <a class="forget" href="javascript:void(0);">忘记密码？</a>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" id="user-login">登录</button>
+                    </div>
+                </div>
+                <p class="noreg">还没有注册？</p>
+                
+                <span class="reg zc"><a href="javascript:void(0);">立即注册</a></span>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <label for="lastname" class="dl-label">三方登录</label>
+                        <a class="Third-login chat-dl" href="javascript:void(0);"></a>
+                        <a class="Third-login weibo-dl" href="javascript:void(0);"></a>
+                        <a class="Third-login qq-dl" href="javascript:void(0);"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </form>
+    </div>
+</div>
+<!--注册-->
+<div class="content-reg">
+    <div class="reg-center">
+        <div class="reg-top">
+            <h2 class="reg-title">新用户注册</h2>
+        </div>
+        <form class="login-form" method="post">
+            <!-- 快捷登录 -->
+            <div class="" id="reg-shortcut">
+                <div class="form-group tel">
+                    <label for="firstname" class="col-sm-2 control-label">手机号</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="cell-phone"  placeholder="请输入您的手机号">
+                        <span class="note-pwd"><a id="get-note" href="javascript:void(0);">获取短信验证码</a></span>
+                    </div>
+                    <span class="prompt prompt-phone"></span>
+                </div>
+               
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">图片<br/>验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="pic-code"  placeholder="请输入图片验证码">
+                        <span class="verification"><a href="javascript:void(0);">图片验证码</a></span>
+                    </div>
+                    <span class="prompt prompt-piccode"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">手机<br/>验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="mobile-code"  placeholder="请输入您手机收到的验证码">
+                    </div>
+                    <span class="prompt prompt-mobile"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">设置<br/>密码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="set-pwd"  placeholder="请设置您的新密码">
+                    </div>
+                    <span class="prompt prompt-pwd"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">邀请码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="invitation-code"  placeholder="请输入邀请码">
+                    </div>
+                    <span class="prompt prompt-inv"></span>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default reg-btn">注册</button>
+                        <span class="reg-account">已有账号，&nbsp;<a class="dl" href="javascript:void(0);" >登录</a></span>
+                    </div>
+                </div>
+          </div>
+      </form>      
+   </div>
+</div>
+<!--重设密码-->
+<div class="content-set">
+    <div class="set-center">
+        <div class="content-top">
+            <h2 class="set-title">重设密码</h2>
+        </div>
+      <form class="login-form" method="post">
+            <!-- 快捷登录 -->
+            <div class="tab-pane fade in active" id="shortcut">
+                <div class="form-group tel">
+                    <label for="firstname" class="col-sm-2 control-label">手机号</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="cell-phone"  placeholder="请输入您的手机号">
+                        <span class="note-pwd"><a id="get-note" href="javascript:void(0);">获取短信验证码</a></span>
+                    </div>
+                    <span class="prompt prompt-phone"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">图片<br/>验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="pic-code"  placeholder="请输入图片验证码">
+                        <span class="verification"><a href="javascript:void(0);">图片验证码</a></span>
+                    </div>
+                    <span class="prompt prompt-piccode"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">手机<br/>验证码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="mobile-code"  placeholder="请输入您手机收到的验证码">
+                    </div>
+                    <span class="prompt prompt-mobile"></span>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label">重设<br/>新密码</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="txt" id="set-pwd"  placeholder="请输入您设置的新密码">
+                    </div>
+                    <span class="prompt prompt-pwd"></span>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-default" id="reset-btn">完成</button>
+                    </div>
+                </div>
+           </div>
+      </form>
+    </div>
+</div>
+<!--遮罩层-->
+<div class="mask-layer"></div>
+<!--选择城市-->
+<script type="text/javascript" src="js/citySelector.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+    <title>房源价格</title>
+    <!--CSS样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fd_step.css" /><!--房源上传-->
+    <!--JS-->
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/house_step.js"></script><!--房源上传-->
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../Index/index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="house-title">房源上传</div>
+    <div class="progress_box">
+        <div class="img-box">
+            <img src="../images/user/step_04.png" alt="价格修改">
+        </div>
+    </div>
+    <div class="content step-4">
+        <form action="#" method="post">
+            <div class="house-infor">
+                <dl class="price-set">
+                    <dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="">日价</span></dt>
+                    <dd>
+                        <input type="text" class="distance day-price" id="dayPrice" name=""> 
+                        <label class="day-num">元/天</label>
+                    </dd>
+                    <dt style="margin-left:124px;"><span class="">周末特殊价</span></dt>
+                    <dd>
+                        <select class="distance weeks">
+                        	<option>周五/周六</option>
+                            <option>周六/周日</option>
+                            <option>周五/周六/周日</option>
+                        </select> 
+                        <input type="text" class="distance day-price" id="weekPrice" name="">
+                        <label class="day-num">元/天</label>
+                    </dd>
+                    <span class="sel-word price"></span>
+                     <span class="week_price"></span>
+                </dl>
+                <dl class="price-set long">
+                    <dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="">长期入住</span><span class="Discount">打折设置</span></dt>
+                    <dd>
+                        <div class="distance house-Discount" id="Discount">
+                            <span class="Discount-add">请在下部设置您的房源打折情况</span>
+                            <ul class="Discount-details">
+                            </ul>
+                        </div>
+                    </dd>
+                    <dd class="user">
+                          <label class="day-num" id="user-title">用户住满</label>
+                          <input type="text" class="day-price" id="stay-day" name="" placeholder="请输入天数">
+                          <label class="day-num">天 </label>
+                          <label class="day-num"  style="padding-left:20px;">打</label>
+                          <input type="text" class="day-price" id="day-discount" name="" placeholder="请输入折扣">
+                          <label class="day-num">折/天</label>
+                          <button class="user-add" id="day-add" type="button">添加</button>
+                    </dd>
+                    <span class="discount-txt"></span>
+                </dl> 
+                <dl class="price-set long" style="margin-top:100px;">
+                    <dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="">特殊价是</span><span class="Discount">否参与各</span><span class="Discount">种打折</span></dt>
+                    <dd style="margin-top: 30px;">
+                        <div class="radio distance" name="Special" value="是"><ins></ins><span class="day-num">是</span></div>
+                        <div class="radio distance" name="Special" value="否"><ins></ins><span class="day-num">否</span></div>
+                        <span class="day-num" style="padding-left:30px;">(含周末特殊价，周末特殊价和针对具体日期单独设置的价格均为特殊价。)</span>
+                    </dd>
+                </dl>
+                <dl class="price-set deposit">
+                    <dt></span><span class="">押金</span></dt>
+                    <dd class="">
+                          <input type="text" class="distance day-price" id="deposit-txt" name="">
+                          <label class="day-num">元 （押金不填写表示不收取）</label>
+                    </dd>
+                    <span class="prompt-word deposit-prompt"></span>
+                </dl>
+  				<dl class="price-set pay">
+                    <dt></span><span class="">房客支付</span><span class="pay-dep">押金渠道</span></dt>
+                    <dd style="margin-top: 17px;">
+                        <div class="radio distance" name="payment" value="线下支付"><ins></ins><span class="day-num">线下支付</span></div>
+                        <div class="radio distance" name="payment" value="线上支付"><ins></ins><span class="day-num">线上支付</span></div>
+                    </dd>
+                </dl>
+                <dl class="price-set upto">
+                    <dt class=""></span><span class="">清洁费</span></dt>
+                    <dd>
+                        <input type="text" class="distance day-price" id="cleaning" name=""> 
+                        <label class="day-num">元</label>
+                        <span class="day-num" style="padding-left:30px;">(清洁费由你线下收取，不填写表示不收取。)</span>
+                    </dd>
+                    <span class="upto-prompt"></span>
+                </dl>
+                <dl class="price-set long">
+                    <dt class=""><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span>入住时间</span></dt>
+                    <dd>
+                    	<select class="distance in-day">
+                        	<option>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                        </select>
+                    </dd>
+                    <dt style="margin-left:40px;"><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="">退房时间</span></dt>
+                    <dd>
+                    	<select class="distance in-day">
+                        	<option>12:00</option>
+                        </select>
+                    </dd>
+                </dl>
+                <dl class="price-set long">
+                    <dt class=""><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span>接待时间</span></dt>
+                    <dd>
+                    	<select class="distance in-day">
+                        	<option>00:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                        </select>
+                        <label class="distance house">至</label>
+                        <select class="distance in-day">
+                        	<option>00:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                        </select>
+                        <label class="day-num">（不修改默认为全天）</label>
+                    </dd>
+                </dl>
+                <dl class="price-set long">
+                    <dt class=""><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span>最少入住</span><span class="Discount">天数</span></dt>
+                    <dd>
+                    	<input type="text" class="distance day-price" id="least-day" name=""> 
+                        <label class="day-num">天</label>
+                    </dd>
+                    <dt style="margin-left:40px;"><span class="">最多入住天数</span></dt>
+                    <dd>
+                    	<input type="text" class="distance day-price" id="most-day" name=""> 
+                        <label class="day-num">天 &nbsp;（不填写默认为不限）</label>
+                    </dd>
+                    <span class="least-prompt"></span>
+                    <span class="most-prompt"></span>
+                </dl>
+                <dl class="price-set long" style="margin-top:60px;">
+                   <dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="">取消订单</span><span class="Discount">提前退款</span><span class="Discount">规则设置</span>
+                    <dd>
+                    	<div class="distance cancel" style="margin-top: 23px;">
+                        	<div class="img-1">
+                            	<span class="cancel-order" style="padding-top:5px;">如订单取消，</span>
+                                <span class="cancel-order">订单全部返还</span>
+                            </div>
+                            <div class="img-2">
+                            	<span class="cancel-order">如订单取消，扣除</span>
+                                <span class="cancel-order">前</span>
+                                <select class="day-no">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <span class="cancel-order">天的定金</span>
+                            </div>
+                            <div class="img-3">
+                                <span class="cancel-order">如提前退房，扣除</span>
+                                <span class="cancel-order">后</span>
+                                <select class="day-no">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <span class="cancel-order">天的定金</span>
+                            </div>
+                        </div>
+                    	<div class="distance cancel "><img src="../images/user/time_step_img.png" alt="退房规则"></div>
+                        <div class="success">
+                        	<span>预订成功</span>
+                            <span>入住</span>
+                            <select class="" style="width: 82px;">
+                            	<option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                            <span>天 14:00 前</span>
+                            <span>入住当天 14：00 前</span>
+                            <span>退房当天 12:00 前</span>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="price-set Receive">
+                    <dt class=""><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span>接单手机号</span></dt>
+                    <dd>
+                    	<label class="day-num distance">使用登录手机号</label>
+                    </dd>
+                    <dd>
+                    	<div class="radio distance" name="dlTel" value="yes"><ins id="yes"></ins><span class="day-num">是</span></div>
+                        <div class="radio distance" name="dlTel" value="no"><ins id="no"></ins><span class="day-num">否</span></div>
+                    </dd>
+                </dl>
+                <dl class="price-set long" id="standby" style="">
+                    <dt class="house" style=""><span class="">备用手机号</span><span class="distance day-num">接单手机号</span></dt>
+                    <dd>
+                    	<input class="Mobile" id="Phone" type="tel" placeholder="请输入接单手机号码" >
+                        <a class="get-code" href="javascript:void(0)">点击获取<br>验证码</a>
+                        <label class="house">验证码</label>
+                        <input class="Mobile" id="Code" type="tel" placeholder="请输入手机验证码" >
+                    </dd>
+                    <span class="tel-prompt"></span>
+                    <span class="code-prompt"></span>
+                </dl>
+            </div>
+            <div class="btn-box">
+            	<button class="back-btn step4_btn"  id="goback"type="button"  data-url="">上一步</button>
+                <button class="first-btn step4_btn" type="button">保存，并申请发布</button>
+                <button class="save-btn step4_btn"  id="go type="button"" data-url="">保存，草稿</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

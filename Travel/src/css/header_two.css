@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 头部 */
+.header {
+	width:100%;
+	min-width: 1240px;
+	height: 100px;
+	background-color: #fff;
+}
+.navbar {
+	width: 1240px;
+	margin: 0 auto;
+}
+.navbar a {
+	color: #fff;
+}
+.navbar .nav li a:hover{
+	color:#323232;
+	background-color:none;
+}
+.container {
+	min-width: 1240px;
+	margin: 0 auto;
+}
+.navbar-left li {
+	float: left;
+}
+.navbar-left li a{
+	text-align: center;
+    line-height: 36px;
+    overflow: hidden;
+    font-size: 18px;
+	color:#323232;
+	padding-left:30px;
+}
+.navbar-left li a:nth-child(1){
+	padding-left:20px;
+}
+/*右边用户状态*/
+.navbar-right li a {
+	float: left;
+	text-align: center;
+    line-height: 36px;
+	color: #323232;
+    overflow: hidden;
+}
+.navbar-brand {
+	width: 50%;
+	padding: 15px 0;
+}
+.nolink {
+	display: block;
+}
+.top_line{
+	float: left;
+	width: 1px;
+    height: 16px;
+    display: block;
+    background-color: #323232;
+	margin-top: 25px;
+}
+.service {
+	padding-top: 3px;
+}
+.service img {
+	float: left;
+	width: 18px;
+    height: 18px;
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.service a {
+	font-size: 14px;
+}
+.login {
+	font-size: 16px;
+}
+.login .dl {
+	padding-right: 7px;
+}
+.login .zc {
+	padding-left: 7px;
+}
+.house {
+	top: 15px;
+    left: 14px;
+}
+.release {
+	width: 152px;
+	height: 35px;
+	font-size: 20px;
+	line-height: 4px !important;
+	color: #fff !important;
+	background: #1bc272;
+}
+
+/*房客,房东*/
+.fk {
+	display: none;
+}
+.fk .service img {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.fk li a {
+	line-height: 45px;
+}
+.user-img {
+	position: relative;
+	text-align: center;
+}
+.user-img img {
+	width: 42px;
+    height: 42px;
+    border-radius: 50%;
+	margin-right: 10px;
+}
+.user-img span {
+	font-size: 15px;
+	vertical-align: text-bottom;
+}
+/***用户下拉框***/
+.fk-pulldown {
+	width: 120px;
+	position: absolute;
+	top: 60px;
+	left: 17px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.fk-pulldown li a{
+	width: 120px;
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	
+}
+.fk-pulldown li a:hover {
+	color: #01aeab!important;
+}
+/***我是房东下拉框***/
+/* 未开通 */
+.fd-pulldown {
+	width: 96px;
+	height: 147px;
+	position: absolute;
+	top: 60px;
+	left: 17px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.fd-pulldown li a{
+	display: none;
+	font-size: 16px;
+	text-align: center;
+	
+}
+.no-dredge {
+	padding: 14px 14px;
+	color: #fff;
+	font-size: 16px;
+	text-align: left;
+}
+.fd-pulldown .my-dredge {
+	display: block;
+	width: 80px;
+	height: 30px;
+	padding: 7px 7px;
+	background: #f2f2f2;
+	border-radius: 5px;
+	color: #01aeab!important;
+	line-height: 1;
+    margin: 8px 8px;
+}
+/* 已开通 */
+.fd-dredge {
+	width: 120px;
+	position: absolute;
+	top: 60px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.fd-dredge li a{
+	width: 120px;
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	
+}
+
+.fd-dredge li a:hover {
+	color: #01aeab!important;
+}

@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'microsoft yahei';
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a,p,span {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+
+/*遮罩层*/
+.mask-layer{
+	width: 1920px;
+	min-width: 1240px;
+    height: 1080px;
+    z-index: 700;
+    background: none 0px 0px repeat scroll rgb(0, 0, 0);
+    opacity: 0.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+/*登录内容*/
+.content-bg {
+	width: 780px;
+	height: 590px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -295px 0 0 -390px;
+	z-index: 701;
+	display: none;
+	
+}
+.m-mroup{margin-bottom: 15px;}
+.content {
+	width: 780px;
+	height: 590px;
+	font-family: 'microsoft yahei';
+	background-color: #fff;
+	position: relative;
+	z-index: 701;
+	margin: 0 auto;
+}
+
+.login-btn {
+	width: 330px;
+	height: 40px;
+	display: block;
+	color: #fff;
+	font-size: 26px;
+	background-color: #1bc272;
+	border: none;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+/*登录类型*/
+.content .nav {
+	margin: 0;
+	padding: 0;
+}
+.content .nav li {
+	width: 390px;
+	height: 58px;
+	background:url(img/top_nav_background_img.png) no-repeat;
+	background-position: -1px -4px;
+}
+.content .nav li.active,.nav-tabs li.active:hover,.nav-tabs li.active:focus {
+	width: 390px;
+	height: 58px;
+	background: url(img/top_nav_background_img2.png) no-repeat;
+	background-position: -1px -4px;
+}
+.content .nav-tabs li a{
+	color: #1bc272;
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: bold;
+}
+.nav-tabs>li.active>a {
+	color: #fff;
+	font-size: 20px;
+}
+/*手机快捷登录*/	
+#shortcut {
+	width: 620px;
+	margin: 0 auto;
+}
+.tab-content .form-group:nth-of-type(1) {
+	margin-top: 60px;
+}
+.tab-content .form-group:nth-of-type(5) {
+	margin-top: 35px;
+}
+.tab-content .form-group:nth-of-type(6) {
+	margin-top: 0;
+}
+.tab-content .form-group {
+	display: block;
+	float: left;
+	width: 620px;
+	height: 50px;
+	line-height: 30px;
+	margin-top: 40px;
+}
+.prompt {
+	display: inline-block;
+	padding-left: 20px;
+}
+.col-sm-2 {
+	width:72px;
+	float: left;
+}
+.control-label {
+	font-size: 18px;
+	color: #323232;
+	margin-right: 18px;
+}
+.txt {
+	width: 330px;
+	height: 34px;
+	font-size: 14px;
+	color: #969696;
+	border: 1px solid #ccc;
+	outline-color: #1bc272;
+	padding-left: 10px;
+}
+.note-pwd {
+	width: 137px;
+	height: 34px;
+	background-color: #1bc272;
+	padding: 7px 8px;
+	margin-left: 20px;
+}
+.note-pwd a {
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+}
+.note-pwd a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.verification {
+	display: inline-block;
+	width: 160px;
+	height: 50px;
+	background-color: #CCC;
+	margin-left: 20px;
+}
+.checkbox label {
+	font-size: 16px;
+	color: #999;
+}
+.autologin {
+	background: none;
+	color: #999;
+	font-size: 14px;
+}
+.btn {
+	width: 330px;
+	height: 40px;
+	font-size: 18px;
+	background-color: #1bc272;
+	border-radius: 5px;
+}
+.btn-default:hover {
+	background-color: #1bc272;
+	color: #fff;
+}
+#shortcut .autologin {
+	margin-left: 140px;
+}
+.tab-content #shortcut .btn {
+	margin-left: 35px;
+	margin-top: -35px;
+}
+.dl-label {
+	float: left;
+	font-size: 18px;
+	color: #323232;
+	line-height: 20px;
+	margin-left: 35px;
+}
+.Third-login {
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+}
+.chat-dl {
+	width: 30px;
+	height: 25px;
+	background:url(img/weixin_icon.png) no-repeat;
+}
+.weibo-dl {
+	width: 30px;
+	height: 25px;
+	background:url(img/sina_icon.png) no-repeat;
+}
+.qq-dl {
+	width: 24px;
+	height: 25px;
+	background:url(img/QQ_icon.png) no-repeat;
+}
+
+/*普通登录*/	
+#common {
+	width: 445px;
+	height: auto;
+	margin: 0 auto;
+}
+.forget {
+	text-align: right;
+	font-size: 16px;
+	color: #999;
+	padding-left: 178px;
+}
+.forget:hover {
+	color: #f00;
+}
+#common .autologin {
+	color: #999;
+	margin-left: 74px;
+    font-size: 16px;
+}
+#common .btn {
+	margin-left: -50px;
+	margin-top: -35px;
+}
+.noreg {
+	font-size: 18px;
+	color: #999;
+	text-align: center;
+	clear: both;
+}
+.reg {
+	display: block;
+	text-align: center;
+	line-height: 12px;
+}
+.reg a {
+	font-size: 24px;
+	color: #1bc272;
+}
+.reg a:hover {
+	color: #f00;
+}
+#common .dl-label {
+	font-size: 20px;
+	color: #323232;
+	line-height: 20px;
+	margin-left: -45px;
+}

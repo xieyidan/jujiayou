@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***房东招募内容***/
+.recruit-cont {
+	width: 100%;
+	min-width: 1240px;
+	height: 3368px;
+	position: relative;
+	top: 0;
+	margin: 0 auto;
+}
+.recruit-img {
+	width: 100%;
+	min-width: 1240px;
+	height: 3368px;
+	margin: 0 auto;
+}
+.recruit-form {
+	width: 1240px;
+	height: 496px;
+	color: #323232;
+	background: #fff;
+	position: relative;
+	bottom: 540px;
+	z-index: 100;
+	margin: 0 auto;
+	box-shadow: 1px 1px 8px 0px #ccc;
+}
+/***加入我们***/
+.join-us {
+	font-size: 24px;
+	text-align: center;
+	padding-top: 56px;
+}
+.cont {
+	font-size: 20px;
+	text-align: center;
+}
+.fa-name {
+	margin-top: 40px;
+}
+.fa-tel {
+	margin-top: 65px;
+}
+.cont input {
+	width: 450px;
+	height: 25px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #323232;
+	margin-left: 10px;
+}
+.cont select {
+	width: 190px;
+	height: 36px;
+	text-align: center;
+	position: relative;
+	top: 15px;
+    border: 2px solid #323232;
+	padding-left: 30px;
+}
+.cont select:nth-of-type(2), .cont select:nth-of-type(3) {
+	margin-left: 20px;
+}
+.cont select:nth-of-type(3) {
+	padding-left: 52px;
+}
+.fd-address {
+	height: 56px;
+	margin-top: 50px;
+}
+.fd-address span {
+	padding-right: 48px;
+}
+.fd-address small {
+	font-size: 20px;
+	color: #323232;
+	position: absolute;
+    bottom: 138px;
+    left: 369px;
+}
+/***提交按钮***/
+.fd-btn {
+	width: 156px;
+	height: 42px;
+	font-size: 21px;
+	color: #fefefe;
+	text-align: center;
+	background: #2cb16f;
+	border: none;
+	outline: none;
+	position: absolute;
+	bottom: 30px; 
+	left: 542px;
+	border-radius: 10px;
+	margin: 0 auto;
+}

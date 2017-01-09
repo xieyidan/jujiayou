@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***主体内容***/
+.main {
+	width: 100%;
+	min-width: 1240px;
+}
+.main-cont {
+	width: 1240px;
+	margin: 0 auto;
+}
+a {
+	cursor: pointer;
+}
+/***左侧内容***/
+.left-cont {
+	position: relative;
+	float: left;
+	width: 190px;
+	background: #d5dbd8;
+	overflow: hidden;
+	z-index: 1;
+	box-shadow: 0px 0px 11px 5px #eee;
+}
+.left-nav {
+    float: left;
+    width: 100%;
+    height: auto;   
+}
+.left-nav li .nav-title{
+	display: block;
+	height: 42px;
+	font-size: 18px;
+	line-height: 42px;
+	text-align: center;
+}
+.left-nav li .nav-title img {
+	padding-right: 10px;
+	padding-top: 2px;
+	vertical-align: text-top;
+}
+/*我的订单*/
+.nav-cont {
+	text-align: center;
+	background: #fff;
+	padding: 15px 0;
+}
+.nav-cont a {
+	display: block;
+	color: #646464;
+	font-size: 14px;
+	line-height: 27px;
+}
+.actives {
+	color: #1bc272 !important;
+	font-weight: bold;
+}
+
+/***右侧***/
+.right-cont {
+	float: left;
+	width: 1050px;
+	overflow: hidden;
+}
+.r-color {
+	color: #646464;
+}
+/*房客选项的提示*/
+.right-top {
+	padding: 20px 10px;
+}
+.right-top span{
+	color: #646464;
+	padding-right: 5px;
+}
+/*订单列表*/
+.right-center {
+	width: 100%;
+	background: #fff;
+}
+.goods-list {
+	padding-top: 30px;
+	margin-left: 20px;
+	border-bottom: 2px solid #ccc;
+}
+/*订单号，订单时间*/
+.goods-box {
+	padding-bottom: 20px;
+}
+.txt-left {
+	float: left;
+	width: 77%;
+}
+.txt-left p {
+	display: inline-block;
+}
+.goods-num {
+	padding-right: 20px;
+}
+.goods-time,.goods-time span,.goods-time a {
+	color: #969696;
+	font-size: 12px;
+}
+.goods-time a {
+	padding-left: 20px;
+	cursor: pointer;
+}
+/*订单状态*/
+.txt-right {
+	float: left;
+}
+.txt-right span {
+	color: #ff1a00;
+}
+/*订单房源信息*/
+.order-item {
+	width: 100%;
+	padding-bottom: 20px;
+	overflow: hidden;
+	position: relative;
+}
+/*房源图*/
+.order-img {
+	float: left;
+	width: 200px;
+	height: 120px;
+}
+.order-img img {
+	width: 100%;
+	height: 100%;
+}
+/*房源介绍*/
+.order-content {
+	float: left;
+	padding-top: 9px;
+	padding-left: 10px;
+	padding-right: 100px;
+}
+.fcolor,.fcolor span,.fcolor a {
+	color: #646464;
+	line-height: 25px;
+	
+}
+.fd-name {
+	padding-top: 15px;
+}
+.fd-name img {
+	padding-left: 20px;
+	padding-right: 10px;
+	vertical-align: bottom;
+}
+.fd-name a {
+	color: #ff6a51;
+	padding-left: 20px;
+}
+/*状态*/
+.order-state {
+	float: left;
+	position: absolute;
+    right: 330px;
+}
+.order-state a {
+	display: block;
+	color: #ff6a51;
+	font-size: 18px;
+	font-weight: bold;
+    line-height: 120px;	
+}
+/*订单金额*/
+.order-money {
+	float: right;
+	padding-top: 9px;
+	padding-right: 137px;
+}
+.order-money p a {
+	display: block;
+	color: #646464;
+	padding-top: 38px;
+	cursor: pointer;
+}
+
+/***分页***/
+.pagination {
+	width: 100%;
+	height: 50px;
+	background: #d5dbd8;
+	margin: 30px auto;
+}
+.pagination li {
+	float: right;
+}
+.pagination li a {
+	display: block;
+	width: 86px;
+	height: 50px;
+	line-height: 50px;
+	border-left: 1px solid #fff;
+	text-align: center;
+}

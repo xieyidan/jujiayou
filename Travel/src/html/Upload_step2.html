@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+    <title>房源描述</title>
+    <!--CSS样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fd_step.css" /><!--房源上传-->
+    <!--JS-->
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/house_step.js"></script><!--房源上传-->
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../Index/index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="house-title">房源上传</div>
+    <div class="progress_box">
+        <div class="img-box">
+            <img src="../images/user/step_02.png" alt="房源描述">
+        </div>
+    </div>
+    <div class="content step-2">
+        <form action="#" method="post">
+            <div class="house-infor">
+            	<dl class="describe">
+                    <dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">特色标题</span></dt>
+                    <dd>
+                        <input type="text" class="distance house-name" id="house-name" placeholder="取一个好的房源名，会更吸引用户">
+                    </dd>
+                    <span id="step-word"></span>
+                </dl>
+               
+                <dl class="describe">
+                    <dt style="padding-top:65px;"><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">房屋内部</span><span class="Introducing ">情况介绍</span></dt>
+                    <dd>
+                        <textarea type="text" class="distance house-Introducing" id="introduce" placeholder="请输入房屋内部情况介绍(20字以上)"></textarea>
+                    </dd>
+                    <span id="introduce-word"></span>
+                </dl>
+                <dl class="describe">
+                    <dt style="padding-top:60px; padding-left:-10px;"><span class="house">房源或个人</span><span class="characteristics">特色&nbsp;/&nbsp;个性</span></dt>
+                    <dd>
+                        <textarea type="text" class="distance house-Introducing features" placeholder=""></textarea>
+                    </dd>
+                </dl>
+                <dl class="describe">
+                    <dt style="padding-top:65px;"><span class="house">周边生活设</span><span class="characteristics">施</span></dt>
+                    <dd>
+                        <textarea type="text" class="distance house-Introducing" placeholder=""></textarea>
+                    </dd>
+                </dl>
+                <dl class="describe">
+                    <dt style="padding-top:70px;padding-left:20px;"><span class="house">交通状况</span></dt>
+                    <dd>
+                        <textarea type="text" class="distance house-Introducing" placeholder=""></textarea>
+                    </dd>
+                </dl>
+                <dl class="describe">
+                    <dt style="padding-top:70px;padding-left:60px;"><span class="house">其他</span></dt>
+                    <dd>
+                        <textarea type="text" class="house-Introducing other" placeholder=""></textarea>
+                    </dd>
+                </dl>
+                    
+            </div>
+            <div class="btn-box">
+            	<button class="back-btn" type="button"  id="goback" data-url="">上一步</button>
+                <button class="first-btn" id="next" type="button">保存，下一步</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

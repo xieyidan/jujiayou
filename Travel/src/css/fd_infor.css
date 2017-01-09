@@ -1,0 +1,414 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'microsoft yahei';
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a,p,span {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+input, select {
+	border: 1px solid #cccccc;
+	outline: medium;
+}
+body, h1, h2, h3, h4, h5, h6, p, blockquote, /* structural elements 结构元素 */ dl, dt, dd, ul, ol, li, a, span, i, b, /* list elements 列表元素 */ form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */ th, td /* table elements 表格元素 */ {
+	margin: 0;
+	padding: 0;
+	color: #323232;
+}
+body {
+	background: #f2f2f2;
+}
+
+/* 头部 */
+.header {
+	width:100%;
+	min-width: 1240px;
+	height: 70px;
+}
+.navbar {
+	width: 1240px;
+	margin: 0 auto;
+}
+.navbar a {
+	color: #fff;
+}
+.navbar .nav li a:hover{
+	color:#323232;
+	background-color:none;
+}
+.container {
+	min-width: 1240px;
+	margin: 0 auto;
+}
+.navbar-left li {
+	float: left;
+}
+.navbar-left li a{
+	text-align: center;
+    line-height: 36px;
+    overflow: hidden;
+    font-size: 18px;
+	color:#323232;
+	padding-left:30px;
+}
+.navbar-left li a:nth-child(1){
+	padding-left:20px;
+}
+.navbar-right li a {
+	float: left;
+	text-align: center;
+    line-height: 36px;
+	color: #fff;
+    overflow: hidden;
+}
+.navbar-brand {
+	width: 50%;
+}
+/*中间内容*/
+.fd-content {
+	width: 100%;
+	min-width: 1240px;
+	overflow: hidden;
+}
+.fa-title {
+	width: 100%;
+	height: 50px;
+	min-width: 1240px;
+	font-size: 22px;
+	color: #fefefe;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	background: #1bc272;
+	margin: 0 auto;
+}
+/*  填写流程   */
+.write-info {
+	width: 998px;
+	height: 40px;
+	margin: 20px auto;
+}
+.write-info li {
+	float: left;
+	width: 499px;
+	height: 40px;
+}
+.fd-perinfo {
+	background: url(img/buzou01.png) no-repeat center;
+}
+.fd-gathering {
+	background: url(img/buzou02.png) no-repeat center;
+}
+.line_span {
+	width: 998px;
+	margin: 0 auto;
+}
+.line_span span {
+	display: block;
+	float: left;
+	width: 499px;
+	font-size: 20px;
+    font-weight: bold;
+	color: #808080;
+	text-align: center;
+	margin-top: 30px;
+}
+/*********请填写您的房东个人信息*********/
+.cont-1 {
+	width: 100%;
+	min-width: 1240px;
+	text-align: center;
+	margin-top: 150px;
+}
+.cont-1 input {
+	font-size: 16px;
+}
+#cont-center li {
+	position: relative;
+	margin-top: 10px;
+}
+#cont-center li samp {
+	color: #ff0000;
+	font-size: 24px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+#cont-center li span {
+	font-size: 20px;
+	margin-right: 20px;
+	text-align: right;
+}
+
+/*上传头像*/
+.imghead {
+	width: 53px;
+	height: 53px;
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+}
+.imghead input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.imghead .previewImg{
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+}
+
+.fd-img-active{
+	width: 100px;
+	height: 100px;
+	border: 1px solid darkblue;	
+}
+.fd-card {
+	width: 160px;
+	height: 34px;
+	font-size: 18px;
+	padding-left: 10px;
+}
+.fd-info {
+	width: 330px;
+	height: 34px;
+	padding-left: 10px;
+}
+.common-prompt{
+	height: 20px;
+	font-size: 16px;
+	color: #ff0000;
+	line-height: 25px;
+}
+#cont-center li small {
+	font-size: 20px;
+	text-align: right;
+	position: relative;
+	top: 34px;
+	right: 59px;
+	
+}
+.cardimg span,.cardimg samp{
+	position: relative;
+	bottom: 80px;
+	
+}
+
+.pic {
+	display: inline-block;
+	width: 123px;
+	height: 130px;
+	background: #ebebeb;
+	border: 2px solid #ccc;
+	margin-right: 15px;
+    position: relative;
+    right: 50px;
+	background: url(img/zhengjianPhoto_tianjia_icon.png) no-repeat center center;
+}
+.pic input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	width: 123px;
+	height: 130px;
+}
+.pic img{
+	position: absolute;
+	width: 119px;
+	height: 126px;
+	right: 0px;
+}
+.cardimg .img-word {
+	font-size: 18px!important;
+	color: #323232;
+	padding-right: 60px;
+	position: relative;
+    top: 26px;
+    right: 290px;
+}
+/******#cont-center li的距离微调********/	
+#cont-center li:nth-of-type(1){
+	right: 91px;
+}
+#cont-center li:nth-of-type(2){
+	left: 21px;
+}
+#cont-center li:nth-of-type(3){
+	right: 85px;
+}
+#cont-center li:nth-of-type(6){
+	left: 127px;
+}
+/******请填写您的收款方式*********/
+.cont-2 {
+	margin-top: 150px;
+	width: 100%;
+	min-width: 1240px;
+	text-align: center;
+}
+.select_tit span {
+	font-size: 20px;
+	padding-right: 20px;
+}
+.select_tit samp {
+	color: #ff0000;
+	font-size: 20px;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+.select_xz {
+	width: 160px;
+	height: 34px;
+	font-size: 18px;
+}
+/*******************************切换显示内容************************************/
+/**********************************支付宝*******************************************/
+
+#div1 .price{
+	padding: 20px 128px 30px 0;
+	font-size: 18px;
+	color: #ff0000;
+}
+/*.div1-word{
+	display: block;
+	font-size: 16px;
+	color: #ff0000;
+	line-height: 30px;
+	text-align: center;
+}*/
+.select_tit {
+	margin-right: 126px;
+}
+#div1 ul li samp {
+	color: #ff0000;
+	font-size: 24px;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+#div1 ul li span {
+	font-size: 20px;
+	padding-right: 20px;
+}
+.div1 {
+	width: 300px;
+	height: 34px;
+	font-size: 16px;
+	padding-left:10px;
+}
+
+
+#div1 li:nth-of-type(1){
+	padding-bottom:40px;
+	}
+#div1 li:nth-of-type(2){
+	padding-left: 21px;
+	margin-bottom:100px;
+	}
+	
+/***********************************银行卡*********************************************/
+#div2 p{
+	padding: 10px 250px 30px 0;
+	font-size: 18px;
+	color: #ff0000;
+	}
+	
+#div2 ul li samp {
+	color: #ff0000;
+	font-size: 24px;
+	vertical-align: middle;
+	padding-right: 10px;
+}
+#div2 ul li span {
+	font-size: 20px;
+	padding-right: 20px;
+}
+
+#div2 ul li select{
+	width:190px;
+	height:34px;
+	}
+
+#div2 ul li select:nth-of-type(1){
+	margin-right:40px;
+	
+	}
+#div2 ul li{
+	margin-bottom:30px;
+	}
+	
+.yh_inp1{
+	width:190px;
+	height:34px;
+	}
+
+.yh_inp2{
+	width:300px;
+	height:34px;
+	}
+/******距离微调********/	
+#div2 ul li:nth-of-type(1), #div2 ul li:nth-of-type(2){
+	padding-left: 40px;
+}
+#div2 ul li:nth-of-type(3){
+	padding-right: 365px;
+}
+
+#div2 ul li:nth-of-type(4), #div2 ul li:nth-of-type(5){
+	    padding-right: 253px;
+}
+
+#div2 ul li:nth-of-type(5){
+	margin-bottom: 100px;
+}
+/*********************************结尾按钮*****************************************/
+.div_btn {
+	width: 100%;
+	min-width: 1240px;
+	margin: 0;
+	padding: 0;
+	margin: 70px auto;
+}
+.btn_Return{
+	height:60px;
+	border-radius:5%;
+	margin-right:30px;
+	border:none;
+	font-size:20px;
+	color:#ffffff;
+	background: #ccc;
+	padding: 0 19px 0 19px;
+}
+	
+.btn_next{
+	height:60px;
+	border-radius:5%;
+	border:none;
+	font-size: 18px!important;
+	color:#ffffff;
+	background-color:#1bc272;
+	padding: 0 19px 0 19px;
+	margin-right: 23px;
+}
+
+.cont-2 .div_btn {
+	width: 100%;
+	min-width: 1240px;
+	margin:0 auto;
+	margin-top: 230px;
+}
+

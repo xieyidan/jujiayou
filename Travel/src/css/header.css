@@ -1,0 +1,192 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/*遮罩层*/
+.mask-layer{
+	width: 1920px;
+    height: 5000px;
+    z-index: 199;
+    background: none 0px 0px repeat scroll rgb(0, 0, 0);
+    opacity: 0.5;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+/*header*/
+.header {
+	position: absolute;
+	top: 0;
+	z-index: 100;
+	width:100%;
+	min-width: 1240px;
+	height: 318px;
+	background-image:url(img/banner_background.png);
+}
+.navbar {
+	width: 1240px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.navbar a {
+	color: #fff;
+}
+.navbar .nav li a:hover{
+	background-color:none;
+}
+.container {
+	min-width: 1240px;
+	margin: 0 auto;
+}
+.navbar-left li a{
+	text-align: center;
+    line-height: 36px;
+    overflow: hidden;
+    font-size: 18px;
+	color: #fff;
+	padding-left: 30px;
+}
+.navbar-left li a:nth-child(1){
+	padding-left:20px;
+}
+.navbar-right li a {
+	float: left;
+	text-align: center;
+    line-height: 36px;
+	color: #fff;
+    overflow: hidden;
+}
+.nolink {
+	display: block;
+}
+.top_line{
+	float: left;
+	width: 2px;
+    height: 16px;
+    display: block;
+    background-color: #fff;
+	margin-top: 25px;
+}
+.service img {
+	width: 27px;
+	height: 27px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.service a {
+	font-size: 14px;
+}
+.login {
+	font-size: 16px;
+}
+.house {
+	top: 12px;
+    left: 14px;
+}
+.release {
+	width: 152px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 12px !important;
+	color: #fff;
+	background: #1bc272;
+}
+/*房客,房东*/
+.fk {
+	display: none;
+}
+.fk .service {
+	padding-top: 3px;
+}
+.fk li a {
+	line-height: 45px;
+}
+.user-img {
+	position: relative;
+	text-align: center;
+}
+.user-img img {
+	width: 42px;
+    height: 42px;
+    border-radius: 50%;
+	margin-right: 10px;
+}
+.user-img span {
+	font-size: 15px;
+}
+/***用户下拉框***/
+.fk-pulldown {
+	width: 120px;
+	position: absolute;
+	top: 60px;
+	left: 17px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.fk-pulldown li a{
+	width: 120px;
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	
+}
+.fk-pulldown li a:hover {
+	color: #01aeab!important;
+}
+/***我是房东下拉框***/
+/* 未开通 */
+.fd-pulldown {
+	width: 96px;
+	height: 147px;
+	position: absolute;
+	top: 60px;
+	left: 17px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.fd-pulldown li a{
+	display: none;
+	font-size: 16px;
+	text-align: center;
+	
+}
+.no-dredge {
+	padding: 14px 14px;
+	color: #fff;
+	font-size: 16px;
+	text-align: left;
+}
+.fd-pulldown .my-dredge {
+	display: block;
+	width: 80px;
+	height: 30px;
+	padding: 7px 7px;
+	background: #f2f2f2;
+	border-radius: 5px;
+	color: #01aeab!important;
+	line-height: 1;
+    margin: 8px 8px;
+}
+/* 已开通 */
+.fd-dredge {
+	width: 120px;
+	position: absolute;
+	top: 60px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	display: none;
+}
+.fd-dredge li a{
+	width: 120px;
+	display: block;
+	font-size: 16px;
+	text-align: center;
+	
+}
+
+.fd-dredge li a:hover {
+	color: #01aeab!important;
+}

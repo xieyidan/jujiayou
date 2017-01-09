@@ -1,0 +1,973 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Microsoft YaHei';
+}
+
+/*单选框，复选框的样式*/
+.checkbox,.radio{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	height: 24px; 
+	line-height: 24px; 
+}
+.checkbox ins,.radio ins{
+	display: inline-block;
+	*display: inline;
+	*zoom:1; 
+	width: 16px; 
+	height: 16px; 
+	vertical-align: middle; 
+	background:url(img/xuanxiang_icon.png) no-repeat; 
+	margin-right: 8px; 
+	vertical-align: middle;
+}
+.checkbox ins{
+	background-position: 0px 0px;
+ }
+.checkbox .hover{
+	background-position: -15px 0px; 
+}
+.checkbox .checked{
+	background-position: -30px 0px; 
+}
+.checkbox .enable{
+	background-position: -96px 0px;
+}
+.checkbox .disabled{
+	background-position: -72px 0px;
+}
+.radio ins{
+	background-position: -61px 0px; 
+}
+.radio .hover{
+	background-position: -78px 0px;
+}
+.radio .checked{
+	background-position: -95px 0px;
+}
+.radio .enable{
+	background-position: -214px 0px;
+}
+.radio .disabled{
+	background-position: -191px 0px;
+}
+.checkbox span,.radio span{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	vertical-align: middle; 
+}
+
+/*头部*/
+.header {
+	background: #f2f2f2;
+}
+/*标题*/
+.house-title {
+	width: 100%;
+	min-width: 1240px;
+	font-size: 22px;
+	color: #fefefe;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 0 10px 0;
+	background: #1bc272;
+	margin: 0 auto;
+	
+}
+/********************上传房源步骤一***********************/
+.progress_box {
+	width: 1240px;
+	margin: 40px auto;
+}
+.img-box {
+	width: 1040px;
+	margin: 0 auto;
+}
+
+/***房源信息内容***/
+.content {
+	width: 100%;
+	min-width: 1240px;
+	font-family: "Microsoft YaHei";
+	margin: 0 auto;
+	
+}
+.house-infor {
+	width: 1240px;
+	margin: 0 auto;
+}
+/*所在城市*/
+.homesInfo {
+	display: block;
+	height: 50px;
+	line-height: 30px;
+	font-family: 'Microsoft YaHei';
+	margin-top: 25px;
+	position: relative;
+    left: 110px;
+}
+.mandatory {
+	padding-right: 10px;
+}
+.house-infor dl dt {
+	float: left;
+	font-size: 18px;
+}
+.house-infor dl dd {
+	float: left;
+	font-size: 14px;
+	
+}
+.distance {
+	padding-left: 10px;
+	margin-left: 20px;
+}
+/*详细地址*/	
+.largeSelect {
+	width: 172px;
+	color: #323232;
+	
+}
+.house-address {
+	width: 370px;
+}
+.house-building {
+	width: 70px;
+}
+/*地理位置*/
+.house-map {
+	width: 127px;
+	padding-left: 25px;
+	color: #000;
+}
+.popup-map{
+	width: 1040px;
+	height: 607px;
+	position: absolute;
+	top: 70px;
+	display: none;
+	background: #FFFFFF;
+	z-index: 9999;
+}
+.popup-map-box{
+	width: 1040px;
+	height: 96px;
+}
+.popup-map-box1{
+	width: 1040px;
+	height:  511px;
+}
+.popup-map-box .hint{
+	display: inline-block;
+	width: 160px;
+	line-height: 21px;
+	font-size: 14px;
+	color: #323232;
+	
+}
+.popup-map-box .span{
+	font-size: 20px;
+	color: #323232;
+	line-height: 96px;
+	margin:0 20px 0 20px;
+}
+.popup-map-box .ipt1{
+	background: #FFFFFF;
+	width: 370px;
+	height: 56px;
+	margin-right: 34px;
+}
+
+.popup-map-box .analysis,.popup-map-box .confirm{
+	background: #FFFFFF;
+	font-size: 14px;
+	width: 114px;
+	height: 34px;
+	border-radius: 10px;
+	margin: 0 15px 0 0;
+	}
+.popup-map-box .map-del{
+	float: right;
+	margin: 10px 10px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*placeholder属性字体颜色*/
+.house-map:-moz-placeholder { 
+    color: #323232!important; 
+}
+
+.house-map:-ms-input-placeholder {
+    color: #323232!important;
+}
+
+.house-map::-webkit-input-placeholder {
+    color: #323232!important;
+}
+.house-map:-0-input-placeholder {
+    color: #323232!important;
+}
+
+.house-type {
+	width: 127px;
+}
+.house-area {
+	width: 150px;
+}
+.Door {
+	width: 76px;
+	margin-right: 7px;
+}
+.toilet-word {
+	padding-left:20px;
+}
+.people-num {
+	width: 60px;
+}
+
+/*床数*/
+.bed dt, .bed dd{
+	display: block;
+	clear: both;
+}
+.bedfont {
+	font-size: 18px;
+}
+.bed-num {
+	display: block;
+	width: 1040px;
+	height: 206px;
+	padding: 10px 10px;
+	border: 1px solid #ccc;
+	background: #fff;
+	overflow: auto;
+	margin-top: 10px;
+	outline: none;
+}
+.set-add {
+	display: block;
+	color: #808080;
+}
+.bed-details {
+	width: 810px;
+	margin-top: 20px;
+}
+.bed-details li {
+	float: left;
+	width: 375px;
+	height: 42px;
+	font-size: 18px;
+	line-height: 42px;
+	background: #f2f2f2;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.bed-title {
+	float: left;
+	padding-left: 10px;
+}
+.bed-size {
+	float: left;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.bed-delete {
+	color: #f00;
+	padding-left: 45px;
+	cursor: pointer;
+}
+.double {
+	display: block;
+	padding-top: 35px;
+    padding-left: 10px;
+	clear: both;
+	
+}
+.double-bed {
+	width: 60px;
+}
+.bed-word {
+	padding:0 5px 0 5px;
+}
+.bed-right {
+	margin-left: 300px;
+}
+.add-btn {
+	font-size: 16px;
+	color: #fff;
+	padding: 2px 18px;
+	background: #1bc272;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+}
+.add-word {
+	color: #f00;
+}
+.single {
+	padding-top: 20px;
+	padding-left: 10px;
+	clear: both;
+}
+.otherbeds {
+	padding-top: 10px;
+	padding-left: 10px;
+}
+.other-bed {
+	width: 108px;
+}
+.other-right {
+	margin-left: 170px;
+}
+.Sheets-replace {
+	width: 125px;
+	background: #f2f2f2;
+}
+
+/*设备*/
+.Liveing {
+	width: 90%;
+}
+.checkbox {
+	width: 139px;
+}
+.heating {
+	padding-left: 30px;
+}
+
+/*外部条件*/
+
+.fee-day {
+	width: 60px;
+	border-bottom: 2px solid #000;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	outline: none;
+	background: none;
+}
+.park-hide {
+	display: none;
+}
+/*其他*/
+.other-con {
+	width: 92%;
+	position: absolute;
+}
+.cook {
+	margin-left: 66px;
+}
+.Mahjong {
+	margin-left: 66px;
+}
+.fill input {
+	width: 346px;
+	color: #808080;
+	padding-left: 10px;
+	margin-left: 10px;
+}
+/*房源别名*/
+.house-alias {
+	position: relative;
+	top: 25px;
+}
+.house-alias input{
+	border: 2px solid #ccc;
+	background: #f2f2f2;
+	margin-left: 20px;
+}
+.house-alias span:nth-of-type(3){
+	font-size: 17px;
+	color: #323232;
+}
+/*房源套数*/
+.decreasing {
+	padding-top: 25px;
+}
+.house-num {
+	width: 75px;
+	background: #f2f2f2;
+}
+
+.sel-word {
+	position: absolute;
+    top: 27px;
+    left: 130px;
+    color: #f00;
+	font-size: 12px;
+}
+.address-word {
+	position: absolute;
+    top: 31px;
+	bottom: 20px;
+    left: 527px;
+    color: #f00;
+}
+.addword {
+    top: 245px;
+	left: 10px;
+}
+
+
+/*保存按钮*/
+.btn-box {
+	width: 1240px;
+	margin: 50px auto;
+}
+.first-btn {
+	display: block;
+	width: 320px;
+	height: 56px;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	background: #1bc272;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+.back-btn {
+	width :170px;
+	height: 56px;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 10px;
+	background: #ccc;
+	margin-left: 300px;
+	margin-right: 50px;
+}
+
+/********************上传房源步骤二***********************/
+.describe {
+	display: table;
+	line-height: 30px;
+	font-size: 20px;
+	color: #323232;
+	font-family: 'Microsoft YaHei';
+	margin-top: 50px;
+	position: relative;
+    left: 110px;
+}
+.house-name{
+	width: 646px;
+	height: 34px;
+	margin-left: 28px;
+	font-size: 14px; 
+}
+#introduce , #step-word{
+	font-size: 14px;
+}
+textarea {
+	background: none;
+	border: 2px solid #ccc;
+	padding-top: 10px;
+}
+.Introducing {
+	display: block;
+    margin-left: 20px;
+}
+.house-Introducing {
+	width: 646px;
+	height: 196px;
+}
+.characteristics {
+	display: block;
+}
+.personality {
+	display: block;
+}
+.other{
+	margin-left: 20px;
+}
+.step-2 button[type="button"]{
+	display:inline-block;
+}
+#step-word {
+	position: absolute;
+    top: 35px;
+    left: 121px;
+    font-size: 16px;
+    color: #f00;
+}
+#introduce-word {
+	position: absolute;
+    top: 200px;
+    left: 121px;
+    font-size: 16px;
+    color: #f00;
+}
+
+/********************上传房源步骤三***********************/
+.Pic-box {
+	width: 1040px;
+	height: 443px;
+	border: 2px solid #ccc;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 60px;
+	overflow: hidden;
+}
+.photo {
+    float: left;
+    width: 185px;
+	height: 198px;
+    margin-top: 15px;
+	margin-left: 15px;
+	margin-bottom: 0;
+    position: relative;
+}
+.photo-box{
+	 width:185px;
+	 height: 198px;
+}
+.photo-box img{
+	 width: 185px;
+	 height: 198px;
+}
+.fengmian{
+	width: 81px;
+	height: 66px;
+	background: url(img/fengmian_img.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+.rotating {
+	display: block;
+	width: 56px;
+	height: 52px;
+	position: absolute;
+	bottom: 15px;
+	left: 67px;
+}
+.close-box{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.close-box img{
+	width: 25px;
+	overflow: hidden;
+	margin: 10px 10px 0 0;
+	cursor: pointer;
+}
+
+.sel-txt {
+	width: 1040px;
+    margin: 0 auto;
+	position: relative;
+	
+}
+
+/*添加照片*/
+.filed {
+	cursor: pointer;
+	margin: 30px 30px;
+	width: 164px;
+	height: 56px;
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    display: inline-block;
+    background: #1bc272;
+    border: 1px solid #99D3F5;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 56px;
+    z-index: 100;
+}
+.filed input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.filed img {
+	padding-left: 5px;
+}
+
+.sel-txt p {
+	font-size: 18px;
+	color: #323232;
+	line-height: 27px;
+}
+.step-3 .btn-box {
+	margin-top: 90px;
+}
+
+.step-3 button[type="submit"]{
+	display:inline-block;
+}
+
+/*拖拽照片*/
+.Pic-box li {
+	float:left;
+	width:185px;
+	height: 198px;
+	background:#fff;
+	display:inline;
+	margin:15px 0 0 18px;
+	list-style:none;
+}
+.active-del{
+	float: right;
+	width: 25px;
+	height: 25px;
+	z-index: 100;
+	position: relative;
+	top: 5px;
+	right: 5px;
+}
+.active-fm{
+	float: left;
+	width: 66px;
+	height: 66px;
+	z-index: 101;
+	position: relative;
+	
+}
+.Pic-box li .active-img{
+	width:185px;
+	height: 198px;
+	position: relative;
+	top: -66px;
+}
+.Pic-box li.hig {
+	border:2px dashed #f30;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************上传房源步骤四***********************/
+.price-set {
+	display: table;
+	line-height: 30px;
+	font-size: 20px;
+	color: #323232;
+	font-family: 'Microsoft YaHei';
+	margin-top: 50px;
+	position: relative;
+    left: 110px;
+}
+.price-set dt {
+	font-size: 20px;
+	color: #323232;
+}
+.price-set input[type="text"],.price-set input[type="tel"], .price-set select{
+	height: 34px;
+}
+.day-price {
+	width: 120px;
+	margin-right: 10px;
+}
+.step-4 .sel-word {
+	position: absolute;
+    top: 35px;
+	bottom: 20px;
+    left: 93px;
+    color: #f00;
+	font-size: 16px;
+}
+.week_price {
+	position: absolute;
+    top: 31px;
+    right: 348px;
+    color: #f00;
+	font-size: 16px;
+}
+.day-num {
+	font-size: 18px;
+	color: #323232;
+}
+.weeks {
+	width: 164px;
+}
+.upto-prompt {
+	position: absolute;
+    left: 80px;
+    top: 35px;
+    color: #f00;
+	font-size: 16px;
+}
+.least-prompt {
+	position: absolute;
+    left: 122px;
+    top: 35px;
+    font-size: 16px;
+    color: #f00;
+}
+.most-prompt {
+	position: absolute;
+    left: 455px;
+    top: 35px;
+    color: #f00;
+	font-size: 16px;
+}
+/*placeholder属性字体颜色*/
+.weeks:-moz-placeholder { 
+    color: #323232!important; 
+}
+
+.weeks:-ms-input-placeholder {
+    color: #323232!important;
+}
+
+.weeks::-webkit-input-placeholder {
+    color: #323232!important;
+}
+.weeks:-0-input-placeholder {
+    color: #323232!important;
+}
+/*长期打折*/
+.long {
+	margin-left: -38px;
+}
+.Discount {
+	display: block;
+    margin-left: 21px;
+}
+.house-Discount {
+	width: 902px;
+	height: 170px;
+	border: 2px solid #ccc;
+}
+.Discount-add {
+	display: block;
+	color: #808080;
+	padding-top: 10px;
+	font-size: 18px;
+}
+.Discount-details {
+	width: 842px;
+	padding-left: 30px;
+}
+.Discount-details li {
+	float: left;
+	width: 401px;
+	height: 42px;
+	font-size: 18px;
+	line-height: 42px;
+	padding-top: 20px;
+}
+.Discount-details li:nth-of-type(2),.Discount-details li:nth-of-type(4),.Discount-details li:nth-of-type(6){
+	padding-left: 60px;
+}
+.Discount-day {
+	padding-left: 16px;
+	padding-right: 10px;
+}
+.Discount-size {
+	float: left;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.Discount-delete {
+	color: #f00;
+	padding-left: 40px;
+	cursor: pointer;
+}
+.user{
+	position: absolute;
+	top: 180px;
+	left: 130px;
+}
+.user-add {
+	width: 80px;
+	height: 34px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	background: #1bc272;
+	border-radius: 10px;
+	margin-left: 30px;
+}
+.user input {
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.discount-txt {
+	position: absolute;
+	left: 129px;
+    top: 217px;
+    font-size: 16px;
+    color: #f00;
+}
+.prompt-word {
+	position: absolute;
+	left: 61px;
+    top: 35px;
+    font-size: 16px;
+    color: #f00;
+}
+/**/
+
+.pay-dep {
+	display: block;
+}
+.deposit {
+	margin-left: 22px;
+	margin-top: 70px;
+}
+.pay {
+	margin-left: -17px;
+}
+
+.upto {
+	margin-left: 1px;
+}
+.in-day {
+	width: 124px;
+}
+.cancel div{
+	float: left;
+}
+.img-1 {
+	width: 146px;
+	height: 85px;
+	background: url(img/tuikuan_background_img.png) no-repeat;
+	position: relative;
+    left: 34px;
+    bottom: 15px;
+}
+.cancel-order {
+	color: #fff;
+	font-size: 20px;
+	line-height: 33px;
+	padding:10px 10px;
+}
+.img-2 {
+	width: 220px;
+	height: 87px;
+	background: url(img/koukuan_background_img.png) no-repeat;
+	position: relative;
+    left: 189px;
+    bottom: 15px;
+}
+.day-no {
+	width: 69px;
+	background: #fff;
+	border: none;
+	padding-left: 20px;
+}
+.img-3 {
+	width: 220px;
+	height: 87px;
+	background: url(img/koukuan_background_img.png) no-repeat;
+	position: relative;
+    left: 272px;
+    bottom: 15px;
+}
+.success {
+	font-size: 18px;
+	color: #323232;
+	padding-top: 10px;
+}
+.success span:nth-of-type(1){
+	padding-left: 33px;
+}
+.success span:nth-of-type(2){
+	padding-left: 100px;
+}
+.success span:nth-of-type(4){
+	padding-left: 147px;
+}
+.success span:nth-of-type(5){
+	padding-left: 60px;
+}
+.success select {
+	margin-left: 6px;
+	margin-right: 6px;
+	padding-left: 20px;
+}
+.Receive {
+	margin-left: -50px;
+	margin-top: 55px;
+}
+.Mobile {
+	width: 200px;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.get-code {
+	display: inline-flex;
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+	background: #1bc272;
+	padding: 9px 22px;
+	border-radius: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	
+}
+.get-code:hover {
+	color: #fff;
+}
+.tel-prompt {
+	position: absolute;
+	top: 38px;
+	left: 240px;
+	font-size: 16px;
+	color: #f00;
+}
+.code-prompt {
+	position: absolute;
+	top: 38px;
+	right: 458px;
+	font-size: 16px;
+	color: #f00;
+}
+#standby {
+	display: none;
+	margin-left: -26px;
+	padding-top: 7px;
+}
+/*保存，草稿按钮*/
+.step-4 .btn-box {
+	margin-top: 90px;
+}
+.save-btn {
+	width :170px;
+	height: 56px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 10px;
+	background: #ccc;
+	margin-left: 30px;
+}
+.step-4 button[type="button"]{
+	display:inline-block;
+}

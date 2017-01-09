@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+    <title>房源图片</title>
+    <!--CSS样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fd_step.css" /><!--房源上传-->
+    <!--JS-->
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/house_step.js"></script><!--房源上传-->
+	<script src="../js/drag.js"></script>
+</head>
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../Index/index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="house-title">房源上传</div>
+    <div class="progress_box">
+        <div class="img-box">
+            <img src="../images/user/step_03.png" alt="房源图片上传">
+        </div>
+    </div>
+    <div class="content step-3">
+        <form action="#" method="post">
+            <div class="house-infor">
+                <form>
+                   <div class="Pic-box">
+						 <ul class="Pic-Ul">
+						 	<!--<div class="photo">	
+	                           <div class="photo-box">
+	                               <input type="hidden" name="picture[]" value="2147">		
+	                               <img id="file-img" src="../images/house/fangyuan_04.png" alt="房源">
+	                           </div>	
+	                           <div class="fengmian">
+	                           </div>
+	                              
+	                           <div class="close-box">		
+	                              <img src="../images/user/guanbi_icon.png" alt="删除房源按钮">
+	                           </div>
+	                       </div>-->
+						 </ul>
+                   </div>
+                </form>  
+                <div class="sel-txt">
+                    <span class="filed">请添加图片<img src="../images/user/tianjia_icon.png" alt="添加图片按钮">
+                    	<input id="Uploading" type="file" multiple  />
+                    </span>
+                    <p>1、第一张为封面，鼠标可拖动图片顺序;</p>
+                    <p>2、最少5张，最多25张;</p>
+                    <p>3、上传图片格式为jpg或者png且不大于20M;</p>
+                    <p>4、温馨提示：为了您房源的良好展示上传图片的顺序为（客厅-卧室-厨房-卫生间-外景）;</p>
+                </div> 
+            </div>
+            <div class="btn-box">
+            	<button class="back-btn" type="button"  id="goback" data-url="">上一步</button>
+                <button class="first-btn" type="submit">保存，下一步</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

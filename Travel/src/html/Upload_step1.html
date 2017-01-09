@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=9" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+    <title>房源信息</title>
+    <!--CSS样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
+    <link rel="stylesheet" href="../css/header_two.css" /><!--头部-->
+    <link rel="stylesheet" href="../css/fd_step.css" /><!--房源上传-->
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <!--JS-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0SVvgq8BvSx7ObWfudubOabkSIuUTWLi"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/house_step.js"></script><!--房源上传-->
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../Index/index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="house-title">房源上传</div>
+    <div class="progress_box">
+        <div class="img-box">
+            <img src="../images/user/step_01.png" alt="房源信息">
+        </div>
+    </div>
+    <div class="content">
+      <form method="post">
+        <div class="house-infor">
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">所在城市</span></dt>
+                <dd>
+                	<select id="region_id1" class="distance largeSelect" name="region_id1">
+						<option value="请选择所在城市">请选择所在城市</option>
+					</select>
+                    <select id="region_id2" class="distance largeSelect" name="region_id2">
+						<option value="请选择所在区域">请选择所在区域</option>
+					</select>
+                    <select id="region_id3" class="distance largeSelect" name="region_id3">
+						<option value="请选择所在商区">请选择所在商区</option>
+					</select>
+                    <select id="region_id4" class="distance largeSelect" name="region_id4">
+						<option value="请选择附近景点">请选择附近景点</option>
+					</select>
+                </dd>
+                <span class="sel-word sel-city"></span>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">详细地址</span></dt>
+                <dd>
+                	<input type="text" class="distance house-address" placeholder="请输入房源的具体地址（详细至小区）">
+                    <input type="text" class="distance house-building" name=""> 栋
+                    <input type="text" class="distance house-building" id="house-no"> 号
+                    &nbsp;&nbsp;栋和号的详情房客付款后可见，没有则填无
+                </dd>
+                <span class="sel-word specific-address"></span>
+                <span class="address-word"></span>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">地理位置</span></dt>
+                <dd>
+                	<input type="text" class="distance house-map" value="地图标注" readonly>
+                </dd>
+                <span class="sel-word map"></span>
+                <div class="popup-map">
+                	<div class="popup-map-box">
+                		<span class="span">所在位置</span>
+                		<input class="ipt1" type="text" />
+                		<input class="analysis" type="button" value="解析位置" />
+                		<input class="confirm" type="button" value="确定位置" />
+                		<div class="hint">提示:可用鼠标拖动地图调整定位点</div>
+                		<img class="map-del" src="../images/guanbi_icon_ditu.png"/>
+                	</div>
+                	<div class="popup-map-box1" id="allmap">
+                		
+                	</div>
+                </div>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">房屋类型</span></dt>
+                <dd>
+                	<select id="" class="distance house-type" name="">
+						<option value="民居">民居</option>
+                        <option value="公寓">公寓</option>
+                        <option value="独栋别墅">独栋别墅</option>
+                        <option value="客栈">客栈</option>
+                        <option value="阁楼">阁楼</option>
+                        <option value="四合院">四合院</option>
+                        <option value="海边小屋">海边小屋</option>
+                        <option value="林间小屋">林间小屋</option>
+                        <option value="豪宅">豪宅</option>
+                        <option value="城堡">城堡</option>
+                        <option value="树屋">树屋</option>
+                        <option value="船舱">船舱</option>
+					</select>
+                </dd>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">房屋面积</span></dt>
+                <dd>
+                	<input class="distance house-area" type="text" placeholder="请输入房屋面积"> 平米
+                </dd>
+                <span class="sel-word area"></span>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">房屋户型</span></dt>
+                <dd>
+                	<select id="room" class="distance Door " name="">
+						<!--<option value="0">0</option>-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>室
+                    <select id="" class="distance Door" name="">
+						<option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>厅
+                    <select id="" class="distance Door" name="">
+						<option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>厨
+                    <select id="" class="distance Door" name="">
+						<option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>阳台 （开间则客厅数选0）
+                </dd>
+                <span class="sel-word door-model"></span>
+            </dl>
+            <dl class="homesInfo" style="margin-left: 20px;">
+            	<dt><span class="house">卫生间</span></dt>
+                <dd>
+                    <span class="toilet-word">独立</span>
+                	<select id="" class="toilet Door" name="">
+						<option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>
+                    <span class="toilet-word">共用</span>
+                    <select id="" class="toilet Door" name="">
+						<option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>
+                </dd>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">可住人数</span></dt>
+                <dd>
+                	<select id="people-num" class="distance people-num" name="">
+                       <!-- <option value="0">0</option>-->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>
+                </dd>
+                <span class="sel-word live-num"></span>
+            </dl>
+            <dl class="homesInfo bed">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">床数</span></dt>
+                <dd>
+                	<div class="bed-num" id="bed-num">
+                    	<span class="set-add">您尚未添加床数，请在下部设置添加</span>
+                    	<ul class="bed-details">
+                        </ul>
+                    </div>
+                </dd>
+                <span class="sel-word addword"></span>
+            </dl>
+            <dl class="homesInfo double">
+            	<dt><span class="mandatory"></span><span class="bedfont" id="DTitle">双人床</span></dt>
+                <dd>
+                	<select id="Dpiece" class="distance double-bed" name="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select> 
+                    <span class="bed-word">张 , 宽</span>
+                    <input class="double-bed" id="Dwide" type="text">
+                    <span class="bed-word">米 x 长</span>
+                    <input class="double-bed" id="Dlength" type="text">
+                    <span class="bed-word">米</span>
+                </dd>
+                <dd class="bed-right">
+                    <button class="add-btn" id="D-btn" type="button" >添加</button>
+                    <span class="add-word" id="add-prompt"></span>
+                </dd>
+            </dl>
+            <dl class="homesInfo single">
+            	<dt><span class="mandatory"></span><span class="bedfont" id="Stitle">单人床</span></dt>
+                <dd>
+                	<select id="Spiece" class="distance double-bed single-bed" name="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>
+                    <span class="bed-word">张 , 宽</span>
+                    <input class="double-bed" id="Swide" type="text">
+                    <span class="bed-word">米 x 长</span>
+                     <input class="double-bed" id="Slength" type="text">
+                    <span class="bed-word">米</span>
+                </dd>
+                <dd class="bed-right">
+                    <button class="add-btn" id="S-btn" type="button" >添加</button>
+                    <span class="add-word" id="single-prompt"></span>
+                </dd>
+            </dl>
+            <dl class="homesInfo otherbeds">
+            	<dt><span class="mandatory"></span><span class="bedfont">其他床</span></dt>
+                <dd>
+                	<select class="distance other-bed" id="other-bed" name="obed">
+						<option value="请选择">请选择</option>
+                        <option value="儿童床">儿童床</option>
+                        <option value="婴儿床">婴儿床</option>
+                        <option value="双层床">双层床</option>
+                        <option value="单人沙发床">单人沙发床</option>
+                        <option value="双人沙发床">双人沙发床</option>
+                        <option value="圆床">圆床</option>
+                        <option value="榻榻床">榻榻床</option>
+					</select>
+                	<select id="Opiece" class="distance single-bed double-bed" name="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>
+                    <span class="bed-word">张 , 宽</span>
+                    <input class="double-bed" id="Owide" type="text">
+                    <span class="bed-word">米 x 长</span>
+                    <input class="double-bed" id="Olength" type="text">
+                    <span class="bed-word">米</span>
+                </dd>
+                <dd class="other-right">
+                    <button class="add-btn" id="O-btn" type="button" >添加</button>
+                    <span class="add-word" id="other-prompt"></span>
+                </dd>
+            </dl>
+            <dl class="homesInfo">
+           	  <dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">能否加床</span></dt>
+                <dd>
+                    <div class="radio distance bed-checked" name="bedWhether" value="能"><ins></ins><span>能</span></div>
+                    <div class="radio distance bed-checked" name="bedWhether" value="否"><ins></ins><span>否</span></div>
+                </dd>
+            </dl>
+            
+            <dl class="homesInfo">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">被单更换</span></dt>
+                <dd>
+                	<select id="" class="distance Sheets-replace" name="">
+						<option value="每客一换">每客一换</option>
+                        <option value="每日一换">每日一换</option>
+					</select>
+                </dd>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="house">生活设施</span></dt>
+                <dd>
+                    <div class="Liveing">
+                    	<div class="checkbox distance" name="chk" value="无线WiFi"><ins></ins><span>无线WiFi</span></div>
+                        <div class="checkbox network" name="chk" value="有线网络"><ins></ins><span>有线网络</span></div>
+                        <div class="checkbox conditioning" name="chk" value="空调"><ins></ins><span>空调</span></div>
+                        <div class="checkbox tv" name="chk" value="电视"><ins></ins><span>电视</span></div>
+                        <div class="checkbox refrigerator" name="chk" value="冰箱"><ins></ins><span>冰箱</span></div>
+                        <div class="checkbox Drinking" name="chk" value="饮水设备"><ins></ins><span>饮水设备</span></div>
+                        <div class="checkbox computer" name="chk" value="电脑"><ins></ins><span>电脑</span></div>
+                        <div class="checkbox heating" name="chk" value="暖气"><ins></ins><span>暖气</span></div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="house">洗浴条件</span></dt>
+                <dd>
+                    <div class="Wash">
+                        <div class="checkbox distance" name="chk" value="淋浴"><ins></ins><span>淋浴</span></div>
+                        <div class="checkbox hot-water" name="chk" value="24小时热水"><ins></ins><span>24小时热水</span></div>
+                        <div class="checkbox bathtub" name="chk" value="浴缸"><ins></ins><span>浴缸</span></div>
+                        <div class="checkbox Toothpaste" name="chk" value="牙膏香皂"><ins></ins><span>牙膏香皂</span></div>
+                        <div class="checkbox Towels" name="chk" value="毛巾浴巾"><ins></ins><span>毛巾浴巾</span></div>
+                        <div class="checkbox shampoo" name="chk" value="浴液洗发水"><ins></ins><span>浴液洗发水</span></div>
+                        <div class="checkbox slippers" name="chk" value="拖鞋"><ins></ins><span>拖鞋</span></div>
+                        <div class="checkbox machine" name="chk" value="洗衣机"><ins></ins><span>洗衣机</span></div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="homesInfo">
+            	<dt><span class="house">外部条件</span></dt>
+                <dd>
+                    <div class="external">
+                        <div class="checkbox distance" name="chk" value="电梯"><ins></ins><span>电梯</span></div>
+                        <div class="checkbox guard" name="chk" value="保安"><ins></ins><span>保安</span></div>
+                        <div class="checkbox intercom" name="chk" value="对讲系统"><ins></ins><span>对讲系统</span></div>
+                        <div class="checkbox facilities" name="chk" value="无障碍设施"><ins></ins><span>无障碍设施</span></div>
+                        <div class="checkbox parking-space" name="chk" value="停车位"><ins id="parking-space"></ins><span>停车位</span></div>
+                        <label class="parking  park-hide">停车费</label>
+                        <label class="fee park-hide"><input class="fee-day" id="" type="text" name=""> /天</label>
+                        <span class="distanc park-hide" style="color:#f00;"> 不填写表示不收费</span>
+                    </div>
+                </dd>
+            </dl>
+             <dl class="homesInfo">
+            	<dt><span class="house">其他</span></dt>
+                <dd>
+                    <div class="other-con">
+                        <div class="checkbox cook" name="chk" value="可以煮饭"><ins></ins><span>可以煮饭</span></div>
+                        <div class="checkbox party" name="chk" value="可以聚会"><ins></ins><span>可以聚会</span></div>
+                        <div class="checkbox pet" name="chk" value="可养宠物"><ins></ins><span>可养宠物</span></div>
+                        <div class="checkbox smoking" name="chk" value="允许吸烟"><ins></ins><span>允许吸烟</span></div>
+                        <div class="checkbox guests" name="chk" value="接待外宾"><ins></ins><span>接待外宾</span></div>
+                        <div class="checkbox multimedia" name="chk" value="多媒体设施"><ins></ins><span>多媒体设施</span></div>
+                        <div class="checkbox Fitness" name="chk" value="健身器材"><ins></ins><span>健身器材</span></div>
+                        <div class="checkbox Mahjong" name="chk" value="麻将机"><ins></ins><span>麻将机</span></div>
+                        <label class="fill">手动填写<input class="" id="" type="text" name="" placeholder="请填写其他配套设施"></label>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="homesInfo house-alias">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">房源别名</span></dt>
+                <dd>
+                	<input class="alias" type="text" > 
+                    <span class="only">（辨别房屋的参考信息，仅自己可见）</span>
+                </dd>
+                <span class="sel-word houseName"></span>
+            </dl>
+            <dl class="homesInfo decreasing">
+            	<dt><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span class="house">房源套数</span></dt>
+                <dd>
+                	<select id="" class="distance house-num" name="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">9+</option>
+					</select>
+                </dd>
+            </dl>
+        </div> 
+        <div class="btn-box">
+        	<button class="first-btn" id="step-1" type="button">保存，下一步</button>
+        </div>
+      </form> 
+    </div>
+</body>
+</html>

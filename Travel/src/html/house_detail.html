@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv = "X-UA-Compatible" cotent = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+	<title>房源详情</title>
+	<!--css样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
+    <link rel="stylesheet" href="../css/login.css"/><!--登陆-->
+    <link rel="stylesheet" href="../css/register.css" /><!--注册-->
+    <link rel="stylesheet" href="../css/house_detail.css" /><!--房源详情-->
+    <link rel="stylesheet" href="../css/footer.css" /><!--底部-->
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+    <!--js-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2&ak=0SVvgq8BvSx7ObWfudubOabkSIuUTWLi"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/swiper.jquery.min.js"></script><!--轮播图-->
+    <script src="../js/house_detail.js"></script><!--房源详情-->
+    <script src="../js/nav.js"></script>
+    <script src="../js/login.js"></script><!--登陆注册-->
+</head>
+<body>
+	<!--头部-->
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../Index/index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right nolink clear">
+                    	<li class="service"><a href="javascript:void(0)" target="_blank"><img src="../images/house/header_tell_icon.png" alt="客服电话">400-047-6667</a></li>
+                        <li class="login"><a class="dl" href="javascript:void(0)">登录</a><span class="top_line"></span><a class="zc" href="javascript:void(0)">注册</a></li>
+                        <li class="house"><a class="release" href="javascript:void(0)" target="_blank">免费发布房源</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--<div class="light"></div> 
+	<div class="fade"></div> -->
+
+    <!--吸顶菜单-->
+    <div class="col" >
+    	<a class="col-logo" href=""><img src="../css/img/xuzhi_icon.png"/></a>
+	    <div class="column clear">
+	 		<div class="column-left">
+	 			<div class="house-box">
+		 			<div id="contentTab" class="house-tabs">
+		                <ul>
+		                    <li id="" class="item-first ">
+		                        <a href="#section1">实拍照片</a>
+		                    </li>
+		                    <li>
+		                        <a id="" href="#section2" onclick="">配套设施</a>
+		                    </li>
+		                    <li class="">
+		                        <a id="" href="#section3" onclick="">入住须知</a>
+		                    </li>
+		                    <li class="">
+		                        <a id="" href="#section4" onclick="">位置地图</a>
+		                    </li>
+		                    <li id="" class="j-tabs">
+		                        <a href="#section5" id="usercomments" onclick="">入住点评</a>
+		                    </li>
+		                   
+		                </ul>
+		            </div>
+	            </div>
+	 		</div>
+	    	
+	    </div>
+    </div>
+    
+    <!--房源内容-->
+ 	<div class="Content">
+ 		<!--标题-->
+		<div class="house-txt" id="section1">
+			<p class="name">翠湖旁清新阳光两居室</p>
+            <p class="txt-color">
+		        <a href="#">短租房 ></a>
+		        <a href="#">昆明 ></a>
+		        <span>云南昆明市五华区翠湖东路</span>
+		    </p>
+		    <ul class="house-tag clear">
+		    	<li><img src="../images/house/shipai_icon.png"><span class="txt-color">实拍</span></li>
+		    	<li><img src="../images/house/yanzhen_icon.png"><span class="txt-color">验真</span></li>
+		    	<li><img src="../images/house/ziying_icon.png"><span class="txt-color">自营</span></li>
+		    	<li><img src="../images/house/jingxuan_icon.png"><span class="txt-color">精选</span></li>
+		    	<li><img src="../images/house/haoping_icon.png"><span class="txt-color">好评</span></li>
+		    </ul>
+		</div>
+ 		<!--内容详情-->
+ 		<div class="house-cont">
+	 		<div class="house-detail clear">
+				<div class="leftBox">
+					<div class="house-pic">
+						<a class="house-collect" href="javascript:;" style=" z-index:100;" onclick="love();" >
+				            <img class="hongx" alt="收藏" src="../images/house/shoucang_moren_icon.png">
+			            </a>
+			            <!--大图-->
+			            <!--<div class="swiper-container box">
+			            	<ul class="Large-pic swiper-wrapper">
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"  id="details" name="details"></li>
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>
+								<li class="swiper-slide"><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+								
+								
+							</ul>
+			            </div>-->
+						<!--缩略图-->
+						<!--<div class="thumb_nav ">
+				            <div class="show_box swiper-container">
+				            	<ul class="thumb_pic swiper-wrapper clear">
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                     <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit swiper-slide">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                </ul>
+				            </div>
+				            <div class="swiper-button-prev swiper-button-white btn1"></div>
+   							<div class="swiper-button-next swiper-button-white btn2"></div>-->
+   							 <!--大图-->
+			          
+		            	<ul class="Large-pic">
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"  id="details" name="details"></li>
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>
+							<li class=""><img src="../images/house/large_house.png" width="765px" height="620px" alt="房源大图"></li>	
+						</ul>
+			          
+						<!--缩略图-->
+						<div class="thumb_nav ">
+				            <div class="show_box">
+				            	<ul class="thumb_pic clear">
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                     <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                    <li class="cisit">
+				                    	<a href="javascript:;"><img src="../images/house/large_house.png" width="112px" height="80px" alt="居家游房源缩略图" ></a>
+				                    </li>
+				                </ul>
+				            </div>
+				            <div class="swiper-button-prev swiper-button-white btn1"></div>
+   							<div class="swiper-button-next swiper-button-white btn2"></div>
+				        </div>
+					</div>
+					<div class="house-int" id="section2">
+						<ul class="house-int-ul clear">
+							<li>
+								<img src="../css/img/zhengtao_icon.png">
+								<p>整套出租</p>
+								<div class="house-int-right"><span>2室1厅1卫1厨0阳台</span><span>150平米</span></div>
+							</li>
+							<li>
+								<img src="../css/img/bed_icon.png">		
+								<p>宜住 6 人</p><p>不可加床</p>
+								<div class="house-int-right right-bed"><span>宽2米x长2米x2张</span><span>宽2米x长2米x2张</span></div>
+							</li>
+							<li style="margin-left: 55px;">
+								<img src="../css/img/shenghuo_icon.png">	
+								<p>生活便利</p>
+								<div class="house-int-right"><span>24小时热水</span><span>有停车位</span></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!--预定房源，联系房东-->
+	 			<div class="rightBox">
+	 				<div class="rightBox-cont">
+	 					<p class="house-price">￥<span class="word_color">1288</span>/晚 
+			                <samp class="full-1">满 7 天 9 折 , </samp>
+			                <samp class="full-2">满 30 天 8.5 折 </samp>
+		            	</p>
+		            	<p class="reserve-box clear">
+			                <span class="reserve-time"><input class="times" type="text"></span>
+			                <select class="reserve-num">
+			                	<option value="1">1套</option>
+			                	<option value="2">2套</option>
+			                	<option value="3">3套</option>
+			                </select>
+		            	</p>
+		            	<span class="time-prompt"></span>
+		            	<button class="reserve-btn" type="button">立即预定</button>
+		            	<!--完整房态-->
+		            	<div class="house-state ">
+		            		<img class="state-img" src="../images/house/riqi_img.png" />
+		            		<ul class="state-time clear">
+		            			<li class="state-day">
+									<span>&nbsp;&nbsp;28日</span>
+									<span date-stock="">
+										￥128
+									</span>
+								</li>
+								<li class="state-day">
+									<span>&nbsp;&nbsp;29日</span>
+									<span date-stock="">
+										￥128
+									</span>
+								</li>
+								<li class="state-day">
+									<span>&nbsp;&nbsp;30日</span>
+									<span date-stock="">
+										￥128
+									</span>
+								</li>
+								<li class="state-day">
+									<span>&nbsp;&nbsp;31日</span>
+									<span date-stock="">
+										￥128
+									</span>
+								</li>
+								<li class="state-day">
+									<span>&nbsp;&nbsp;01日</span>
+									<span date-stock="">
+										￥128
+									</span>
+								</li>
+								<li class="full-state state-day">
+									 <a id="room" href="javascript:void(0);">
+									 	<span>完整</span>
+										<span>房态</span>										
+									 </a>
+								</li>
+		            		</ul>
+		            	</div>
+		            	<!--联系房东-->
+		            	<div class="contact-fd">
+		            		<div class="fd-pic clear">
+			               		<div class="left_pic">
+	                               <img src="../images/user/yonghu_moren_icon.png" width="100" height="100" alt="用户头像">                    
+			               		</div>
+			                    <div class="pmessage">
+			                        <span class="fd-name">小易</span>
+			                        <span class="tip_box clear">
+				                        <span class="tip shim">实名认证</span>                        
+				                        <span class="tip iphone">手机认证</span>                        
+			                        </span>
+			                    </div>
+			                </div>
+			                <button class="contact-btn" type="button">联系房东</button>
+		            	</div>
+	 				</div>
+	 			</div>
+	 		</div>
+			
+ 		</div>
+ 		
+ 		
+ 		 <div class="column-box">
+ 		    <div class="column-cont">
+ 		 	<!--配套设施-->
+		    <div class="column-infor clear">
+		        <div class="side-box">
+		            <i class="icon-facility"></i>
+		            <p class="column-title">设施服务</p>
+		        </div>
+		        <div class="content-box">
+		            <div id="facilitycont" class="column-list">
+	                    <ul class="facility-list clear">
+                            <li class="icon-wifi">无线WiFi</li>
+                            <li class="icon-parking-space">停车位</li>
+                            <li class="icon-cook">可做饭</li>
+                            <li class="icon-hot-water">24小时热水</li>
+                            <li class="icon-shower">淋浴</li>
+                            <li class="icon-bathtub">浴缸</li>
+                            <li class="icon-party">允许聚会</li>
+                            <li class="icon-kettle">麻将</li>
+                            <li class="icon-pet">可带宠物</li>
+                            <li class="icon-smoking">允许吸烟</li>
+                            <li class="icon-toothbrush">空调</li>
+                            <li class="icon-tv">电视</li>
+	                    </ul>		
+		            </div>
+		            <div id="facilitybtn" class="toggle-btn"><a href="javascript:;" class="facilityBtn">点击查看更多</a></div>
+		        </div>
+		    </div>
+		    <!--入住须知-->	
+		    <div class="column-infor" id="section3">
+		        <div class="side-box">
+		            <i class="icon-Checkin"></i>
+		            <p class="column-title">入住须知</p>
+		        </div>
+		        <div class="content-box">
+		        	<!--时间须知-->
+		            <div id="Checkincont" class="column-list">
+	                    <ul class="Checkin-list clear">
+                            <li class="icon-">入住时间：<span>14:00之后</span></li>
+                            <li class="icon-">退房时间：<span>12:00之前</span></li>
+                            <li class="icon-">接待时间：<span>8:00-22:00</span></li>
+                            <li class="icon-">被单更换：<span>每客一换</span></li>
+                            <li class="icon-">最少入住：<span>一天</span></li>
+                            <li class="icon-">最多入住：<span>不限</span></li>
+                            <li class="icon-">接待外宾：<span>不接待</span></li>
+	                    </ul>		
+		            </div>
+		            <!--收费说明-->
+		            <div class="column-list charge" style="margin-top: 40px;">	                 
+                        <p class="list-title">收费说明</p>
+                        <p class="icon-">以下费用由房东收取，不在房费中：</p>
+                        <p class="icon-">押金：<span>500元，</span>押金为<span>线下支付</span></p>
+                        <p class="icon-">清洁费：<span>50元</span></p>
+                        <p class="icon-">停车费：<span>50元/天</span></p>
+		            </div>
+		            <!--退订须知-->
+		            <div class="unsubscribe" style="margin-top: 30px;">	                 
+                        <p class="list-title" style="margin-left: 30px;">退订须知</p>
+                        <div class="unsubscribe-box clear">
+                        	<div class="rules-1">
+                        		<p class="rules-order">如订单取消，</p>
+                                <p class="rules-order">订单全部返还</p>
+                        	</div>
+                        	<div class="rules-2">
+                        		<p class="rules-order">如订单取消，扣除</p>
+                                <p class="rules-order">前<span>1</span>天的定金</p>
+                        	</div>
+                        	<div class="rules-3">
+                        		<p class="rules-order">如提前退房，扣除</p>
+                                <p class="rules-order">后<span>1</span>天的定金</p>
+                        	</div>
+                        	<img src="../images/house/steps_img.png" alt="退房规则">
+                        	<div class="success">
+	                        	<p>预定成功</p>
+	                            <p>入住<span>1</span>天 14:00 前</p>	                            
+	                            <p>入住当天<span>14:00</span>前</p>
+	                            <p>退房当天<span>12:00</span>前</p>
+                            </div>
+                        </div>
+		            </div>
+		            <!--房源介绍-->
+		            <div class="column-list house" style="margin-top: 40px;">	                 
+                        <p class="list-title">房源介绍</p>
+                        <p class="house-details">
+                        	房屋宽敞舒适透气 干净整洁 阳光充足 三室二厅二卫 户型非常好使用 交通方便快捷 小区是军队是的管理制度 业主们都是老军人住房 带一个车位，电梯房，免费WiFi，
+                        	家电齐全拎包入住，可做饭，房间干净整洁，防盗门，开放式小厨房，光线充足，自然风堪比空调。床上用品均为纯棉居家款式，居家温馨舒适，并保证一客一换。
+                        	房间内设施齐全，电视机，冰箱，微波炉、浴霸、电热毯，24小时热水。照片真实拍摄，周边各种设施一应俱全，生活学习都非常方便。
+                        </p>
+		            </div>
+		            <div class="column-list house" style="margin-top: 40px;">	                 
+                        <p class="list-title">特色/个性</p>
+                        <p class="list-details">复式结构，简介大方，WIFI无限畅连，24小时热水供应。</p>
+		            </div>
+		            <div class="column-list house" style="margin-top: 40px;">	                 
+                        <p class="list-title">特色</p>
+                        <p class="list-details">复式结构，简介大方，WIFI无限畅连，24小时热水供应。</p>
+		            </div>
+		            <div class="column-list house" style="margin-top: 40px;">	                 
+                        <p class="list-title">个性</p>
+                        <p class="list-details">复式结构，简介大方，WIFI无限畅连，24小时热水供应。</p>
+		            </div>
+		            <div id="facilitybtn" class="toggle-btn" style="margin-top: 20px;"><a href="javascript:;" class="houseBtn">点击查看更多房源介绍</a></div>
+		        </div>
+		    </div>
+		    <!--位置地图-->
+		    <div class="column-map" id="section4">
+		        <div class="side-box">
+		            <p class="column-title map-title">地图位置</p>
+		        </div>
+		        <div class="house-address"></div>
+		        <div class="house-map" id="allmap">
+		        	
+		        </div>
+		    </div>
+		    <!--提示语-->
+		    <div class="column-prompt">
+		        <p class="column-title">居家游提示：</p>
+		        <p class="column-title">入住后如果您认为照片与房间实质有太大差异，居家游客服将对双方提出的证据进行认定，如属实，未入住的天数费用将全额退款。</p>
+		    </div>  
+		    </div>
+
+		</div>
+		<!--入住点评-->
+	    <div class="column-box" id="section5">
+	    	<div class="column-review">
+		        <p class="column-title">入住点评<span>(5)</span></p>
+		    	<div class="side-box">
+		    		<p class="good">100%</p>
+		            <p class="column-title">房源总好评率</p>
+		        </div>
+		        <div class="content-box">
+		            <div id="reviewcont" class="column-list">
+	                    <ul class="review-list clear">
+                            <li class="">
+		                        <a href="#">房间整洁度</a>
+		                        <img src="../images/star0.png" />
+		                    </li>
+		                    <li class="">
+		                        <a id="" href="#">房东服务</a>
+		                        <img src="../images/star0.png" />
+		                    </li>
+		                    <li class="">
+		                        <a id="" href="#">交通位置</a>
+		                        <img src="../images/star0.png" />
+		                    </li>
+		                    <li class="sheshi">
+		                        <a id="" href="#">设施环境</a>
+		                        <img src="../images/star0.png" />
+		                    </li>
+		                    <li class="sheshi">
+		                        <a href="#" >性价比</a>
+		                        <img src="../images/star0.png" />
+		                    </li>
+	                    </ul>		
+		            </div>
+		        </div>
+		    </div>
+		    <div class="review-box">
+		    	<a href="javascript:;" class="current" data-category="0" data-count="4">全部<span class="number-box current">（5）</span></a>
+		        <a href="javascript:;" class="" data-category="2" data-count="3">带照片<span class="number-box">（3）</span></a>
+		    </div>
+		    <!--房客评价-->
+		    <div class="comment-list">
+			    <ul class="comment-ul">
+		            <li class="comment-group clear">
+		                <div class="user-avatar">
+		                    <img src="../images/user/user_icon.png" alt="房客头像">
+		                </div>
+		                <div class="comment-main">
+		                    <div class="comment-tit clear">
+		                        <div class="comment-ifno">
+		                            <span class="name-box">用户名</span>
+		                            <span class="booking-info">2016-12-16</span>
+		                        </div>
+		                    </div>
+		                    <div class="comment-detail">公寓就在路边，很易找到，交通很便利。旁边就是万达广场，饮食非常方便选择多。公寓安静舒适，是一次满意的入住。公寓就在路边，很易找到，交通很便利。旁边就是万达广场，饮食非常方便选择多。公寓安静舒适，是一次满意的入住。 </div>
+	                        <!--<div class="htl-reply" style="">
+	                            <div class="htl-hd">
+	                                <div class="htl-avatar">
+	                                    <img src="https://pic.tujia.com/upload/LandlordStoreLogo/day_161225/thumb/201612251652291399_40_40.jpg" alt=" " width=" 40" height="40">
+	                                </div>
+	                                <div class="htl-info">
+	                                    <p>回复：<span class="booking-info"><b class="date-box">2016-12-18 19:40:33</b></span> </p>
+	                                </div>
+	                            </div>
+	                            <div class="text-cont">感谢您选择优客里里公寓，公寓交通很方便地铁200米不到。驾车下京通快速路基本上就到了。楼下就是万达广场，购物，吃饭非常方便。欢迎您下次再来。</div>
+	                        </div>-->
+	                        <div class="btn-cont other-hotel">
+	                            <a href="javascript:;" data-showreplaytext="查看房东的回复" data-hidereplaytext="收起回复" class="j-viewCompanyReply ">查看房东的回复</a>
+	                        </div>
+		                </div>
+		            </li>
+                    <li class="comment-group">
+		                <div class="user-avatar">
+		                    <img src="../images/user/user_icon.png" alt="房客头像">
+		                </div>
+		                <div class="comment-main">
+		                    <div class="comment-tit">
+		                        <div class="comment-ifno">
+		                            <span class="name-box">yangtaifeng</span>
+		                            <span class="booking-info">2016-12-29 </span>  
+		                        </div>
+		                    </div>
+		                    <div class="comment-detail">非常满意。多次入住感觉一直那么温馨。超赞。</div>
+		                    <div class="comment-pic" data-commentid="1194604">
+		                        <ul class="clear">
+		                            <li>
+		                                <a data-img="" class="" rel="" title="">
+		                                    <img class="" data-original="" width="162" height="90" alt="" style="display: block;">
+		                                </a>
+		                            </li>
+		                            <li>
+		                                <a data-img="" class="" rel="" title="">
+		                                    <img class="" data-original="" src="" width="162" height="90" alt="" style="display: block;">
+		                                </a>
+		                            </li>
+		                            <li>
+		                                <a data-img="" class="" rel="" title="">
+		                                    <img class="" data-original="" src="" width="162" height="90" alt="" style="display: block;">
+		                                </a>
+		                            </li>
+		                        </ul>
+		                    </div>
+		                    <!--<div class="htl-reply" style="">
+	                            <div class="htl-hd">
+	                                <div class="htl-avatar">
+	                                    <img src="https://pic.tujia.com/upload/LandlordStoreLogo/day_161225/thumb/201612251652291399_40_40.jpg" alt=" " width=" 40" height="40">
+	                                </div>
+	                                <div class="htl-info">
+	                                    <p>回复：<span class="booking-info"><b class="date-box">2016-12-02 11:25:13</b></span> </p>
+	                                </div>
+	                            </div>
+	                            <div class="text-cont">感谢您选择优客里里公寓，公寓交通非常方便地铁仅佰米之遥。万达广场就在楼下。</div>
+	                        </div>-->
+	                        <div class="btn-cont other-hotel">
+	                            <a href="javascript:;" data-showreplaytext="查看房东的回复" data-hidereplaytext="收起回复" class="j-viewCompanyReply ">查看房东的回复</a>
+	                        </div>
+		                </div>
+		            </li>
+		            <!--评价分页-->
+				    <ul class="pagination">		
+						<li class=""><a href="#">尾页</a></li>
+						<li class=""><a href="#">下一页</a></li>
+						<li><a href="#">...</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">1</a></li>
+					</ul>
+			    </ul> 
+			</div>
+	    </div>
+	     <!--房东的其他房源-->
+	    <div class="column-box" >
+	    	<div class="column-other">
+	            <p class="column-title" style="padding-left: 30px;">房东的其他房源</p>
+	            <div class="other-house">
+	            	<ul class="house-item">
+				    	<li class="img_box">
+				        	<a href="javascript:;">
+				        		<img class="img-house" src="../images/house/fangyuan_01.png" alt="房源图">
+				        		<p class="fd-txt">避暑之都旅游三居室套房，期待下个是您</p>
+					        	<p class="tip-box">
+					            	<span>100%</span>好评
+					                <span>0</span>评价 
+					            </p>
+				        	</a>
+				        </li>
+				        <li class="img_box">
+				        	<a href="javascript:;">
+				        		<img class="img-house" src="../images/house/fangyuan_01.png" alt="房源图">
+				        		<p class="fd-txt">避暑之都旅游三居室套房，期待下个是您</p>
+					        	<p class="tip-box">
+					            	<span>100%</span>好评
+					                <span>0</span>评价 
+					            </p>
+				        	</a>
+				        </li>
+				        <li class="img_box">
+				        	<a href="javascript:;">
+				        		<img class="img-house" src="../images/house/fangyuan_01.png" alt="房源图">
+				        		<p class="fd-txt">避暑之都旅游三居室套房，期待下个是您</p>
+					        	<p class="tip-box">
+					            	<span>100%</span>好评
+					                <span>0</span>评价 
+					            </p>
+				        	</a>
+				        </li>
+			        </ul>
+	            </div>
+	    	</div>
+	    	<!--周边房源推荐-->
+	    	<div class="column-circum">
+	            <p class="column-title" style="padding-left: 30px;">周边房源推荐</p>
+	            <div class="other-house">
+	            	<ul class="house-item">
+				    	<li class="img_box">
+				        	<a href="javascript:;">
+				        		<img class="img-house" src="../images/house/fangyuan_01.png" alt="房源图">
+				        		<p class="fd-txt">避暑之都旅游三居室套房，期待下个是您</p>
+					        	<p class="tip-box">
+					            	<span>100%</span>好评
+					                <span>0</span>评价 
+					            </p>
+				        	</a>
+				        </li>
+				        <li class="img_box">
+				        	<a href="javascript:;">
+				        		<img class="img-house" src="../images/house/fangyuan_01.png" alt="房源图">
+				        		<p class="fd-txt">避暑之都旅游三居室套房，期待下个是您</p>
+					        	<p class="tip-box">
+					            	<span>100%</span>好评
+					                <span>0</span>评价 
+					            </p>
+				        	</a>
+				        </li>
+				        <li class="img_box">
+				        	<a href="javascript:;">
+				        		<img class="img-house" src="../images/house/fangyuan_01.png" alt="房源图">
+				        		<p class="fd-txt">避暑之都旅游三居室套房，期待下个是您</p>
+					        	<p class="tip-box">
+					            	<span>100%</span>好评
+					                <span>0</span>评价 
+					            </p>
+				        	</a>
+				        </li>
+			        </ul>
+	            </div>
+	    	</div>
+	    	
+	    </div>
+ 	</div>
+ 	
+	<!--登录-->
+	<div class="content-bg">
+	    <div class="content">
+	      <form class="login-form" method="post" action="#">
+	        <!-- 登录类型 -->
+	        <ul id="myTab" class="nav nav-tabs">
+	            <li class="active">
+	                <a href="#shortcut" data-toggle="tab">手机快捷登录</a>
+	            </li>
+	            <li><a href="#common" data-toggle="tab">普通登录</a></li>
+	        </ul>
+	        <div id="myTabContent" class="tab-content">
+	            <!-- 快捷登录 -->
+	            <div class="tab-pane fade in active" id="shortcut">
+	                <div class="form-group tel">
+	                    <label for="firstname" class="col-sm-2 control-label">手机号</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="cell-phone"  placeholder="请输入您的手机号">
+	                        <span class="note-pwd"><a id="get-note" href="javascript:void(0);">获取短信验证码</a></span>
+	                    </div>
+	                    <span class="prompt prompt-phone"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">图片<br/>验证码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="pic-code"  placeholder="请输入图片验证码">
+	                        <span class="verification"><a href="javascript:void(0);">图片验证码</a></span>
+	                    </div>
+	                    <span class="prompt prompt-piccode"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">手机<br/>验证码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="phone-code"  placeholder="请输入您手机收到的验证码">
+	                    </div>
+	                    <span class="prompt prompt-mobile"></span>
+	                </div>
+	                <div class="form-group">
+	                    <div class="checkbox autologin" name="chk"><ins></ins><span>自动登录</span></div>
+	                </div>
+	                <div class="form-group">
+	                    <div class="col-sm-offset-2 col-sm-10">
+	                        <button type="submit" class="btn btn-default" id="login-btn">登录</button>
+	                    </div>
+	                </div>
+	                <div class="form-group m-mroup">
+	                    <div class="col-sm-offset-2 col-sm-10">
+	                        <label for="lastname" class="dl-label">三方登录</label>
+	                        <a class="Third-login chat-dl" href="javascript:void(0);"></a>
+	                        <a class="Third-login weibo-dl" href="javascript:void(0);"></a>
+	                        <a class="Third-login qq-dl" href="javascript:void(0);"></a>
+	                    </div>
+	                </div>
+	            </div>
+	            <!--普通登录-->
+	            <div class="tab-pane fade" id="common">
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">手机号</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="tel-phone"  placeholder="请输入您的手机号">
+	                    </div>
+	                    <span class="prompt prompt-tel"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">密码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="set-pwd"  placeholder="请输入密码">
+	                    </div>
+	                    <span class="prompt prompt-pwd"></span>
+	                </div>
+	                <div class="form-group">
+	                    <div class="checkbox autologin" name="chk"><ins></ins><span>自动登录</span></div>
+	                    <a class="forget" href="javascript:void(0);">忘记密码？</a>
+	                </div>
+	                <div class="form-group">
+	                    <div class="col-sm-offset-2 col-sm-10">
+	                        <button type="submit" class="btn btn-default" id="user-login">登录</button>
+	                    </div>
+	                </div>
+	                <p class="noreg">还没有注册？</p>
+	                
+	                <span class="reg zc"><a href="javascript:void(0);">立即注册</a></span>
+	                <div class="form-group">
+	                    <div class="col-sm-offset-2 col-sm-10">
+	                        <label for="lastname" class="dl-label">三方登录</label>
+	                        <a class="Third-login chat-dl" href="javascript:void(0);"></a>
+	                        <a class="Third-login weibo-dl" href="javascript:void(0);"></a>
+	                        <a class="Third-login qq-dl" href="javascript:void(0);"></a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	      </form>
+	    </div>
+	</div>
+	<!--注册-->
+	<div class="content-reg">
+	    <div class="reg-center">
+	        <div class="reg-top">
+	            <h2 class="reg-title">新用户注册</h2>
+	        </div>
+	        <form class="login-form" method="post">
+	            <!-- 快捷登录 -->
+	            <div class="" id="reg-shortcut">
+	                <div class="form-group tel">
+	                    <label for="firstname" class="col-sm-2 control-label">手机号</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="cell-phone"  placeholder="请输入您的手机号">
+	                        <span class="note-pwd"><a id="get-note" href="javascript:void(0);">获取短信验证码</a></span>
+	                    </div>
+	                    <span class="prompt prompt-phone"></span>
+	                </div>
+	               
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">图片<br/>验证码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="pic-code"  placeholder="请输入图片验证码">
+	                        <span class="verification"><a href="javascript:void(0);">图片验证码</a></span>
+	                    </div>
+	                    <span class="prompt prompt-piccode"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">手机<br/>验证码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="mobile-code"  placeholder="请输入您手机收到的验证码">
+	                    </div>
+	                    <span class="prompt prompt-mobile"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">设置<br/>密码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="set-pwd"  placeholder="请设置您的新密码">
+	                    </div>
+	                    <span class="prompt prompt-pwd"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">邀请码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="invitation-code"  placeholder="请输入邀请码">
+	                    </div>
+	                    <span class="prompt prompt-inv"></span>
+	                </div>
+	                <div class="form-group">
+	                    <div class="col-sm-offset-2 col-sm-10">
+	                        <button type="submit" class="btn btn-default reg-btn">注册</button>
+	                        <span class="reg-account">已有账号，&nbsp;<a class="dl" href="javascript:void(0);" >登录</a></span>
+	                    </div>
+	                </div>
+	          </div>
+	      </form>      
+	   </div>
+	</div>
+	<!--重设密码-->
+	<div class="content-set">
+	    <div class="set-center">
+	        <div class="content-top">
+	            <h2 class="set-title">重设密码</h2>
+	        </div>
+	      <form class="login-form" method="post">
+	            <!-- 快捷登录 -->
+	            <div class="tab-pane fade in active" id="shortcut">
+	                <div class="form-group tel">
+	                    <label for="firstname" class="col-sm-2 control-label">手机号</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="cell-phone"  placeholder="请输入您的手机号">
+	                        <span class="note-pwd"><a id="get-note" href="javascript:void(0);">获取短信验证码</a></span>
+	                    </div>
+	                    <span class="prompt prompt-phone"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">图片<br/>验证码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="pic-code"  placeholder="请输入图片验证码">
+	                        <span class="verification"><a href="javascript:void(0);">图片验证码</a></span>
+	                    </div>
+	                    <span class="prompt prompt-piccode"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">手机<br/>验证码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="mobile-code"  placeholder="请输入您手机收到的验证码">
+	                    </div>
+	                    <span class="prompt prompt-mobile"></span>
+	                </div>
+	                <div class="form-group">
+	                    <label for="lastname" class="col-sm-2 control-label">重设<br/>新密码</label>
+	                    <div class="col-sm-10">
+	                        <input type="text" class="txt" id="set-pwd"  placeholder="请输入您设置的新密码">
+	                    </div>
+	                    <span class="prompt prompt-pwd"></span>
+	                </div>
+	                <div class="form-group">
+	                    <div class="col-sm-offset-2 col-sm-10">
+	                        <button type="submit" class="btn btn-default" id="reset-btn">完成</button>
+	                    </div>
+	                </div>
+	           </div>
+	      </form>
+	    </div>
+	</div>
+	<!--遮罩层-->
+	<div class="mask-layer"></div>	
+    <!--底部内容-->
+    <div class="footer_box">
+        <div class="footer_wrap">
+            <div class="footer_row">
+                <ul class="footer_row_ul">
+                    <li><p>关于我们</p></li>
+                    <li><a href="javascript:void(0);" target="_blank">关于居家游</a></li>
+                    <li><a href="javascript:void(0);" target="_blank">联系我们</a></li>
+                </ul>
+                <ul class="footer_row_ul">
+                    <li><p>加入我们</p></li>
+                    <li><a href="javascript:void(0);" target="_blank">职位招聘</a></li>
+                </ul>
+                <ul class="footer_row_ul">
+                    <li><p>服务条款</p></li>
+                    <li><a href="javascript:void(0);" target="_blank">免责声明</a></li>
+                    <li><a href="javascript:void(0);" target="_blank">版权声明</a></li>
+                    <!--<li><a href="/article/detail/id/15.html" target="_blank">社区指南</a></li>-->
+                    <li><a href="javascript:void(0);" target="_blank">会员条款</a></li>
+                </ul>
+                <ul class="footer_row_ul">
+                    <li><p>帮助中心</p></li>
+                    <li><a href="javascript:void(0);" target="_blank">网站地图 </a></li>
+                    <li><a href="javascript:void(0);" target="_blank">使用帮助 </a></li>
+                    <li><a href="javascript:void(0);" target="_blank">新手上路 </a></li>
+                </ul>
+                <ul class="footer_row_ul">
+                    <li class="we">
+                        <a class="WeCha" href="javascript:void(0)" target="_blank"><img src="../images/index/weixin_icon.png" alt="居家游微信公众号"><div class="footer_er"></div></a>
+                        <a href="http://weibo.com/jujiayou" target="_blank"><img src="../images/index/sina_icon.png" alt="居家游微博"></a>
+                    </li>
+                    <li><span class="hot24">24小时全国服务热线</span></li>
+                    <li><span class="phone">400-047-6667</span><span class="phone">0851-82215566</span></li>
+                </ul>        
+            </div>
+            <div class="footer_end">
+                <dl class="city-nav">
+                    <dt>热门城市：</dt>
+                    <dd>
+                        <a href="javascript:void(0)" target="_blank">贵阳短租房</a>
+                        <a href="javascript:void(0)" target="_blank">上海短租房</a>
+                        <a href="javascript:void(0)" target="_blank">武汉短租房</a>
+                        <a href="javascript:void(0)" target="_blank">成都短租房</a>
+                        <a href="javascript:void(0)" target="_blank">重庆短租房</a>
+                        <a href="javascript:void(0)" target="_blank">广州短租房</a>
+                        <a href="javascript:void(0)" target="_blank">西安短租房</a>
+                        <a href="javascript:void(0)" target="_blank">北京短租房</a>
+                        <a href="javascript:void(0)" target="_blank">南京短租房</a>
+                        <a href="javascript:void(0)" target="_blank">杭州短租房</a>
+                    </dd>
+                </dl>
+                <p>地址：贵州省贵阳市观山湖区高新区管委会都匀路89号金利大厦A栋2楼</p>
+                <p>Copyright © 2016 Jujiayou All Rights Reserved
+                    <a href="http://www.miitbeian.gov.cn/" hidefocus="true" target="_blank"> &nbsp;黔ICP备16001483号-1</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+ 
+</body>
+</html>

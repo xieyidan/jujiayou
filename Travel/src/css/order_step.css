@@ -1,0 +1,323 @@
+@charset "utf-8";
+/* CSS Document */
+
+a {
+	cursor: pointer;
+}
+/*************提交订单—普通下单页************/
+.order-cont {
+	width: 100%;
+	min-width: 1240px;
+	overflow: hidden;
+}
+.cont-box {
+	width: 1240px;
+	margin: 0 auto;
+}
+/*步骤提示*/
+.step-box {
+	width: 1040px;
+	margin: 40px auto;
+}
+/*入住信息*/
+.order-con {
+	line-height: 25px;
+    padding: 20px 20px 15px 20px;
+}
+.order-title {
+	font-size: 18px;
+}
+/*删除*/
+.delete a {
+	display: block;
+}
+.delete a:hover {
+	color: #323232;
+}
+
+/*房源名称*/
+.room-name {
+	font-size: 15px;
+	padding-right: 30px;
+}
+/*房源价格*/
+.order-price {
+	padding-right: 25px;
+}
+/*房源地址*/
+.order-address span {
+	color: #646464;
+	padding-left: 10px;
+	vertical-align: text-bottom;
+}
+/*入住时间，套数*/
+.order-time {
+	padding-top: 15px;
+	padding-left: 25px;
+}
+.time-list {
+	float: left;
+	padding-right: 50px;
+}
+.order-time img {
+	padding-right: 5px;
+}
+.order-time span {
+	padding-right: 10px;
+}
+.time-list input, .time-list select {
+	padding-left: 6px;
+}
+.daycount {
+	line-height: 15px;
+	padding: 0 5px;
+}
+.order-num {
+	width: 105px;
+	margin-right: 5px;
+}
+.people-num {
+	padding-left: 33px;
+}
+/*入住联系人*/
+.live-people {
+	padding-left: 20px;
+	padding-right: 30px;
+}
+.order-contact {
+	padding-top: 10px;
+}
+.order-contact input {
+	margin-right: 5px;
+}
+/*联系人信息*/
+.tab-infor {
+    border: 1px solid #ccc;	
+    margin-top: 15px;
+}
+
+.tab-infor tr th {
+	width: 170px;
+	height: 34px;
+	border: 2px solid #ccc;
+	font-weight: bold;
+}
+.tab-infor tr th img {
+	padding-right: 10px;
+}
+.tab-infor tr td {
+	width: 170px;
+	height: 34px;
+	border: 2px solid #ccc;
+	background: #fff;
+}
+.tab-infor tr td input {
+	width: 170px;
+	height: 34px;
+	border: none;
+	text-align: center;
+	background: #fff;
+}
+.tab-infor tr td select {
+	width: 90px;
+	border: none;
+	background: #fff;
+}
+/*新增入住人*/
+.add-people {
+	margin-top: 20px;
+}
+.sync input {
+	margin-right: 10px;
+}
+.add-btn {
+	display: inline-block;
+	width: 100px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	color: #fff;
+	background: #1bc272;
+	border-radius: 10px;
+	margin-left: 30px;
+}
+.add-btn:hover {
+	color: #fff;
+}
+/*预订人电话、姓名*/
+.order-people {
+	margin-top: 10px;
+}
+.reserve-people {
+	padding-top: 10px;
+}
+.reserve-people p {
+	display: inline-block;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+.reserve-people p span {
+	display: block;
+	line-height: 20px;
+}
+.reserve-code {
+	display: none;
+	padding-left: 28px;
+}
+/*修改*/
+.change-num {
+	display: inline-block;
+	color: #ff1a00;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.change-num:hover {
+	color: #ff1a00;
+}
+/*取消修改*/
+.change-off {
+	display: none;
+	color: #ff1a00;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.change-off:hover {
+	color: #ff1a00;
+}
+/*退订规则*/
+.rules-1 {
+    float: left;
+    width: 136px;
+    height: 67px;
+    background: url(img/zhengchangtk_bg_img.png) no-repeat;
+    margin-top: 25px;
+    position: relative;
+    left: 70px;
+}
+.rules-order {
+	color: #fff;
+	padding-left: 20px;
+	line-height: 20px;
+    padding-top: 5px;
+}
+.rules-order span {
+	color: #fff;
+	padding: 0 5px;
+}
+.rules-2 {
+    float: left;
+    width: 157px;
+    height: 73px;
+    background: url(img/kouhou_bg_img.png) no-repeat;
+    margin-top: 25px;
+    position: relative;
+    left: 230px;
+}
+.rules-3 {
+    float: left;
+    width: 157px;
+    height: 73px;
+    background: url(img/kouhou_bg_img.png) no-repeat;
+    margin-top: 25px;
+    position: relative;
+    left: 350px;
+}
+.success p {
+    display: inline-block;
+}
+.success p span {
+	line-height: 20px;
+    padding: 0 7px 0 7px;
+}
+.success p:nth-of-type(1) {
+    width: 255px;
+    padding-left: 10px;
+}
+.success p:nth-of-type(2) {
+    width: 300px;
+}
+.success p:nth-of-type(3) {
+    width: 215px;
+}
+/*服务协议*/
+.agreement {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+}
+.agreement a {
+	color: #ff6a51;
+}
+/*提交按钮*/
+.sub-btn {
+	display: block;
+	width: 200px;
+	height: 50px;
+	color: #fff;
+	font-size: 16px;
+	background:  #1bc272;
+	border-radius: 10px;
+	margin: 50px auto;
+}
+/************提交订单—快速下单页************/
+.order-inp {
+	width: 170px;
+	height: 34px;
+	font-size: 12px;
+}
+/*预订人电话、姓名*/
+.fast-order {
+	margin-top: 10px;
+}
+.fast-reserve {
+	display: inline-block;
+}
+.fast-reserve p {
+	display: inline-block;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+.fast-reserve p span {
+	font-size: 14px;
+	display: block;
+	line-height: 20px;
+}
+/*图片验证码*/
+.img-reserve{
+	padding-left: 100px;
+}
+.img-note {
+	display: inline-block;
+	width: 130px;
+	line-height: 40px;
+	text-align: center;
+	background: #ccc;
+	margin-left: 20px;
+}
+/*短信验证码*/
+.note-reserve {
+	padding-left: 28px;
+}
+.note-reserve input {
+	width: 95px;
+}
+.get-note {
+	display: inline-block;
+	width: 104px;
+	color: #fff;
+    line-height: 34px;
+    text-align: center;
+    background: #1bc272;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+/*姓名*/
+.name-reserve {
+	padding-left: 62px;
+}
+
+/************房东确认************/
+
+/************支付定金************/
+
+/************预订成功************/

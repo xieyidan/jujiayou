@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv = "X-UA-Compatible" cotent = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
+    <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
+	<title>搜索页</title>
+	<!--css样式表-->
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
+    <link rel="stylesheet" href="../css/header_two.css" /><!--头部-->
+    <link rel="stylesheet" href="../css/search_list.css" /><!--搜索页-->
+    <link rel="stylesheet" href="../css/search_footer.css" /><!--底部-->
+    <link rel="stylesheet" href="../css/citySelector.css" /><!--选择城市和目的地-->
+    <link rel="stylesheet" href="../assets/global.css"/><!--入住退房时间-->
+    <link rel="stylesheet" href="../assets/jquery.ui.css"  />
+    <link rel="stylesheet" href="../assets/css.css"/>
+    <link rel="stylesheet" href="../css/common.css" /><!--右侧悬浮-->   
+    <!--js-->
+    <script src="../assets/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/Commonality.js"></script><!--控件-->
+    <script>
+    	$(function(){
+    		//地址
+    		$(".tab-box").hide();  //隐藏class名为tab-box的元素
+		    $(".address-cont li").hover(function(e) {  //给li悬停事件
+				$(this).addClass("cur").siblings().removeClass();  //给当前li添加样式并移除它的兄弟元素的样式
+				var index=$(".address-cont li").index(this); //获取当前li的索引
+				$(".tab-box").eq(index).show().siblings().hide(); //显示当前li索引下的内容并隐藏兄弟元素下内容
+		    },function(){
+			    $(".tab-box").hide();  //隐藏class名为tab-box的元素
+			    $(this).removeClass("cur");  //移除悬停样式
+			});
+			
+			//设备条件
+			var mapTop = $("#condition-box").offset().top;//获取class名为house-condition的距离浏览器顶部高度
+			$(window).scroll(function() {
+				var obj_height = document.documentElement.scrollTop || document.body.scrollTop; //屏幕、body的高度
+			    //当往下拉的高度超出house-condition的高度时浮动跟随显示在浏览器最顶部
+				if(obj_height >= 330)
+				{
+					$("#condition-box").css({"display":"block","position":"fixed","left":"0px","top":"0px","z-index":"10"});//选中设备条件浮动在顶部
+					$(".fang-box").addClass("city-real"); //添加房源信息样式
+					$(".city-map").addClass("map-fixed"); //添加房源地图定位
+					$(".left-list").addClass("left-style");  //添加房源套数样式
+					$(".right-list").addClass("right-style");  //添加房源排序样式
+					
+				}
+				else{
+				    $("#condition-box").css({"position":"relative","display":"none"});//隐藏
+				    $(".fang-box").removeClass("city-real"); //移除房源信息样式
+				    $(".city-map").removeClass("map-fixed"); //移除房源地图定位
+				    $(".left-list").removeClass("left-style"); //移除房源套数样式
+				    $(".right-list").removeClass("right-style"); //移除房源排序样式
+				}
+				//筛选展开条件
+				$("#select-more").click(function(){
+					$("html, body").animate({ scrollTop: 0 }, 120); //返回顶部
+				})
+			});
+			
+			//收藏
+			$(".house-collect").on("click",function(){
+				$(".red-love").toggle();
+				$(".grey-love").toggle();
+			})
+			
+    	});
+    </script>
+</head>
+<body>
+	<!--头部-->
+    <div class="header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="../Index/index.html"><img src="../images/logo1.png" alt="居家游logo"/></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                       <li><a href="javascript:void(0) fno" target="_blank">短租房</a></li>
+                       <li><a href="javascript:void(0)" target="_blank">热门旅游地</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right nolink">
+                    	<li class="service"><a href="javascript:void(0)" target="_blank"><img src="../images/house/header_tell_icon.png" alt="客服电话">400-047-6667</a></li>
+                        <li class="login"><a class="dl" href="javascript:void(0)">登录</a><span class="top_line"></span><a class="zc" href="javascript:void(0)">注册</a></li>
+                        <li class="house"><a class="release" href="javascript:void(0)" target="_blank">免费发布房源</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--搜索页内容-->
+ 	<div class="content">
+ 		<form id="" action="" method="post" role="form">
+ 			<!--搜索目的地-->
+	 		<div class="search-box">
+	 			<div class="search-cont clear">
+	 				<div class="form-group">
+	 					<label>目的地</label>
+                        <input class="sel-city cityinput" id="citySelect" type="text" name="" value="" />
+                    </div>
+                    <div class="form-group sel-space">
+                    	<label>入住日期</label>
+						 <input class="sel-time" id="startDate" type="text" name="" value="" readonly/>
+					</div>
+					<div class="form-group sel-space">
+						<label>退房日期</label>
+						 <input class="sel-time" id="endDate" type="text" name="" value=""readonly />
+					</div>
+                    <div class="form-group sel-space">
+                    	<label>人数</label>
+                        <input class="sel-num" id="" type="text" name="" value="" />
+                    </div>
+                        <button type="submit" class="sel-space search-btn">搜索</button>
+	 			</div>
+	 			<!--房源设施筛选-->
+	 			<div class="screen-box">
+	 				<div class="screen-facility clear">
+	 					<!--地址选择-->
+	 					<div class="screen-address">
+	 						<span class="address-txt">地址</span>
+	 						<div class="address-right">
+	 							<a class="unlimited" href="javascript:;">不限</a>
+	 							<ul class="address-cont clear">
+	 								<li class="list-li">行政区<i></i></li>
+	 								<li class="list-li">车站机场<i></i></li>
+	 								<li class="list-li">商圈<i></i></li>
+	 								<li class="list-li">景点<i></i></li>
+	 								<li class="list-li">高校<i></i></li>
+	 								<li class="list-li">医院<i></i></li>
+	 							</ul>	 							
+	 						</div>
+							<div class="address-tab">
+ 								<div class="tab-box">
+ 									<div class="line_box">
+ 										<span><a>南明</a></span>
+ 										<span><a>云岩</a></span>
+ 										<span><a>南明</a></span>
+ 										<span><a>南明</a></span>
+ 										<span><a>金阳新区</a></span>
+ 										<span><a>南明</a></span>
+ 										<span><a>金阳新区</a></span>
+ 										<span><a>南明</a></span>
+ 										<span><a>金阳新区</a></span>
+ 									</div>
+ 								</div>
+ 								<div class="tab-box">
+ 									<div class="line_box">
+ 										<span><a>白云汽车站</a></span>
+ 										<span><a>贵阳西站</a></span>
+ 									</div>
+ 								</div>
+ 								<div class="tab-box">
+ 									<div class="line_box">
+ 										<span><a>北京路</a></span>
+ 										<span><a>喷水池</a></span>
+ 									</div>
+ 								</div>
+ 								<div class="tab-box">
+ 									<div class="line_box">
+ 										<span><a>北京路</a></span>
+ 										<span><a>喷水池</a></span>
+ 									</div>
+ 								</div>
+ 								<div class="tab-box">
+ 									<div class="line_box">
+ 										<span><a>白云公园</a></span>
+ 										<span><a>观山湖公园</a></span>
+ 									</div>
+ 								</div>
+ 								<div class="tab-box">
+ 									<div class="line_box">
+ 										<span><a>贵阳学院</a></span>
+ 										<span><a>贵阳护理学院</a></span>
+ 									</div>
+ 								</div>
+ 							</div>	 						
+	 					</div>
+	 					<!--户型选择-->
+	 					<div class="Door-address">
+	 						<span class="address-txt">户型</span>
+	 						<div class="address-right">
+	 							<a class="unlimited" href="javascript:;">不限</a>
+	 							<div class="chk-num sel-door clear">
+			                        <div class="checkbox" name="chk" value="一居"><ins></ins><span>一居</span></div>
+			                        <div class="checkbox" name="chk" value="两居"><ins></ins><span>两居</span></div>
+			                        <div class="checkbox" name="chk" value="三居"><ins></ins><span>三居</span></div>
+			                        <div class="checkbox" name="chk" value="四居"><ins></ins><span>三居以上</span></div>
+			                    </div>	 						
+	 						</div>
+	 					</div>
+	 				</div>
+	 				<div class="screen-facility clear">
+	 					<!--房型选择-->
+	 					<div class="screen-room">
+	 						<span class="address-txt">房型</span>
+	 						<div class="address-right">
+	 							<a class="unlimited" href="javascript:;">不限</a>
+	 							<div class="chk-num sel-room clear">
+			                        <div class="checkbox" name="chk" value="公寓"><ins></ins><span>公寓</span></div>
+			                        <div class="checkbox" name="chk" value="别墅"><ins></ins><span>别墅</span></div>
+			                        <div class="checkbox" name="chk" value="阁楼"><ins></ins><span>阁楼</span></div>
+			                        <div class="checkbox" name="chk" value="民居"><ins></ins><span>民居</span></div>
+			                        <div class="checkbox tree-house" name="chk" value="树屋"><ins></ins><span>树屋</span></div>
+			                        <div class="checkbox rv" name="chk" value="房车"><ins></ins><span>房车</span></div>
+			                        <div class="checkbox" name="chk" value="四合院"><ins></ins><span>四合院</span></div>
+			                        <div class="checkbox" name="chk" value="客栈"><ins></ins><span>客栈</span></div>
+			                    </div>	 						
+	 						</div>
+	 					</div>
+	 					<!--价格选择-->
+	 					<div class="Door-address">
+	 						<span class="address-txt">价格</span>
+	 						<div class="address-right">
+	 							<a class="unlimited" href="javascript:;">不限</a>
+	 							<div class="chk-num sel-price">
+			                        <div class="checkbox" name="chk" value="一居"><ins></ins><span>200以下</span></div>
+			                        <div class="checkbox" name="chk" value="两居"><ins></ins><span>200-300</span></div>
+			                        <div class="checkbox" name="chk" value="三居"><ins></ins><span>301-400</span></div>
+			                        <div class="checkbox" name="chk" value="四居"><ins></ins><span>401-500</span></div>
+			                        <div class="checkbox" name="chk" value="四居"><ins></ins><span>501-600</span></div>
+			                        <div class="checkbox">
+			                        	自定义
+			                        	<input class="" type="text" />
+			                        	<span class="trans">~</span>
+			                        	<input class="" type="text" />
+			                        </div>
+			                   </div>	             
+	 						</div>
+	 					</div>	
+	 				</div>
+	 				<!--配套选择-->
+	 				<div class="screen-mating clear">	 					
+	 					<div class="mating-cont">
+	 						<span class="address-txt">配套</span>
+	 						<div class="address-right">
+	 							<a class="unlimited" href="javascript:;">不限</a>
+	 							<div class="chk-num sel-room">
+			                        <div class="checkbox" name="chk" value="WiFi"><ins></ins><span>WiFi</span></div>
+			                        <div class="checkbox" name="chk" value="电视"><ins></ins><span>电视</span></div>
+			                        <div class="checkbox" name="chk" value="空调"><ins></ins><span>空调</span></div>
+			                        <div class="checkbox" name="chk" value="麻将机"><ins></ins><span>麻将机</span></div>
+			                        <div class="checkbox" name="chk" value="24小时热水"><ins></ins><span>24小时热水</span></div>
+			                        <div class="checkbox" name="chk" value="沐浴"><ins></ins><span>沐浴</span></div>
+			                        <div class="checkbox" name="chk" value="可做饭"><ins></ins><span>可做饭</span></div>
+			                        <div class="checkbox" name="chk" value="停车位"><ins></ins><span>停车位</span></div>
+			                    </div>	 						
+	 						</div>
+	 					</div>
+	 				</div>	 				
+	 			</div>
+	 		</div>		
+ 		</form>
+ 		<!--房源设备条件-->
+		<div class="house-condition" id="condition-box">
+			<dl class="condition clear">
+                <dt class="clear-all" id="clear-select">清除全部条件</dt>
+                <dd id="">户型<a href="" class="icon_cancel">x</a></dd>
+                <dd id="">设施服务<a href="" class="icon_cancel">x</a></dd>
+	        </dl>
+	        <div class="select_up" id="select-more" style="display: block;">展开筛选条件&nbsp;∨</div>
+		</div>
+ 		<!--房源信息-->
+ 		<div class="fang-box">	
+ 			<div class="house-content">
+	 			<!--房源套数和排序方式-->
+	 			<div class="house-top">
+	 				<div class="left-list">
+	 					<span>北京短租房</span>>
+	 					<span class="housenum">5</span>
+	 					<span>房源可租</span>
+	 				</div>
+	 				<div class="right-list">
+	 					<ul class="sort clear">
+	 						<li class="sort-default"><a href="javascript:;">默认排序</a></li>
+	 						<li class=""><a href="javascript:;">价格</a></li>
+	 						<li class=""><a href="javascript:;">评论数</a></li>
+	 						<li class=""><a href="javascript:;">预订数</a></li>
+	 					</ul>
+	 				</div>
+	 			</div>
+	 			<!--房源地图-->
+	 			<div class="city-map">
+	 				<div class="map-list">
+	 					
+	 				</div>
+	 			</div>
+	 			<!--房源详情内容-->
+	 			<div class="city-box">
+	 				<div class="city-list">
+	 					<ul class="pic-list clear">
+	 						<li class="">
+	 							<a class="house-collect" href="javascript:;" style="z-index:100;" >
+						            <img class="grey-love" src="../images/house/dianzan_moren_icon.png" alt="收藏" >
+						            <img class="red-love" src="../images/house/dianzan_dianji_icon.png" alt="收藏" >
+					            </a>
+	 							<a class="" href="javascript:;" target="_blank"> 
+									<div class="house-img">
+		                              	<img class="img-1" src="../images/house/fangyuan_09.png" title="北京环岛路溪头下A客舱温馨双床标间" alt="房源图">
+		                                <div class="city-txt">
+											<p class="city-price">¥<span>618</span>/晚</p>
+			                                <img class="user-img" width="48" height="48" lazy_src="finish" src="../images/user/user_moren_icon.png" alt="房东头像">
+										</div>
+	                                </div>
+	                                <div class="city-cont">
+	                                	<p class="city-title">北京环岛路溪头下A客舱温馨双床标间</p>
+	                                	<p class="">地址：<span>云南昆明市五华区翠湖东路</span></p>
+	                                	<p class=""><span>|&nbsp;客栈-整套出租&nbsp;|&nbsp;</span><span>1居&nbsp;|&nbsp;</span></span><span>宜住2人</span></p>
+	                                	<p class=""><span>0人评价</span>&nbsp;|&nbsp;近期预定<span>380</span>/晚</p>
+	                                	<p class="f-img">
+                                            <img src="../css/img/sheshi_dianshi_icon.png" alt="房源设备">
+                                            <img src="../css/img/sheshi_linyu_icon.png" alt="房源设备">
+                                            <img src="../css/img/sheshi_juhui_icon.png" alt="房源设备">
+                                        </p>
+	                                </div>
+	 							</a>	
+	 						</li>
+	 						<li class="">
+	 							<a class="house-collect" href="javascript:;" style="z-index:100;" onclick="love();" >
+						            <img class="" alt="收藏" src="../images/house/dianzan_moren_icon.png">
+					            </a>
+	 							<a class="" href="javascript:;" target="_blank"> 
+									<div class="house-img">
+		                              	<img class="img-1" src="../images/house/fangyuan_09.png" title="北京环岛路溪头下A客舱温馨双床标间" alt="房源图" >
+		                                <div class="city-txt">
+											<p class="city-price">¥<span>618</span>/晚</p>
+			                                <img class="user-img" width="48" height="48" lazy_src="finish" src="../images/user/user_moren_icon.png" alt="房东头像">
+										</div>
+	                                </div>
+	                                <div class="city-cont">
+	                                	<p class="city-title">北京环岛路溪头下A客舱温馨双床标间</p>
+	                                	<p class="">地址：<span>云南昆明市五华区翠湖东路</span></p>
+	                                	<p class=""><span>|&nbsp;客栈-整套出租&nbsp;|&nbsp;</span><span>1居&nbsp;|&nbsp;</span></span><span>宜住2人</span></p>
+	                                	<p class=""><span>0人评价</span>&nbsp;|&nbsp;近期预定<span>380</span>/晚</p>
+	                                	<p class="f-img">
+                                            <img src="../css/img/sheshi_dianshi_icon.png">
+                                            <img src="../css/img/sheshi_linyu_icon.png">
+                                            <img src="../css/img/sheshi_juhui_icon.png">
+                                        </p>
+	                                </div>
+	 							</a>	
+	 						</li>
+	 						<li class="">
+	 							<a class="house-collect" href="javascript:;" style="z-index:100;" onclick="love();" >
+						            <img class="" alt="收藏" src="../images/house/dianzan_moren_icon.png">
+					            </a>
+	 							<a class="" href="javascript:;" target="_blank"> 
+									<div class="house-img">
+		                              	<img class="img-1" src="../images/house/fangyuan_09.png" title="北京环岛路溪头下A客舱温馨双床标间" alt="房源图" >
+		                                <div class="city-txt">
+											<p class="city-price">¥<span>618</span>/晚</p>
+			                                <img class="user-img" width="48" height="48" lazy_src="finish" src="../images/user/user_moren_icon.png" alt="房东头像">
+										</div>
+	                                </div>
+	                                <div class="city-cont">
+	                                	<p class="city-title">北京环岛路溪头下A客舱温馨双床标间</p>
+	                                	<p class="">地址：<span>云南昆明市五华区翠湖东路</span></p>
+	                                	<p class=""><span>|&nbsp;客栈-整套出租&nbsp;|&nbsp;</span><span>1居&nbsp;|&nbsp;</span></span><span>宜住2人</span></p>
+	                                	<p class=""><span>0人评价</span>&nbsp;|&nbsp;近期预定<span>380</span>/晚</p>
+	                                	<p class="f-img">
+                                            <img src="../css/img/sheshi_dianshi_icon.png">
+                                            <img src="../css/img/sheshi_linyu_icon.png">
+                                            <img src="../css/img/sheshi_juhui_icon.png">
+                                        </p>
+	                                </div>
+	 							</a>	
+	 						</li>
+	 						<li class="">
+	 							<a class="house-collect" href="javascript:;" style="z-index:100;" onclick="love();" >
+						            <img class="" alt="收藏" src="../images/house/dianzan_moren_icon.png">
+					            </a>
+	 							<a class="" href="javascript:;" target="_blank"> 
+									<div class="house-img">
+		                              	<img class="img-1" src="../images/house/fangyuan_09.png" title="北京环岛路溪头下A客舱温馨双床标间" alt="房源图">
+		                                <div class="city-txt">
+											<p class="city-price">¥<span>618</span>/晚</p>
+			                                <img class="user-img" width="48" height="48" lazy_src="finish" src="../images/user/user_moren_icon.png" alt="房东头像">
+										</div>
+	                                </div>
+	                                <div class="city-cont">
+	                                	<p class="city-title">北京环岛路溪头下A客舱温馨双床标间</p>
+	                                	<p class="">地址：<span>云南昆明市五华区翠湖东路</span></p>
+	                                	<p class=""><span>|&nbsp;客栈-整套出租&nbsp;|&nbsp;</span><span>1居&nbsp;|&nbsp;</span></span><span>宜住2人</span></p>
+	                                	<p class=""><span>0人评价</span>&nbsp;|&nbsp;近期预定<span>380</span>/晚</p>
+	                                	<p class="f-img">
+                                            <img src="../css/img/sheshi_dianshi_icon.png">
+                                            <img src="../css/img/sheshi_linyu_icon.png">
+                                            <img src="../css/img/sheshi_juhui_icon.png">
+                                        </p>
+	                                </div>
+	 							</a>	
+	 						</li>
+	 						<li class="">
+	 							<a class="house-collect" href="javascript:;" style="z-index:100;" onclick="love();" >
+						            <img class="" alt="收藏" src="../images/house/dianzan_moren_icon.png">
+					            </a>
+	 							<a class="" href="javascript:;" target="_blank"> 
+									<div class="house-img">
+		                              	<img class="img-1" src="../images/house/fangyuan_09.png" title="北京环岛路溪头下A客舱温馨双床标间" alt="房源图">
+		                                <div class="city-txt">
+											<p class="city-price">¥<span>618</span>/晚</p>
+			                                <img class="user-img" width="48" height="48" lazy_src="finish" src="../images/user/user_moren_icon.png" alt="房东头像">
+										</div>
+	                                </div>
+	                                <div class="city-cont">
+	                                	<p class="city-title">北京环岛路溪头下A客舱温馨双床标间</p>
+	                                	<p class="">地址：<span>云南昆明市五华区翠湖东路</span></p>
+	                                	<p class=""><span>|&nbsp;客栈-整套出租&nbsp;|&nbsp;</span><span>1居&nbsp;|&nbsp;</span></span><span>宜住2人</span></p>
+	                                	<p class=""><span>0人评价</span>&nbsp;|&nbsp;近期预定<span>380</span>/晚</p>
+	                                	<p class="f-img">
+                                            <img src="../css/img/sheshi_dianshi_icon.png">
+                                            <img src="../css/img/sheshi_linyu_icon.png">
+                                            <img src="../css/img/sheshi_juhui_icon.png">
+                                        </p>
+	                                </div>
+	 							</a>	
+	 						</li>
+	 						<li class="">
+	 							<a class="house-collect" href="javascript:;" style="z-index:100;" onclick="love();" >
+						            <img class="" alt="收藏" src="../images/house/dianzan_moren_icon.png">
+					            </a>
+	 							<a class="" href="javascript:;" target="_blank"> 
+									<div class="house-img">
+		                              	<img class="img-1" src="../images/house/fangyuan_09.png" title="北京环岛路溪头下A客舱温馨双床标间" alt="房源图">
+		                                <div class="city-txt">
+											<p class="city-price">¥<span>618</span>/晚</p>
+			                                <img class="user-img" width="48" height="48" lazy_src="finish" src="../images/user/user_moren_icon.png" alt="房东头像">
+										</div>
+	                                </div>
+	                                <div class="city-cont">
+	                                	<p class="city-title">北京环岛路溪头下A客舱温馨双床标间</p>
+	                                	<p class="">地址：<span>云南昆明市五华区翠湖东路</span></p>
+	                                	<p class=""><span>|&nbsp;客栈-整套出租&nbsp;|&nbsp;</span><span>1居&nbsp;|&nbsp;</span></span><span>宜住2人</span></p>
+	                                	<p class=""><span>0人评价</span>&nbsp;|&nbsp;近期预定<span>380</span>/晚</p>
+	                                	<p class="f-img">
+                                            <img src="../css/img/sheshi_dianshi_icon.png">
+                                            <img src="../css/img/sheshi_linyu_icon.png">
+                                            <img src="../css/img/sheshi_juhui_icon.png">
+                                        </p>
+	                                </div>
+	 							</a>	
+	 						</li>
+	 						
+	 					</ul>
+	 					<!--分页-->
+					    <ul class="pagination">		
+							<li class=""><a href="#">尾页</a></li>
+							<li class=""><a href="#">下一页</a></li>
+							<li><a href="#">...</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">1</a></li>
+						</ul>
+	 				</div>
+				    <!--底部内容-->
+				    <div class="footer_box">
+				        <div class="footer_wrap">
+				            <div class="footer_row">
+				                <ul class="footer_row_ul">
+				                    <li><p>关于我们</p></li>
+				                    <li><a href="javascript:void(0);" target="_blank">关于居家游</a></li>
+				                    <li><a href="javascript:void(0);" target="_blank">联系我们</a></li>
+				                </ul>
+				                <ul class="footer_row_ul">
+				                    <li><p>加入我们</p></li>
+				                    <li><a href="javascript:void(0);" target="_blank">职位招聘</a></li>
+				                </ul>
+				                <ul class="footer_row_ul">
+				                    <li><p>服务条款</p></li>
+				                    <li><a href="javascript:void(0);" target="_blank">免责声明</a></li>
+				                    <li><a href="javascript:void(0);" target="_blank">版权声明</a></li>
+				                    <!--<li><a href="/article/detail/id/15.html" target="_blank">社区指南</a></li>-->
+				                    <li><a href="javascript:void(0);" target="_blank">会员条款</a></li>
+				                </ul>
+				                <ul class="footer_row_ul">
+				                    <li><p>帮助中心</p></li>
+				                    <li><a href="javascript:void(0);" target="_blank">网站地图 </a></li>
+				                    <li><a href="javascript:void(0);" target="_blank">使用帮助 </a></li>
+				                    <li><a href="javascript:void(0);" target="_blank">新手上路 </a></li>
+				                </ul>
+				                <ul class="footer_row_ul">
+				                    <li class="we">
+				                        <a class="WeCha" href="javascript:void(0)" target="_blank"><img src="../images/index/weixin_icon.png" alt="居家游微信公众号"><div class="footer_er"></div></a>
+				                        <a href="http://weibo.com/jujiayou" target="_blank"><img src="../images/index/sina_icon.png" alt="居家游微博"></a>
+				                    </li>
+				                    <li><span class="hot24">24小时全国服务热线</span></li>
+				                    <li><span class="phone">400-047-6667</span><span class="phone">0851-82215566</span></li>
+				                </ul>        
+				            </div>
+				            <div class="footer_end">
+				                <dl class="city-nav">
+				                    <dt>热门城市：</dt>
+				                    <dd>
+				                        <a href="javascript:void(0)" target="_blank">贵阳短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">上海短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">武汉短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">成都短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">重庆短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">广州短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">西安短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">北京短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">南京短租房</a>
+				                        <a href="javascript:void(0)" target="_blank">杭州短租房</a>
+				                    </dd>
+				                </dl>
+				                <p>地址：贵州省贵阳市观山湖区高新区管委会都匀路89号金利大厦A栋2楼</p>
+				                <p>Copyright © 2016 Jujiayou All Rights Reserved
+				                    <a href="http://www.miitbeian.gov.cn/" hidefocus="true" target="_blank"> &nbsp;黔ICP备16001483号-1</a>
+				                </p>
+				            </div>
+				        </div>
+				    </div> 
+					 				
+	 			</div>
+ 			</div>
+ 		</div>
+ 	</div>
+    <script type="text/javascript" src="../js/citySelector.js"></script> <!--选择城市-->
+    <script src="../assets/jquery.ui.js"></script><!--入住退房时间-->
+	<script src="../assets/moment.min.js"></script>
+	<script src="../assets/hotel.search.js"></script>
+	<script src="../assets/stay.js"></script>
+</body>
+</html>

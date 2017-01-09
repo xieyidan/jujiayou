@@ -1,0 +1,427 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+    font-family: 'microsoft yahei';
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f2f2f2;
+}
+ul,li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+select,option {
+	width: 200px;
+	border: none;
+	overflow:hidden; 
+}
+
+/*图片轮播*/
+.banner {
+	width: 100%;
+	height: 800px;
+	min-width:1240px;
+}
+.banner-center {
+	position: relative;
+	height: 800px;
+	overflow: hidden;
+}
+.carousel-inner {
+	height: 800px;
+}
+.carousel-control {
+	display: none;
+}
+.carousel:hover .carousel-control {
+	display: block;
+}
+/*搜索栏*/
+.search {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 85px;
+    z-index: 3;
+	
+}
+.row {
+    width: 1000px;
+    height: 64px;
+    margin: 0 auto;
+	border-radius:5px;
+	background-color:#fff;
+}
+.form-control {
+	height: 64px;
+	border: 0;
+	outline: 0;
+}
+.search ul li {
+	float: left;
+}
+.search ul li input{
+	font-size: 18px;
+}
+.select-city input {
+    width: 224px;
+    border-radius: 5px;
+	float: left;
+}
+#citySelect {
+	width: 224px;
+	text-align: left;
+	background-image:url(img/search_chengshi_icon.png);
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+	padding-left: 55px;
+}
+.select-time {
+	width: 400px;
+	border-left: 2px solid #1bc272;
+}
+#date-range3 {
+	width: 344px;
+	text-align: left;
+	background-image: url(img/Search_day_icon.png);
+    background-repeat: no-repeat;
+    background-position: 20px 23px;
+	padding-left: 55px;
+}
+.select-num {
+	width: 200px;
+	height: 64px;
+	border-left: 2px solid #1bc272;
+}
+.select-num select {
+	width: 200px;
+	text-align: left;
+	background: #fff;
+	background-image: url(img/search_ruzhu_icon.png);
+    background-repeat: no-repeat;
+    background-position: 5px 15px;
+    background-size: 14% auto;
+	padding-left: 45px;
+	/*-moz-appearance: none;
+    -webkit-appearance:none;
+	-ms-appearance:none;
+    appearance: none; */
+}
+.search-btn {
+	width: 176px;
+	height: 64px;
+	background: #1bc272;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.search-word {
+	background: none;
+	border: none;
+	font-size: 24px;
+	color: #fff;
+	line-height: 64px;
+	float: left;
+	padding-left: 10px;
+}
+.search-img {
+	float: left;
+	margin-top: 21px;
+	margin-left: 40px;
+}
+/*placeholder属性字体颜色*/
+.search:-moz-placeholder { 
+    color: #323232!important; 
+	font-family: 'microsoft yahei';
+}
+
+.search input::-moz-placeholder { 
+    color: #323232!important;
+	font-family: 'microsoft yahei';
+}
+
+.search input:-ms-input-placeholder {
+    color: #323232!important;
+	font-family: 'microsoft yahei';
+}
+
+.search input::-webkit-input-placeholder {
+    color: #323232!important;
+	font-family: 'microsoft yahei';
+}
+.search input:-0-input-placeholder {
+    color: #323232!important;
+	font-family: 'microsoft yahei';
+}
+/*城市选择*/
+
+/*下载居家游APP*/
+.Downapp {
+	width: 100%;
+	min-width: 1240px;
+}
+.Downapp a img {
+	width: 100%;
+}
+/*中间内容*/
+.Content {
+	width: 100%;
+	min-width: 1240px;
+	overflow: hidden;
+	margin-top: 10px;
+}
+.Content-list1 {
+	width: 1240px;
+    height: auto;
+    margin: 0 auto;
+	clear: both;
+}
+/*标题*/
+.title {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 40px;
+}
+.title h2 {
+    display: block;
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 44px;
+    color: #445566;
+    margin-bottom: 15px;
+    clear: both;
+}
+.title p {
+    display: block;
+    font-size: 18px;
+    color: #959ea7;
+    line-height: 30px;
+}
+/*与美·同行*/
+.Content-city {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.fold-wrap {
+    width: 1240px;
+    height: 420px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.fold-wrap li {
+    float: left;
+    width: 155px;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.mask-b {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.0);
+}
+.mask-b h4 {
+    color: #fff;
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+	font-size: 30px;
+	font-family: Microsoft Yahei;
+    position: relative;
+    padding: 130px 0 0 0;
+}
+.pic-auto {
+    width: 100%;
+    height: 100%;
+}
+.pic-auto1 {
+    background: url(img/beijing.jpg) no-repeat center 0;
+}
+.pic-auto2 {
+    background: url(img/guangzhou.jpg) no-repeat center 0;
+}
+.pic-auto3 {
+    background: url(img/guiyang.jpg) no-repeat center 0;
+}
+.pic-auto4 {
+    background: url(img/kuenming.jpg) no-repeat center 0;
+}
+.pic-auto5 {
+    background: url(img/sanya.jpg) no-repeat center 0;
+}
+.pic-auto6 {
+    background: url(img/xiamen.jpg) no-repeat center 0;
+}
+.pic-auto7 {
+    background: url(img/shanghai.jpg) no-repeat center 0;
+}
+.pic-auto8 {
+    background: url(img/cd.jpg) no-repeat center 0;
+}
+/*精美·家园*/
+.Content-house {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.house-wrap {
+	float: left;
+    width: 1240px;
+	height: auto;
+	padding-bottom: 5px;
+    margin: 10px auto;
+    display:inline;
+}
+.house-li {
+	float: left;
+	width: 400px;
+	height: 315px;
+	margin-top: 20px;
+	background-color: #fff;
+	display:inline;
+}
+.mleft {
+	margin-left: 20px;
+}
+.img-room {
+	position: relative;
+	width: 400px;
+	height: 226px;
+	overflow: hidden;
+	opacity:0.9;
+}
+.homg-img{
+	display: block;
+	width: 400px;
+	height: 226px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.user {
+	position: absolute;
+	bottom: 30px;
+    left: 20px;
+}
+.img-word{
+	width: 400px;
+	height: 89px;
+	box-shadow: 0px 0px 5px 1px #ccc;
+}
+.img-word h3 {
+	font-size: 18px;
+	color: #323232;
+    font-family: 'microsoft yahei';
+}
+.txt-house{
+	width: 260px;
+	color: #323232 !important;
+}
+.img-word h3 small {
+	width: 116px;
+	float:right;
+	color: #ff1a00;
+	font-size: 24px;
+    padding-left: 3px;
+}
+.img-word p {
+	padding-top: 5px;
+}
+.room-num {
+	float: left;
+	color: #646464;
+	font-size: 14px;
+	padding-left: 10px;
+}
+.room-name {
+	float: right;
+	color: #646464;
+	font-size: 10px;
+	padding-right: 30px;
+}
+.room-name img {
+	padding-right: 10px;
+}
+/*房东招募*/
+.landlord-recruit {
+	width: 100%;
+	min-width: 1240px;
+	margin-top: 60px;
+}
+.landlord-recruit a img {
+	width: 100%;
+}
+/*分享·美好*/
+.Content-share {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.share-wrap {
+    width: 1240px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.share-wrap .share {
+	float: left;
+	margin-top: 20px;
+}
+.share-wrap .share:hover {
+	transition: 0.3s;
+	margin-top: 15px;
+}
+	
+
+/*优质房源*/
+.xuanzhe {
+    width: 100%;
+	min-width: 1240px;
+    height: 190px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+.xuanzhe_cont {
+    width: 1240px;
+    height: 190px;
+    margin: 0 auto;
+}
+.xuanzhe_cont ul {
+    list-style: none;
+    position: relative;
+    top: 60px;
+}
+.xuanzhe_cont ul li {
+    float: left;
+    width: 25%;
+    height: 100px;
+    text-align: center;
+}
+.xuanzhe_cont ul li a p {
+    color: #323232;
+    font-size: 18px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+}
