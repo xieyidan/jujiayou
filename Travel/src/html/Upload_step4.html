@@ -9,6 +9,8 @@
     <title>房源价格</title>
     <!--CSS样式表-->
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
+    <link rel="stylesheet" href="../css/header_two.css" /><!--头部-->
     <link rel="stylesheet" href="../css/fd_step.css" /><!--房源上传-->
     <!--JS-->
     <script src="../assets/jquery.min.js"></script>
@@ -69,12 +71,12 @@
                         </div>
                     </dd>
                     <dd class="user">
-                          <label class="day-num" id="user-title">用户住满</label>
+                          <label class="" id="user-title">用户住满</label>
                           <input type="text" class="day-price" id="stay-day" name="" placeholder="请输入天数">
-                          <label class="day-num">天 </label>
-                          <label class="day-num"  style="padding-left:20px;">打</label>
+                          <label class="">天 </label>
+                          <label class=""  style="padding-left:20px;">打</label>
                           <input type="text" class="day-price" id="day-discount" name="" placeholder="请输入折扣">
-                          <label class="day-num">折/天</label>
+                          <label class="">折/天</label>
                           <button class="user-add" id="day-add" type="button">添加</button>
                     </dd>
                     <span class="discount-txt"></span>
@@ -163,26 +165,26 @@
                     <dd>
                     	<div class="distance cancel" style="margin-top: 23px;">
                         	<div class="img-1">
-                            	<span class="cancel-order" style="padding-top:5px;">如订单取消，</span>
+                            	<span class="cancel-order">如订单取消，</span>
                                 <span class="cancel-order">订单全部返还</span>
                             </div>
                             <div class="img-2">
-                            	<span class="cancel-order">如订单取消，扣除</span>
-                                <span class="cancel-order">前</span>
-                                <select class="day-no">
-                                    <option>1</option>
-                                    <option>2</option>
-                                </select>
-                                <span class="cancel-order">天的定金</span>
+                            	<span class="cancel-order" style="padding-top:6px;">如订单取消，扣除</span>
+                                <span class="cancel-order">
+	                                <select class="day-no">
+	                                    <option>1</option>
+	                                    <option>2</option>
+	                                </select>
+                                天的定金</span>
                             </div>
                             <div class="img-3">
-                                <span class="cancel-order">如提前退房，扣除</span>
-                                <span class="cancel-order">后</span>
-                                <select class="day-no">
-                                    <option>1</option>
-                                    <option>2</option>
-                                </select>
-                                <span class="cancel-order">天的定金</span>
+                                <span class="cancel-order" style="padding-top:6px;">如提前退房，扣除</span>
+                                <span class="cancel-order">前
+	                                <select class="day-no">
+	                                    <option>1</option>
+	                                    <option>2</option>
+	                                </select>
+                             	天的定金</span>  	 
                             </div>
                         </div>
                     	<div class="distance cancel "><img src="../images/user/time_step_img.png" alt="退房规则"></div>
@@ -202,7 +204,7 @@
                 <dl class="price-set Receive">
                     <dt class=""><span class="mandatory"><img src="../images/user/bitian_icon.png" alt="必填项图片"></span><span>接单手机号</span></dt>
                     <dd>
-                    	<label class="day-num distance">使用登录手机号</label>
+                    	<label class="house distance">使用登录手机号</label>
                     </dd>
                     <dd>
                     	<div class="radio distance" name="dlTel" value="yes"><ins id="yes"></ins><span class="day-num">是</span></div>
@@ -210,7 +212,7 @@
                     </dd>
                 </dl>
                 <dl class="price-set long" id="standby" style="">
-                    <dt class="house" style=""><span class="">备用手机号</span><span class="distance day-num">接单手机号</span></dt>
+                    <dt class="house" style=""><span class="">备用手机号</span><span class="distance house">接单手机号</span></dt>
                     <dd>
                     	<input class="Mobile" id="Phone" type="tel" placeholder="请输入接单手机号码" >
                         <a class="get-code" href="javascript:void(0)">点击获取<br>验证码</a>

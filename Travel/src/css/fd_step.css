@@ -106,7 +106,7 @@
 	height: 50px;
 	line-height: 30px;
 	font-family: 'Microsoft YaHei';
-	margin-top: 25px;
+	margin-top: 20px;
 	position: relative;
     left: 110px;
 }
@@ -271,7 +271,7 @@
 	float: left;
 	width: 375px;
 	height: 42px;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 42px;
 	background: #f2f2f2;
 	margin-left: 30px;
@@ -283,8 +283,8 @@
 }
 .bed-size {
 	float: left;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 40px;
+	padding-right: 40px;
 }
 .bed-delete {
 	color: #f00;
@@ -348,12 +348,13 @@
 }
 .heating {
 	padding-left: 30px;
+	margin-top: 6px;
 }
 
 /*外部条件*/
-
 .fee-day {
 	width: 60px;
+	height: 25px;
 	border-bottom: 2px solid #000;
 	border-top: none;
 	border-right: none;
@@ -366,15 +367,17 @@
 }
 /*其他*/
 .other-con {
-	width: 92%;
+	width: 91%;
 	position: absolute;
+	left: 102px;
 }
-.cook {
-	margin-left: 66px;
+.party,.fill {
+	margin-left: -10px;
 }
 .Mahjong {
-	margin-left: 66px;
+	margin-top: 10px;
 }
+
 .fill input {
 	width: 346px;
 	color: #808080;
@@ -456,7 +459,6 @@
 .describe {
 	display: table;
 	line-height: 30px;
-	font-size: 20px;
 	color: #323232;
 	font-family: 'Microsoft YaHei';
 	margin-top: 50px;
@@ -466,7 +468,6 @@
 .house-name{
 	width: 646px;
 	height: 34px;
-	margin-left: 28px;
 	font-size: 14px; 
 }
 #introduce , #step-word{
@@ -501,7 +502,7 @@ textarea {
 	position: absolute;
     top: 35px;
     left: 121px;
-    font-size: 16px;
+    font-size: 12px;
     color: #f00;
 }
 #introduce-word {
@@ -516,7 +517,7 @@ textarea {
 .Pic-box {
 	width: 1040px;
 	height: 443px;
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 	background: #fff;
 	margin: 0 auto;
 	margin-top: 60px;
@@ -607,7 +608,7 @@ textarea {
 }
 
 .sel-txt p {
-	font-size: 18px;
+	font-size: 16px;
 	color: #323232;
 	line-height: 27px;
 }
@@ -681,12 +682,8 @@ textarea {
 	position: relative;
     left: 110px;
 }
-.price-set dt {
-	font-size: 20px;
-	color: #323232;
-}
 .price-set input[type="text"],.price-set input[type="tel"], .price-set select{
-	height: 34px;
+	height: 30px;
 }
 .day-price {
 	width: 120px;
@@ -696,19 +693,19 @@ textarea {
 	position: absolute;
     top: 35px;
 	bottom: 20px;
-    left: 93px;
+    left: 77px;
     color: #f00;
-	font-size: 16px;
+	font-size: 12px;
 }
 .week_price {
 	position: absolute;
     top: 31px;
-    right: 348px;
+    right: 24px;
     color: #f00;
-	font-size: 16px;
+	font-size: 12px;
 }
 .day-num {
-	font-size: 18px;
+	font-size: 14px;
 	color: #323232;
 }
 .weeks {
@@ -719,13 +716,13 @@ textarea {
     left: 80px;
     top: 35px;
     color: #f00;
-	font-size: 16px;
+	font-size: 12px;
 }
 .least-prompt {
 	position: absolute;
     left: 122px;
     top: 35px;
-    font-size: 16px;
+    font-size: 12px;
     color: #f00;
 }
 .most-prompt {
@@ -733,7 +730,7 @@ textarea {
     left: 455px;
     top: 35px;
     color: #f00;
-	font-size: 16px;
+	font-size: 12px;
 }
 /*placeholder属性字体颜色*/
 .weeks:-moz-placeholder { 
@@ -767,7 +764,7 @@ textarea {
 	display: block;
 	color: #808080;
 	padding-top: 10px;
-	font-size: 18px;
+	font-size: 14px;
 }
 .Discount-details {
 	width: 842px;
@@ -802,12 +799,13 @@ textarea {
 	position: absolute;
 	top: 180px;
 	left: 130px;
+	font-size: 16px !important;
 }
 .user-add {
 	width: 80px;
 	height: 34px;
 	color: #fff;
-	font-size: 20px;
+	font-size: 14px;
 	text-align: center;
 	background: #1bc272;
 	border-radius: 10px;
@@ -821,18 +819,17 @@ textarea {
 	position: absolute;
 	left: 129px;
     top: 217px;
-    font-size: 16px;
+    font-size: 12px;
     color: #f00;
 }
 .prompt-word {
 	position: absolute;
 	left: 61px;
     top: 35px;
-    font-size: 16px;
+    font-size: 12px;
     color: #f00;
 }
 /**/
-
 .pay-dep {
 	display: block;
 }
@@ -856,41 +853,39 @@ textarea {
 .img-1 {
 	width: 146px;
 	height: 85px;
-	background: url(img/tuikuan_background_img.png) no-repeat;
+	background: url(img/zhengchangtk_bg_img.png) no-repeat;
 	position: relative;
-    left: 34px;
-    bottom: 15px;
+    left: 60px;
+    top: 20px;
 }
 .cancel-order {
+	display: block;
 	color: #fff;
-	font-size: 20px;
-	line-height: 33px;
-	padding:10px 10px;
+	line-height: 25px;
+	padding-left: 25px;
 }
 .img-2 {
-	width: 220px;
-	height: 87px;
-	background: url(img/koukuan_background_img.png) no-repeat;
+	width: 177px;
+	height: 84px;
+	background: url(img/kouqian_bg_img.png) no-repeat;
 	position: relative;
     left: 189px;
-    bottom: 15px;
 }
 .day-no {
-	width: 69px;
+	width: 56px;
+	color: #323232;
 	background: #fff;
 	border: none;
 	padding-left: 20px;
 }
 .img-3 {
-	width: 220px;
-	height: 87px;
-	background: url(img/koukuan_background_img.png) no-repeat;
+	width: 177px;
+	height: 84px;
+	background: url(img/kouqian_bg_img.png) no-repeat;
 	position: relative;
-    left: 272px;
-    bottom: 15px;
+    left: 315px;
 }
 .success {
-	font-size: 18px;
 	color: #323232;
 	padding-top: 10px;
 }
@@ -898,13 +893,13 @@ textarea {
 	padding-left: 33px;
 }
 .success span:nth-of-type(2){
-	padding-left: 100px;
+	padding-left: 130px;
 }
 .success span:nth-of-type(4){
 	padding-left: 147px;
 }
 .success span:nth-of-type(5){
-	padding-left: 60px;
+	padding-left: 101px;
 }
 .success select {
 	margin-left: 6px;
@@ -923,13 +918,12 @@ textarea {
 .get-code {
 	display: inline-flex;
 	color: #fff;
-	font-size: 18px;
 	text-align: center;
 	background: #1bc272;
 	padding: 9px 22px;
 	border-radius: 10px;
 	margin-left: 10px;
-	margin-right: 10px;
+	margin-right: 35px;
 	
 }
 .get-code:hover {
@@ -937,23 +931,29 @@ textarea {
 }
 .tel-prompt {
 	position: absolute;
-	top: 38px;
-	left: 240px;
-	font-size: 16px;
+	top: 25px;
+    left: 231px;
+    font-size: 12px;
 	color: #f00;
 }
 .code-prompt {
 	position: absolute;
-	top: 38px;
-	right: 458px;
-	font-size: 16px;
+	top: 25px;
+	right: 168px;
+	font-size: 12px;
 	color: #f00;
+}
+.price-set .house {
+	font-size: 18px;
 }
 #standby {
 	display: none;
 	margin-left: -26px;
-	padding-top: 7px;
 }
+#standby dd {
+	margin-top: -10px;
+}
+
 /*保存，草稿按钮*/
 .step-4 .btn-box {
 	margin-top: 90px;
@@ -962,7 +962,7 @@ textarea {
 	width :170px;
 	height: 56px;
 	color: #fff;
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 	border-radius: 10px;
 	background: #ccc;
