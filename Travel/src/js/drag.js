@@ -3,6 +3,7 @@
 var $ = function (id) {return typeof id === "string" ? document.getElementById(id) : id};
 //获取tagName
 var $$ = function (tagName, oParent) {return (oParent || document).getElementsByTagName(tagName)};
+var idx = 0 ;
 //获取class
 var $$$ = function (sClass, oParent) {
 	var aClass = [],
@@ -51,19 +52,21 @@ PhotoWall.prototype = {
 			oImg.setAttribute("class","active-img" );
 			var oImg1 = document.createElement("img");
 			var oImg2 = document.createElement("img");
-//			oImg1.src = "../css/img/fengmian_img.png"; //封面
-//			oImg2.src = "../images/user/guanbi_icon.png"; //删除按钮
-			if (i == 0) {
+			if (idx == 0) {
+				idx++;
 				oImg1.src = "../css/img/fengmian_img.png"; //封面
 				oImg2.src = "../images/user/guanbi_icon.png"; //删除按钮
+				oImg1.setAttribute("class","active-fm" );
+				oImg2.setAttribute("class","active-del");
+				oLi.appendChild(oImg1);
+				oLi.appendChild(oImg2);
 			}else{
 				oImg2.src = "../images/user/guanbi_icon.png"; //删除按钮
+				oImg2.setAttribute("class","active-del");
+				oLi.appendChild(oImg2);
 			}
-			oImg1.setAttribute("class","active-fm" );
-			oImg2.setAttribute("class","active-del");
+			
 			oImg.src = this.aData[i];
-			oLi.appendChild(oImg1);
-			oLi.appendChild(oImg2);
 			oLi.appendChild(oImg);
 			aFrag.appendChild(oLi);
 			oImg2.onclick = function(){

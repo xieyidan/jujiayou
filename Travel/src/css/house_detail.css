@@ -210,12 +210,11 @@ body {
 }
 .house-cont {
 	width: 100%;
-	background: #fff;
+	position: relative;
 }
 .house-detail {
 	width: 1240px;
 	margin: 0 auto;
-	background: #fff;
 }
 /*左边内容——房源信息*/
 .leftBox {
@@ -508,9 +507,8 @@ body {
 	
 }
 .col-logo{
-	position: absolute;
-	top: 0;
-	left: 14.6%;
+	float: left;
+	margin-left: 14.6%;
 }
 .column{
 	width: 1240px;

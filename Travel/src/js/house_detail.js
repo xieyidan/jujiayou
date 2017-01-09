@@ -88,9 +88,9 @@
 
 /******吸顶菜单*****/
 		//内容信息导航吸顶
-		var col= $(".col");
-		var rightBox = $('.rightBox')
-		var column = $('#contentTab')
+		var col= $(".col");//父元素
+		var rightBox = $('.rightBox');//房源预定
+		var column = $('#contentTab'); //吸顶导航
 		$(window).scroll(function(){ 
 			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
 			if(scrollTop>130){ 
