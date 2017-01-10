@@ -295,8 +295,8 @@ body {
 }
 .thumb_pic {
 	height: 140px;
-	width: 660px;
-	
+	width: 1400px;
+	position: relative;
 }
 .thumb_pic li {
 	float: left;

@@ -1,76 +1,61 @@
 ;(function () {
 	$(document).ready(function(){ 
 /******轮播图**********/
-//	//大图
-//		var mySwiper1 = new Swiper('.box', {
-//			touchAngle : 45,
-//			grabCursor : true,
-//		})
-//		var mySwiper2 = new Swiper('.show_box', {
-//			slidesPerView : "auto",//'auto'
-//			prevButton:'.swiper-button-prev',
-//			nextButton:'.swiper-button-next',
-//			touchAngle : 45,
-//			resistance : false,
-//			longSwipesRatio : 0.1,
-////			loop : true,
-////			loopedSlides :8,
-//		})
-//		
-//		mySwiper1.params.control = mySwiper2;
-//	//小图
-//		//点击缩略图切换
-//		var thumbPic = $('.thumb_pic').find("li");
-//		thumbPic.each(function(idx,item){
-//			$(item).on('click',function(){
-//				mySwiper1.slideTo(idx, 1000, false);//切换到第一个slide，速度为1秒
-//			})
-//		});
-//		
-//		//点击前进后退
-//		var index = 0;
-//		$('.swiper-button-prev').on('click',function(){
-//			console.log(1)
-//		});
-//		$('.swiper-button-next').on('click',function(){
-//			console.log(2)
-//		});
-
 	var housePic = $('.house-pic');//外层
 	var LargePic = $('.Large-pic');//大图
 	var thumbPic = $('.thumb_pic');//缩略图
 	var btn1 = $('.btn1');//左边按钮
 	var btn2 = $('.btn2');//右边按钮
 	var index = 0 ;
+	var allWidth = thumbPic.width();//ul总宽度
+	var LiWidth = thumbPic.width()/10; //li宽度
 	//获取所有图片
     var len = LargePic.children("li").length;
+  	console.log(len)
 	//初始状态
     show();
     //自动轮播
-    var timer = setInterval(animating,3000);
+    //var timer = setInterval(animating,3000);
     //点击小图时
 	thumbPic.on("click","li",function(){
-		clearInterval(timer);  //清除定时器
+		//clearInterval(timer);  //清除定时器
 		index = $(this).index();
 		show();
 	});
 	//左右控制
 	btn1.on("click",function(){
-		clearInterval(timer);  //清除定时器
 		index--;
 		show();
+		console.log(index);
+		if (index > 3) {
+			thumbPic.animate({left:"+=132px"});
+			
+		}else if(index == 0){
+			index = 1;
+			thumbPic.children("li").eq(index-1).animate({opacity:1}).siblings().animate({opacity:0.5});
+		}
+		
 	})
 	btn2.on("click",function(){
-		clearInterval(timer);  //清除定时器
+		
 		index++;
 		show();
+		console.log(index)
+		if (index >= 5 && index < len-1) {
+			thumbPic.animate({left:"-=132px"});
+			
+		}else if(index == len-1) {
+			index =len-2;
+			thumbPic.children("li").eq(index).animate({opacity:1}).siblings().animate({opacity:0.5});
+		}
+		
 	});
 	
 	//图片轮播
-	function animating(){
-		index++;
-		show();
-	}
+//	function animating(){
+//		index++;
+//		show();
+//	}
      		
 	//图片切换
 	function show(){
@@ -82,7 +67,7 @@
  		LargePic.children("li").eq(index).animate({opacity:1}).siblings().animate({opacity:0});
  		thumbPic.children("li").eq(index).animate({opacity:1}).siblings().animate({opacity:0.5});
 	}
-     		
+   
 
 
 
@@ -176,6 +161,15 @@
 
 
 
+
+
+
+
+
+
+
+
+	
 
 
 
