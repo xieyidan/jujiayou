@@ -4,79 +4,12 @@
 @font-face {
     font-family: 'microsoft yahei';
 }
-*{
-	margin: 0;
-	padding: 0;
-}
-ul,li {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-a,p,span {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-input, select {
-	border: 1px solid #cccccc;
-	outline: medium;
-}
-body, h1, h2, h3, h4, h5, h6, p, blockquote, /* structural elements 结构元素 */ dl, dt, dd, ul, ol, li, a, span, i, b, /* list elements 列表元素 */ form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */ th, td /* table elements 表格元素 */ {
-	margin: 0;
-	padding: 0;
-	color: #323232;
-}
-body {
-	background: #f2f2f2;
-}
 
 /* 头部 */
 .header {
-	width:100%;
-	min-width: 1240px;
-	height: 70px;
+	background: #f2f2f2;
 }
-.navbar {
-	width: 1240px;
-	margin: 0 auto;
-}
-.navbar a {
-	color: #fff;
-}
-.navbar .nav li a:hover{
-	color:#323232;
-	background-color:none;
-}
-.container {
-	min-width: 1240px;
-	margin: 0 auto;
-}
-.navbar-left li {
-	float: left;
-}
-.navbar-left li a{
-	text-align: center;
-    line-height: 36px;
-    overflow: hidden;
-    font-size: 18px;
-	color:#323232;
-	padding-left:30px;
-}
-.navbar-left li a:nth-child(1){
-	padding-left:20px;
-}
-.navbar-right li a {
-	float: left;
-	text-align: center;
-    line-height: 36px;
-	color: #fff;
-    overflow: hidden;
-}
-.navbar-brand {
-	width: 50%;
-}
+
 /*中间内容*/
 .fd-content {
 	width: 100%;
@@ -120,7 +53,7 @@ body {
 	display: block;
 	float: left;
 	width: 499px;
-	font-size: 20px;
+	font-size: 18px;
     font-weight: bold;
 	color: #808080;
 	text-align: center;
@@ -133,21 +66,16 @@ body {
 	text-align: center;
 	margin-top: 150px;
 }
-.cont-1 input {
-	font-size: 16px;
-}
 #cont-center li {
 	position: relative;
 	margin-top: 10px;
 }
 #cont-center li samp {
-	color: #ff0000;
-	font-size: 24px;
-	vertical-align: middle;
+	vertical-align: text-bottom;
 	padding-right: 5px;
 }
 #cont-center li span {
-	font-size: 20px;
+	font-size: 18px;
 	margin-right: 20px;
 	text-align: right;
 }
@@ -159,11 +87,15 @@ body {
     position: relative;
     display: inline-block;
     z-index: 100;
+    padding-left: 50px;
 }
 .imghead input {
     position: absolute;
     right: 0;
     top: 0;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
     opacity: 0;
 }
 .imghead .previewImg{
@@ -180,7 +112,6 @@ body {
 .fd-card {
 	width: 160px;
 	height: 34px;
-	font-size: 18px;
 	padding-left: 10px;
 }
 .fd-info {
@@ -190,16 +121,17 @@ body {
 }
 .common-prompt{
 	height: 20px;
-	font-size: 16px;
+	font-size: 12px;
 	color: #ff0000;
 	line-height: 25px;
+	padding-right: 100px;
 }
 #cont-center li small {
-	font-size: 20px;
+	font-size: 18px;
 	text-align: right;
 	position: relative;
 	top: 34px;
-	right: 59px;
+	right: 54px;
 	
 }
 .cardimg span,.cardimg samp{
@@ -234,7 +166,7 @@ body {
 	right: 0px;
 }
 .cardimg .img-word {
-	font-size: 18px!important;
+	font-size: 16px !important;
 	color: #323232;
 	padding-right: 60px;
 	position: relative;
@@ -243,16 +175,16 @@ body {
 }
 /******#cont-center li的距离微调********/	
 #cont-center li:nth-of-type(1){
-	right: 91px;
+	right: 130px;
 }
 #cont-center li:nth-of-type(2){
-	left: 21px;
+	left: 18px;
 }
 #cont-center li:nth-of-type(3){
 	right: 85px;
 }
 #cont-center li:nth-of-type(6){
-	left: 127px;
+	left: 125px;
 }
 /******请填写您的收款方式*********/
 .cont-2 {
@@ -262,26 +194,26 @@ body {
 	text-align: center;
 }
 .select_tit span {
-	font-size: 20px;
+	font-size: 18px;
 	padding-right: 20px;
 }
 .select_tit samp {
 	color: #ff0000;
-	font-size: 20px;
+	font-size: 18px;
 	padding-right: 10px;
 	vertical-align: middle;
 }
 .select_xz {
 	width: 160px;
 	height: 34px;
-	font-size: 18px;
+	font-size: 14px;
 }
 /*******************************切换显示内容************************************/
 /**********************************支付宝*******************************************/
 
 #div1 .price{
 	padding: 20px 128px 30px 0;
-	font-size: 18px;
+	font-size: 16px;
 	color: #ff0000;
 }
 /*.div1-word{
@@ -301,7 +233,7 @@ body {
 	padding-right: 10px;
 }
 #div1 ul li span {
-	font-size: 20px;
+	font-size: 18px;
 	padding-right: 20px;
 }
 .div1 {
@@ -323,7 +255,7 @@ body {
 /***********************************银行卡*********************************************/
 #div2 p{
 	padding: 10px 250px 30px 0;
-	font-size: 18px;
+	font-size: 16px;
 	color: #ff0000;
 	}
 	
@@ -334,7 +266,7 @@ body {
 	padding-right: 10px;
 }
 #div2 ul li span {
-	font-size: 20px;
+	font-size: 18px;
 	padding-right: 20px;
 }
 
@@ -365,11 +297,11 @@ body {
 	padding-left: 40px;
 }
 #div2 ul li:nth-of-type(3){
-	padding-right: 365px;
+	padding-right: 350px;
 }
 
 #div2 ul li:nth-of-type(4), #div2 ul li:nth-of-type(5){
-	    padding-right: 253px;
+	    padding-right: 237px;
 }
 
 #div2 ul li:nth-of-type(5){
