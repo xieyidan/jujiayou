@@ -521,34 +521,52 @@ textarea {
 	background: #fff;
 	margin: 0 auto;
 	margin-top: 60px;
-	overflow: hidden;
 }
-.photo {
-    float: left;
-    width: 185px;
+.Pic-box ul{
+	width: 1040px;
+	height: 443px;
+	overflow: auto;
+}
+/*拖拽照片*/
+.Pic-box li {
+	float:left;
+	width:185px;
 	height: 198px;
-    margin-top: 15px;
-	margin-left: 15px;
-	margin-bottom: 0;
-    position: relative;
+	background:#fff;
+	display:inline;
+	margin:15px 0 0 18px;
+	list-style:none;
 }
-.photo-box{
-	 width:185px;
-	 height: 198px;
-}
-.photo-box img{
-	 width: 185px;
-	 height: 198px;
-}
-.fengmian{
-	width: 81px;
-	height: 66px;
-	background: url(img/fengmian_img.png);
-	position: absolute;
-	top: 0;
-	left: 0;
+.active-del{
+	float: right;
+	width: 25px;
+	height: 25px;
 	z-index: 100;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	cursor: default ;
 }
+.active-fm{
+	float: left;
+	width: 66px;
+	height: 66px;
+	z-index: 101;
+	position: absolute;
+}
+.Pic-box li .active-img{
+	width:185px;
+	height: 198px;
+	position: absolute;
+	cursor: pointer;
+	
+}
+.Pic-box li.hig {
+	border:2px dashed #f30;
+	opacity:0.5;
+	filter:alpha(opacity=50);
+}
+
 .rotating {
 	display: block;
 	width: 56px;
@@ -556,19 +574,6 @@ textarea {
 	position: absolute;
 	bottom: 15px;
 	left: 67px;
-}
-.close-box{
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-.close-box img{
-	width: 25px;
-	overflow: hidden;
-	margin: 10px 10px 0 0;
-	cursor: pointer;
 }
 
 .sel-txt {
@@ -622,44 +627,7 @@ textarea {
 	display:inline-block;
 }
 
-/*拖拽照片*/
-.Pic-box li {
-	float:left;
-	width:185px;
-	height: 198px;
-	background:#fff;
-	display:inline;
-	margin:15px 0 0 18px;
-	list-style:none;
-}
-.active-del{
-	float: right;
-	width: 25px;
-	height: 25px;
-	z-index: 100;
-	position: relative;
-	top: 5px;
-	right: 5px;
-}
-.active-fm{
-	float: left;
-	width: 66px;
-	height: 66px;
-	z-index: 101;
-	position: relative;
-	
-}
-.Pic-box li .active-img{
-	width:185px;
-	height: 198px;
-	position: relative;
-	top: -66px;
-}
-.Pic-box li.hig {
-	border:2px dashed #f30;
-	opacity:0.5;
-	filter:alpha(opacity=50);
-}
+
 
 
 
