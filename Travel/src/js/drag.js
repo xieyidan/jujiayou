@@ -1,9 +1,13 @@
 ;(function(){
+	
 //获取ID
 var $ = function (id) {return typeof id === "string" ? document.getElementById(id) : id};
 //获取tagName
 var $$ = function (tagName, oParent) {return (oParent || document).getElementsByTagName(tagName)};
 var idx = 0 ;
+var idx1 = 1;
+var len = 0 ;
+
 //获取class
 var $$$ = function (sClass, oParent) {
 	var aClass = [],
@@ -61,16 +65,23 @@ PhotoWall.prototype = {
 				oLi.appendChild(oImg1);
 				oLi.appendChild(oImg2);
 			}else{
-				oImg2.src = "../images/user/guanbi_icon.png"; //删除按钮
-				oImg2.setAttribute("class","active-del");
-				oLi.appendChild(oImg2);
+				if (idx1<25) {
+					idx1++;
+					oImg2.src = "../images/user/guanbi_icon.png"; //删除按钮
+					oImg2.setAttribute("class","active-del");
+					oLi.appendChild(oImg2);
+				}
+				else{
+					alert("房源图片添加不能超过25张");
+					return;
+				}
+				
 			}
 			
 			oImg.src = this.aData[i];
 			oLi.appendChild(oImg);
 			aFrag.appendChild(oLi);
 			oImg2.onclick = function(){
-				console.log(1)
 				this.parentNode.parentNode.removeChild(this.parentNode);
 				this.parentNode.style.display = "none";
 			}
@@ -84,6 +95,8 @@ PhotoWall.prototype = {
 		var i = 0;
 		this.oParent.style.height = this.oParent.offsetHeight + "px";
 		this.aPos.length = 0;
+		
+		len=this.aLi.length;
 		for (i = 0; i < this.aLi.length; i++) this.aLi[i].style.cssText = "";	
 		for (i = 0; i < this.aLi.length; i++)
 		{
@@ -227,6 +240,9 @@ window.onload = function ()
 	var aData = [];
 	var aExample = [];
 	var i = 0;
+	var aBtn = document.getElementsByClassName("first-btn")[0];
+	console.log(aBtn);
+	
 	//添加图片
 	Uploading.onchange = function(){
 		var strsrc=getObjectURL(this.files[0]);
@@ -240,6 +256,13 @@ window.onload = function ()
 		};
 		this.onresize()
 	};
+	aBtn.onclick = function(){
+		if (len>4&&len<25) {
+			window.location.href="Upload_step4.html";
+		}else{
+			alert("房源照片不能少于5张")
+		}
+	}
 }
 
 function getObjectURL(file) {

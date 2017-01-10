@@ -354,7 +354,10 @@
     });
     
 	//打折设置
+	var DiscountDetailsLi = $('.Discount-details li');
+	
 	$("#day-add").on("click",function(){
+		
 		var userTitle = $("#user-title").text(); //标题
 		var stayDay = $("#stay-day").val();  //天数
 		var dayDiscount = $("#day-discount").val();  //折扣
@@ -373,18 +376,27 @@
 		else
 		{
 			$(".Discount-add").css("display","none");
-			$("#Discount .Discount-details").append(
-									'<li class="Discount-li">'+
-                                    '<span class="Discount-title">用户住满</span>'+
-                                    '<span class="Discount-day">'+stayDay+'</span>'+
-                                    '<span>天打</span>'+
-                                    '<span class="Discount-day">'+dayDiscount+'</span>'+
-                                    '<span>折 / 天</span>'+
-                                    '<span class="Discount-delete">删除</span>'+
-                                '</li>'
-								
-							  );
+		    var Discount = $('.Discount-li')
+		    console.log(Discount.length);
+		    if (Discount.length<6) {
+		    	$("#Discount .Discount-details").append(
+					'<li class="Discount-li">'+
+	                    '<span class="Discount-title">用户住满</span>'+
+	                    '<span class="Discount-day">'+stayDay+'</span>'+
+	                    '<span>天打</span>'+
+	                    '<span class="Discount-day">'+dayDiscount+'</span>'+
+	                    '<span>折 / 天</span>'+
+	                    '<span class="Discount-delete">删除</span>'+
+                    '</li>'
+				
+			    );
+		    }else{
+		    	alert("最多添加6条打折设置")
+		    	return;
+		    }
+							  
 		}
+		
 		$(".Discount-delete").on("click",function(){
 			$(this).parent(".Discount-li").remove();
 		});
@@ -627,90 +639,61 @@
 	
 	
 	/*百度地图API*/	
-	var houseMap = $('.house-map');//地图标注按钮
-	var popupMap = $('.popup-map');//地图展示区域
-	var ipt1 = $('.ipt1');//获取输入款值
-	var site = [];
-	var houseAddress = $('.house-address');
-	var houseBuilding = $('.house-building');
-	var houseNo = $('#house-no');
-	var mapVal;
-	//把详细位置添加到地图输入框
-	houseMap.on("click",function(){
-		if (popupMap.is(":hidden")) {
-			popupMap.show();
-			houseMap.css({"background":"#1BC272","color":"#fff"});
-			ipt1.val(houseAddress.val()+houseNo.val()+houseBuilding.val());
-			site.push(ipt1.val());
-			console.log(site)
-		}else{
-			popupMap.hide();
-			houseMap.css({"background":"#F2F2F2","color":"#000"});
-		};
-		
-	});
-	//删除地图按钮
-	$('.map-del').on("click",function(){
-		popupMap.hide();
-		houseMap.css({"background":"#F2F2F2","color":"#000"});
-	})
-	
-	var map = new BMap.Map('allmap');
-    var poi = new BMap.Point(116.307852,40.057031);
-    map.centerAndZoom(poi, 16);
-    map.enableScrollWheelZoom();
-    
-    var opts = {type: BMAP_NAVIGATION_CONTROL_LARGE}   //缩放控件
-	map.addControl(new BMap.NavigationControl(opts));
-	// 创建地址解析器实例
-	var myGeo = new BMap.Geocoder();
-	// 解析位置
-	$('.analysis').on("click",function(){
-		mapVal=ipt1.val();
-		myGeo.getPoint(mapVal, function(point){
-			if (point) {
-				map.centerAndZoom(point, 16);
-				map.addOverlay(new BMap.Marker(point));
-			}else{
-				alert("未解析到地址，请检查地址是否有误!");
-			}
-		});
-	})
-	//确认位置
-	$('.confirm').on("click",function(){
-		console.log(site)
-	})
-		
-//	    var content = '<div style="margin:0;line-height:20px;padding:2px;">' +
-//	                    '<img src="../img/baidu.jpg" alt="" style="float:right;zoom:1;overflow:hidden;width:100px;height:100px;margin-left:3px;"/>' +
-//	                    '地址：北京市海淀区上地十街10号<br/>电话：(010)59928888<br/>简介：百度大厦位于北京市海淀区西二旗地铁站附近，为百度公司综合研发及办公总部。' +
-//	                  '</div>';
-//	
-//	    //创建检索信息窗口对象
-//	    var searchInfoWindow = null;
-//		searchInfoWindow = new BMapLib.SearchInfoWindow(map, content, {
-//				title  : "百度大厦",      //标题
-//				width  : 290,             //宽度
-//				height : 105,              //高度
-//				panel  : "panel",         //检索结果面板
-//				enableAutoPan : true,     //自动平移
-//				searchTypes   :[
-//					BMAPLIB_TAB_SEARCH,   //周边检索
-//					BMAPLIB_TAB_TO_HERE,  //到这里去
-//					BMAPLIB_TAB_FROM_HERE //从这里出发
-//				]
-//			});
-//	    var marker = new BMap.Marker(poi); //创建marker对象
-//	    marker.enableDragging(); //marker可拖拽
-//	    marker.addEventListener("click", function(e){
-//		    searchInfoWindow.open(marker);
-//	    })
-//	    map.addOverlay(marker); //在地图中添加marker
+//	var houseMap = $('.house-map');//地图标注按钮
+//	var popupMap = $('.popup-map');//地图展示区域
+//	var ipt1 = $('.ipt1');//获取输入款值
+//	var site = [];
+//	var houseAddress = $('.house-address');
+//	var houseBuilding = $('.house-building');
+//	var houseNo = $('#house-no');
+//	var mapVal;
+//	//把详细位置添加到地图输入框
+//	houseMap.on("click",function(){
+//		if (popupMap.is(":hidden")) {
+//			popupMap.show();
+//			houseMap.css({"background":"#1BC272","color":"#fff"});
+//			ipt1.val(houseAddress.val()+houseNo.val()+houseBuilding.val());
+//			site.push(ipt1.val());
+//			console.log(site)
+//		}else{
+//			popupMap.hide();
+//			houseMap.css({"background":"#F2F2F2","color":"#000"});
+//		};
 //		
-//		function openInfoWindow3() {
-//			searchInfoWindow3.open(new BMap.Point(116.328852,40.057031)); 
-//		}
-	
+//	});
+//	//删除地图按钮
+//	$('.map-del').on("click",function(){
+//		popupMap.hide();
+//		houseMap.css({"background":"#F2F2F2","color":"#000"});
+//	})
+//	
+//	var map = new BMap.Map('allmap');
+//  var poi = new BMap.Point(116.307852,40.057031);
+//  map.centerAndZoom(poi, 16);
+//  map.enableScrollWheelZoom();
+//  
+//  var opts = {type: BMAP_NAVIGATION_CONTROL_LARGE}   //缩放控件
+//	map.addControl(new BMap.NavigationControl(opts));
+//	// 创建地址解析器实例
+//	var myGeo = new BMap.Geocoder();
+//	// 解析位置
+//	$('.analysis').on("click",function(){
+//		mapVal=ipt1.val();
+//		myGeo.getPoint(mapVal, function(point){
+//			if (point) {
+//				map.centerAndZoom(point, 16);
+//				map.addOverlay(new BMap.Marker(point));
+//			}else{
+//				alert("未解析到地址，请检查地址是否有误!");
+//			}
+//		});
+//	})
+//	//确认位置
+//	$('.confirm').on("click",function(){
+//		console.log(site)
+//	})
+		
+		
 	
 	
 	
