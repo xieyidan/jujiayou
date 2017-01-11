@@ -598,6 +598,8 @@ textarea {
     z-index: 100;
 }
 .filed input {
+	width: 164px;
+    height: 56px;
     position: absolute;
     font-size: 100px;
     right: 0;

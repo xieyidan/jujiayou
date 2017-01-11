@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="keywords" content="短租房网站，日租房公寓，民宿预定，短租公寓网站，家庭旅馆">
     <meta name="description" content="居家游以礼游天下为理念,提供最全面优质的短租房、民宿、日租房房源,为你带来居家式的服务体验!">
-	<title>房东后台管理</title>
+	<title>房客后台管理</title>
 	<!--CSS样式表-->
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
@@ -26,9 +26,6 @@
 				//var index=$(".nav-cont .current").index(this); //获取当前li的索引
 				//$(this).eq(index).addClass("actives").siblings().removeClass("actives"); //显示当前li索引并隐藏兄弟元素
 			})
-				
-		
-
     	})
     </script>
 </head>
@@ -117,8 +114,8 @@
     				</li>
     			</ul>
     		</div>
-    		<!--右侧内容-->
-    		<div class="right-cont">
+    		<!--右侧内容_全部订单-->
+    		<div class="right-cont" id="item1">
     			<p class="r-color right-top"><span>我是房客 ></span><span>我的订单 ></span><span>全部订单</span></p>
     			<div class="right-center">
     				<!--订单列表-->
@@ -210,6 +207,30 @@
 						<li><a href="#">2</a></li>
 						<li><a href="#">1</a></li>
 					</ul>
+    			</div>
+    		</div>
+    		<!--右侧内容_个人信息-->
+    		<div class="right-cont" id="item2">
+    			<p class="r-color right-top"><span>我是房客 ></span><span>我的设置 ></span><span>个人信息</span></p>
+    			<div class="right-center">
+    				<!--头像-->
+    				<div class="Personal-infor">
+    					<p class="my-infor">我的基本资料</p>
+    					<div class="my-pic">
+    					   <p class="fk-img"><img src="../images/user/fk_touxiang_icon.png"></p>
+    					   <p>我的头像</p>
+    					</div>
+    					<p class="get-integral">完善资料可获取200积分</p>    					
+    				</div>
+					<!--完善信息-->
+					<div class="perfect">
+						<dl>
+							<dt>用户昵称</dt>
+							<dd>
+								<input type="text" placeholder="">
+							</dd>
+						</dl>
+					</div>
     			</div>
     		</div>
     	</div>

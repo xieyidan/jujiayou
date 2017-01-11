@@ -57,7 +57,7 @@ a {
 	font-weight: bold;
 }
 
-/***右侧***/
+/***右侧——全部订单***/
 .right-cont {
 	float: left;
 	width: 1050px;
@@ -65,6 +65,9 @@ a {
 }
 .r-color {
 	color: #646464;
+}
+#item1 {
+	display: none;
 }
 /*房客选项的提示*/
 .right-top {
@@ -197,4 +200,45 @@ a {
 	line-height: 50px;
 	border-left: 1px solid #fff;
 	text-align: center;
+}
+
+
+/***右侧——个人信息***/
+.Personal-infor {
+	text-align: center;
+	margin: 0 auto;
+}
+/*我的基本资料*/
+.my-infor {
+	font-size: 18px;
+	padding: 30px 0 20px 0;
+}
+/*我的头像*/
+.my-pic p {
+	font-size: 16px;
+	margin-top: 10px;
+}
+/*积分*/
+.get-integral {
+	color: #ff1a00;
+	font-size: 18px;
+	padding: 20px 0;
+}
+
+/*完善信息*/
+.perfect {
+	position: relative;
+	left: 198px;
+	display: block;
+}
+.perfect dl {
+	width: 100%;
+	height: 40px;	
+}
+.perfect dl dt {
+	float: left;
+	font-size: 16px;
+}
+.perfect dl dd {
+	float: left;
 }

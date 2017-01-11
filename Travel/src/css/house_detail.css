@@ -5,65 +5,6 @@
 @font-face {
     font-family: 'Microsoft YaHei';
 }
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video,button, input, textarea {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  color: #323232;
-  font-size: 100%;
-  text-decoration: none;
-  vertical-align: baseline;
-}
-ul,li {
-	list-style: none;
-}
-
-input, select {
-	font-size: 16px;
-	outline: medium;
-	border: 2px solid #ccc;
-	background: #f2f2f2;
-	overflow:hidden; 
-}
-a:hover {
-	text-decoration: none;
-}
-button {
-	border: none;
-	outline: none;
-}
-textarea {
-	outline: none;
-	resize: none;
-	font-size: 16px;
-}
-body {
-	font-size: 14px;
-	font-family: 'Microsoft YaHei';
-	background-color: #f2f2f2;
-}
-/*清除浮动*/
-.clear:after{
-	display:block;
-	clear:both;
-	content:".";
-	visibility:hidden;
-	height:0;
-}
-.clear{zoom: 1;}
 
 
 
@@ -72,39 +13,8 @@ body {
 /****房源详情样式****/
 /* 头部 */
 .header {
-	width:100%;
-	min-width: 1240px;
-	height: 70px;
+
 	background-color: #fff;
-}
-.navbar {
-	width: 1240px;
-	margin: 0 auto;
-}
-.navbar a {
-	color: #fff;
-}
-.navbar .nav li a:hover{
-	color:#323232;
-	background-color:none;
-}
-.container {
-	min-width: 1240px;
-	margin: 0 auto;
-}
-.navbar-left li {
-	float: left;
-}
-.navbar-left li a{
-	text-align: center;
-    line-height: 36px;
-    overflow: hidden;
-    font-size: 18px;
-	color:#323232;
-	padding-left:30px;
-}
-.navbar-left li a:nth-child(1){
-	padding-left:20px;
 }
 
 
@@ -544,7 +454,7 @@ body {
 	color: #fff;
 }
 .current{
-	background: #01AEAB;
+	background: #1bc272;
 }
 /*右*/
 .column-right{
@@ -570,10 +480,10 @@ body {
 	margin-bottom: 20px;
 }
 .column-infor {
-	width: 745px;
+	width: 725px;
 	margin: 0 20px;
+    padding: 20px 0;
     border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
     overflow: hidden;
 }
 .side-box {
@@ -661,6 +571,9 @@ body {
 }
 
 /*入住须知*/
+#section3 {
+	border-bottom: 2px solid #ccc;
+}
 .icon-Checkin {
     display: inline-block;
     width: 50px;
@@ -736,7 +649,7 @@ body {
 /*地图位置*/
 .column-map {
 	width: 100%;
-    padding: 50px 0 20px 0;
+    padding: 40px 0 20px 0;
     overflow: hidden;
     position: relative;
 }
@@ -752,10 +665,10 @@ body {
 }
 .house-address {
 	position: absolute;
-	top: 90px;
+	top: 80px;
 	width: 410px;
 	color: #fff;
-	font-size: 16px;
+	font-size: 14px;
 	padding: 10px 20px;
 	background-color: rgba(0,0,0,.4);
 	z-index: 9;
@@ -766,6 +679,7 @@ body {
 	margin-bottom: 40px;
 }
 .column-prompt p:nth-of-type(2){
+	font-size: 14px !important;
 	padding-top: 10px;
 	line-height: 25px;
 }
@@ -811,7 +725,7 @@ body {
 	font-size:  16px;
 	padding-left: 30px;
 }
-.review-box .current {
+.review-box .cur {
     color: #ff6a51;
     font-weight: bold;
     cursor: default;

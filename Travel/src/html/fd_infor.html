@@ -9,6 +9,8 @@
     <title>房东信息验证</title>
     <!--css样式表-->
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
+    <link rel="stylesheet" href="../css/header_two.css" /><!--头部-->
     <link rel="stylesheet" href="../css/fd_infor.css" /><!--房东信息验证-->
     <!--js-->
     <script src="../assets/jquery.min.js"></script>
@@ -50,21 +52,20 @@
          	
             <ul id="cont-center">
                 <li>
-            		<samp>*</samp>
+            		<samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                 	<span>添加头像</span>
 		        	<span class="imghead"><img class="previewImg" src="../images/user/fangdongxinxi_touxiang_icon.png" >
                 		<input class="previewBtn" type="file" multiple />
                 	</span>
                 </li>
                 <li>
-                    <samp>*</samp>
+                    <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                     <span>昵称</span>
                     <input class="fd-info" type="text" placeholder="请输入您的昵称"/>
-                    
                 </li>
                 <p class="common-prompt"></p>
                 <li>
-                    <samp>*</samp>
+                    <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                     <span>证件类型</span>
                     <select class="fd-card">
                         <option>身份证</option>
@@ -75,21 +76,21 @@
                      </select>
                 </li>
                 <li>
-                    <samp>*</samp>
+                    <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                     <span>证件号码</span>
                     <input class="fd-info" type="text" placeholder="请输入您的证件号码"/>                   
                 </li>
                 <p class="common-prompt"></p>
                  
                 <li>
-                    <samp>*</samp>
+                    <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                     <span>真实姓名</span>
                     <input class="fd-info" type="text" placeholder="请输入您的真实姓名"/>
                     
                 </li>
                  <p class="common-prompt"></p>
                  <li class="cardimg">
-                    <samp>*</samp>
+                    <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                     <span>手持证<small>件照片</small></span>
                     <div class="pic zm-img">
                     	<input class="pic-btn1" type="file" multiple />
@@ -107,7 +108,7 @@
         </div>
         <div class="cont-2" style="display:none;">
         <div class="select_tit">
-            <samp>*</samp><span>收款方式</span>
+            <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp><span>收款方式</span>
             <select  class="select_xz" name="queryType" onchange="Cmd(this)">
                 <option value="1" name="queryType"> 支付宝</option>
                 <option value="2" name="queryType"> 银行卡</option>
@@ -118,8 +119,8 @@
           <div id="div1">
             <ul>
             <p class="price">使用支付宝，收款能实时到账</p>
-            <li><samp>*</samp><span>支付宝账号</span><input class="div1" type="text" placeholder="请输入您的支付宝账号"><p class="common-prompt"></p></li>
-            <li><samp>*</samp><span>支付姓名</span><input class="div1" type="text"><p class="common-prompt"></p></li>
+            <li><samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp><span>支付宝账号</span><input class="div1" type="text" placeholder="请输入您的支付宝账号"><p class="common-prompt"></p></li>
+            <li><samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp><span>支付姓名</span><input class="div1" type="text"><p class="common-prompt"></p></li>
             </ul>
         </div>
     
@@ -127,7 +128,7 @@
             <ul>
             <p class="price">银行卡转账很慢，推荐您使用支付宝方式！</p>
             <li>
-            <samp>*</samp>
+            <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
             <span>开户银行名称</span>
              <select class="yh_name">
                 <option></option>
@@ -137,7 +138,7 @@
                 <option>中国交通银行</option>
              </select>
              
-            <samp>*</samp>
+            <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
             <span>开户银行省份</span>
              <select class="yh_name">
                 <option></option>
@@ -150,7 +151,7 @@
             
             
              <li>
-            <samp>*</samp>
+            <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
             <span>开户银行城市</span>
              <select class="yh_name">
                 <option></option>
@@ -160,7 +161,7 @@
                 <option>中国交通银行</option>
              </select>
              
-            <samp>*</samp>
+            <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
             <span>开户支行名称</span>
              <select class="yh_name">
                 <option></option>
@@ -173,19 +174,19 @@
             
             
             <li>
-                <samp>*</samp>
+                <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                 <span>银行开户姓名</span>
                 <input class="yh_inp1" type="text"/>
             </li>
             
             <li>
-                <samp>*</samp>
+                <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                 <span>银行开户账号</span>
                 <input class="yh_inp2" type="text"/>
             </li>
             
             <li>
-                <samp>*</samp>
+                <samp><img src="../images/user/bitian_icon.png" alt="必填项图片"></samp>
                 <span>再次确认账号</span>
                 <input class="yh_inp2" type="text"/>
                 <p class="common-prompt"></p>
