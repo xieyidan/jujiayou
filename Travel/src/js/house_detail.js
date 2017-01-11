@@ -81,10 +81,10 @@
 			if(scrollTop>130){ 
 				
 				if(scrollTop>1920){
-					rightBox.css({"position":"relative","top":"1787px","right":"0px","z-index":99});
+					rightBox.css({"position":"relative","top":"1610px","right":"0px"});
 				}else{
 					col.show();
-					rightBox.css({"position":"fixed","top":"60px","right":"332px","z-index":99});
+					rightBox.css({"position":"fixed","top":"60px","right":"332px"});
 				}
 			}
 			else{ 
@@ -117,7 +117,7 @@
 			}
 		})
 		//点击查看更多房源介绍
-		var house = $(".house:gt(2)");
+		var house = $(".house:gt(0)");
 		var houseBtn = $('.houseBtn');
 		house.hide();
 		houseBtn.on("click",function(){

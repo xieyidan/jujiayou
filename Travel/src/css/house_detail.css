@@ -1,30 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
-/****重置性代码样式****/
-@font-face {
-    font-family: 'Microsoft YaHei';
-}
-
-
-
-
 
 /****房源详情样式****/
 /* 头部 */
 .header {
-
 	background-color: #fff;
 }
-
-
-
-
-
-
-
-
-
+img {
+	vertical-align: middle;
+}
 /*右边用户状态*/
 .navbar-right li a {
 	float: left;
@@ -273,7 +258,6 @@
 	margin: 20px 0 0 20px;
 }
 /*价格*/
-
 .word_color {
 	color: #ff1a00;
 	font-size: 30px;
@@ -586,6 +570,43 @@
     width: 260px;
     overflow: hidden;
 }
+.stay-integral {
+	width: 330px !important;
+}
+.look-integral{
+	color: #ff1a00;
+    padding-left: 10px;
+}
+/*积分弹框*/
+.modal-dialog {
+	position: fixed;
+	top: 250px;
+    left: 430px;
+    width: 648px;
+    color: #323232;
+}
+.modal-title {
+	font-size: 18px;
+    text-align: center;
+    padding-top: 15px;
+}
+.modal-body p {
+	line-height: 25px;
+}
+.eg {
+	padding-top: 20px;
+}
+.modal-body p span {
+	display: block;
+}
+.look-btn {
+	width: 120px;
+	height: 34px;
+	color: #fff;
+	background: #1bc272;
+	border-radius: 10px;
+	margin-left: 100px;
+}
 /*收费须知*/
 .list-title {
 	font-size: 16px;
@@ -638,7 +659,7 @@
 	width: 180px;
 }
 .success p:nth-of-type(3) {
-	width: 215px;
+	width: 200px;
 }
 .house-details {
 	width: 610px;

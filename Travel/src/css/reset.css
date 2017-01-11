@@ -5,29 +5,46 @@
 @font-face {
     font-family: 'Microsoft YaHei';
 }
-*{
-	margin: 0;
-	padding: 0;
+/* line 5, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,button, input, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: #323232;
+  font-size: 100%;
+  text-decoration: none;
+  vertical-align: baseline;
 }
 ul,li {
-	margin: 0;
-	padding: 0;
 	list-style: none;
 }
-
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: center;
+  font-weight: normal;
+  vertical-align: middle;
+}
 input, select {
-	height: 30px;
-	font-size: 14px;
 	outline: medium;
 	border: 2px solid #ccc;
 	background: #f2f2f2;
 	overflow:hidden; 
-}
-body, h1, h2, h3, h4, h5, h6, p, blockquote,div, /* structural elements 结构元素 */ dl, dt, dd, ul, ol, li, a, span, i, b, /* list elements 列表元素 */ form, fieldset, legend, button, input, textarea, /* form elements 表单元素 */ th, td /* table elements 表格元素 */ {
-	margin: 0;
-	padding: 0;
-	color: #323232;
-	text-decoration: none;
 }
 a:hover {
 	text-decoration: none;
@@ -39,9 +56,19 @@ button {
 textarea {
 	outline: none;
 	resize: none;
-	font-size: 16px;
 }
 body {
+	font-size: 14px;
+	font-family: 'Microsoft YaHei';
 	background-color: #f2f2f2;
 }
+/*清除浮动*/
+.clear:after{
+	display:block;
+	clear:both;
+	content:".";
+	visibility:hidden;
+	height:0;
+}
+.clear{zoom: 1;}
 

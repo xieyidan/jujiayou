@@ -1,14 +1,11 @@
 // JavaScript Document
 
 /***房客预定房源***/
-
 $(function(){
 	/***提交订单***/
 	//入住人数
 	var peoplenum = $("people-no").val();
-	if(peoplenum>6){
-		alert('最多入住6位');
-	}
+	
 	//新增入住人
 	$(".add-btn").on("click",function(){
 		//添加入住人信息
