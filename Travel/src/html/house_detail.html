@@ -305,14 +305,49 @@
 		        	<!--时间须知-->
 		            <div id="Checkincont" class="column-list">
 	                    <ul class="Checkin-list clear">
-                            <li class="icon-">入住时间：<span>14:00之后</span></li>
-                            <li class="icon-">退房时间：<span>12:00之前</span></li>
-                            <li class="icon-">接待时间：<span>8:00-22:00</span></li>
-                            <li class="icon-">被单更换：<span>每客一换</span></li>
-                            <li class="icon-">最少入住：<span>一天</span></li>
-                            <li class="icon-">最多入住：<span>不限</span></li>
-                            <li class="icon-">接待外宾：<span>不接待</span></li>
-	                    </ul>		
+                            <li class="icon-list">入住时间：<span>14:00之后</span></li>
+                            <li class="icon-list">退房时间：<span>12:00之前</span></li>
+                            <li class="icon-list">接待时间：<span>8:00-22:00</span></li>
+                            <li class="icon-list">被单更换：<span>每客一换</span></li>
+                            <li class="icon-list">最少入住：<span>一天</span></li>
+                            <li class="icon-list">最多入住：<span>不限</span></li>
+                            <li class="icon-list">接待外宾：<span>不接待</span></li>
+                            <li class="icon-list stay-integral">入住送积分：<span>订单金额*积分系数</span>
+                            	<a class="look-integral" data-toggle="modal" data-target="#myModal">点击查看积分规则</a>
+                            </li>
+                             <!--积分弹框-->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+												&times;
+											</button>
+											<p class="modal-title" id="myModalLabel">
+												入住送积分规则
+											</p>
+										</div>
+										<div class="modal-body">
+											<p>入住积分获得:</p>
+											<p>
+												<span>消费金额*消费获取积分系数=积分，普通会员/银行卡会员/金卡会员和钻石卡会员消费积分</span>
+												<span>系数分别为1、1.5、2、3</span>
+											</p>
+											<p class="eg">例如：</p>
+											<p>
+												<span>普通会员入住了一套房价为300元的房源两天，则在入住完成后1天获得600积分</span>
+												<span>积分可用于未来下单时抵扣现金，每100积分可抵扣1元</span>
+											</p>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="look-btn" data-dismiss="modal">查看我的积分</button>
+											<button type="button" class="look-btn" data-dismiss="modal" aria-hidden="true">知道了</button>
+										</div>
+									</div>
+								</div>
+							</div>
+	                    </ul>
+	                  
 		            </div>
 		            <!--收费说明-->
 		            <div class="column-list charge" style="margin-top: 40px;">	                 
@@ -368,7 +403,7 @@
                         <p class="list-title">个性</p>
                         <p class="list-details">复式结构，简介大方，WIFI无限畅连，24小时热水供应。</p>
 		            </div>
-		            <div id="facilitybtn" class="toggle-btn" style="margin-top: 20px;"><a href="javascript:;" class="houseBtn">点击查看更多房源介绍</a></div>
+		            <div id="facilitybtn" class="toggle-btn" style="margin-top: 20px; margin-left: -45px;"><a href="javascript:;" class="houseBtn">点击查看更多房源介绍</a></div>
 		        </div>
 		    </div>
 		    <!--位置地图-->

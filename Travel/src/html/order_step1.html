@@ -12,13 +12,12 @@
     <link rel="stylesheet" href="../css/reset.css" /><!--公共样式-->
     <link rel="stylesheet" href="../css/header_two.css" /><!--头部-->
     <link rel="stylesheet" href="../css/common.css" /><!--右侧悬浮-->
-    <link rel="stylesheet" href="../css/order_step.css" /><!--预定房源-->
+    <link rel="stylesheet" href="../css/order_step.css" /><!--订单页-->
     <!--JS-->
     <script src="../assets/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../js/order_step.js"></script><!--订单页-->
 	<script src="../js/Commonality.js"></script><!--控件-->
-	<script src="../js/order_step.js"></script><!--预定房源-->
-	
 </head>
 <body>
 	<!--头部-->
@@ -166,7 +165,7 @@
 			    						<option>女</option>
 			    					</select>
 		    					</td>
-		    					<td><input type="date" value="2017-1-5" /></td>
+		    					<td><input type="date" value="" /></td>
 		    					<td class="delete"><a class="delete-btn" href="javascript:;">删除</a></td>
 		    				</tr>
 		    			</tbody>
@@ -200,7 +199,15 @@
 	    					<input class="order-inp" type="text" name="" value=""/>
 		    			</div>
 		    		</div>
-			    </div>	
+			    </div>
+			    <div class="order-con">
+			    	<!--评价送积分-->
+		    		<div class="order-integral login-integral">
+		    			<p class="expect"><span>预计可</span><span>获得积分</span></p>
+		    			<p>订单金额&nbsp;*&nbsp;积分系数&nbsp;=&nbsp;某某数值积分</p>
+		    			<p class="new-user">您是银卡会员，积分系数为1.5</p>
+		    		</div>
+			    </div>
 			    <!--退订规则-->
 		    	<div class="order-con">
 		    		<p class="order-title">退订规则</p>

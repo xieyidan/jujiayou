@@ -67,7 +67,7 @@ a {
 	color: #646464;
 }
 #item1 {
-	display: none;
+	display: block;
 }
 /*房客选项的提示*/
 .right-top {
@@ -81,6 +81,8 @@ a {
 .right-center {
 	width: 100%;
 	background: #fff;
+	margin-bottom: 20px;
+	overflow: hidden;
 }
 .goods-list {
 	padding-top: 30px;
@@ -89,11 +91,12 @@ a {
 }
 /*订单号，订单时间*/
 .goods-box {
-	padding-bottom: 20px;
+	
 }
 .txt-left {
 	float: left;
 	width: 77%;
+	padding-bottom: 20px;
 }
 .txt-left p {
 	display: inline-block;
@@ -108,6 +111,12 @@ a {
 .goods-time a {
 	padding-left: 20px;
 	cursor: pointer;
+}
+/*评价*/
+.goods-eval a {
+	color: #ff6a51;
+	font-size: 14px;
+	padding-left: 190px;
 }
 /*订单状态*/
 .txt-right {
@@ -188,7 +197,8 @@ a {
 	width: 100%;
 	height: 50px;
 	background: #d5dbd8;
-	margin: 30px auto;
+	margin: 0 auto;
+    margin-top: 35px;
 }
 .pagination li {
 	float: right;
@@ -202,8 +212,16 @@ a {
 	text-align: center;
 }
 
+/***右侧——聊天记录***/
+
+/***右侧——系统消息***/
+
+/***右侧——我的评价***/
 
 /***右侧——个人信息***/
+#item2 {
+	display: none;
+}
 .Personal-infor {
 	text-align: center;
 	margin: 0 auto;
@@ -227,18 +245,78 @@ a {
 
 /*完善信息*/
 .perfect {
+	width: 81%;
 	position: relative;
 	left: 198px;
-	display: block;
+	overflow: hidden;
 }
+/*用户呢称*/
 .perfect dl {
 	width: 100%;
-	height: 40px;	
+	height: 60px;
 }
 .perfect dl dt {
 	float: left;
+	width: 80px;
 	font-size: 16px;
+	text-align: right;
 }
 .perfect dl dd {
 	float: left;
+	margin-left: 20px;
 }
+.perfect dl dd select,.perfect dl dd input {
+	background: #fff;
+	padding-left: 10px;
+}
+.perfect dl dd input[type="text"] {
+	width: 315px;
+}
+.perfect dl dd select {
+	width: 110px;
+	margin-right: 6px;
+}
+.bank-card {
+	color: #ff1a00;
+	padding-left: 30px;
+}
+/*性别*/
+.radio:nth-of-type(2) {
+	margin-left: 50px;
+}
+/*出生日期*/
+select:nth-of-type(2),select:nth-of-type(3) {
+	margin-left: 24px;
+}
+/*工作*/
+.job {
+	width: 110px !important;
+    margin-right: 30px;
+}
+/*教育*/
+.school {
+	width: 180px !important;
+    margin-left: 24px;
+}
+/*保存按钮*/
+.save {
+	display: block;
+	width: 180px;
+	height: 50px;
+	color: #fff;
+	font-size: 18px;
+	background: #1bc272;
+	border-radius: 10px;
+	margin: 20px auto 40px auto;
+}
+
+
+/***右侧——密码设置***/
+
+/***右侧——入住人***/
+
+/***右侧——优惠券***/
+
+/***右侧——我的收藏***/
+
+/***右侧——分享优惠***/

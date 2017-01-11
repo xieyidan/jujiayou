@@ -17,6 +17,7 @@
     <!--JS-->
     <script src="../assets/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/Commonality.js"></script><!--控件-->
     <script>
     	$(function(){ 		
 			//左侧标题
@@ -179,6 +180,34 @@
 			            	<div class="txt-left">
 			            		<p class="goods-num">订单号：<span style="padding-right:15px;">123456789012</span></p>
 			            		<p class="goods-time">下单时间：<span>2017-1-05 14:51:04</span><a>取消订单</a></p>
+			            		<p class="goods-eval"><a>评价送50积分！</a></p>
+			            	</div>
+			                <div class="txt-right">订单状态：<span>已完成</span></div>
+			            </div>
+			            <!--订单房源信息-->
+			            <div class="order-item">
+			            	<div class="order-img"><img src="../images/house/fangyuan_04.png" alt="房源图"></div>
+			            	<div class="order-content">
+			            		<p>四度-工业风/环球中心新会展地铁口/<span>可停车</span></p>
+			            		<p class="fcolor"><span>2017-1-05</span>至<span>2017-1-12</span>共<span>2</span>晚<span>2</span>套房</p>
+			            		<p class="fcolor fd-name"><span>房东呢称</span><span><img src="../images/user/lianxifangdong_icon.png" />联系房东</span><a>支付后可见联系方式</a></p>
+			            		<p class="fcolor">查看房东其他房源</p>
+			            	</div>
+			            	<div class="order-state"><a>评价房东</a></div>
+			            	<div class="order-money">
+			            		<p>订单金额 <span>￥660</span></p>
+			            		<p class="fcolor">线下押金 <span>￥660</span></p>
+			            		<p><a>订单详情 ></a></p>
+			            	</div>
+			            </div>
+    				</div>
+    				<!--订单列表-->
+    				<div class="goods-list">
+    					<!--订单号，时间，状态-->
+    					<div class="goods-box clear">
+			            	<div class="txt-left">
+			            		<p class="goods-num">订单号：<span style="padding-right:15px;">123456789012</span></p>
+			            		<p class="goods-time">下单时间：<span>2017-1-05 14:51:04</span><a>取消订单</a></p>
 			            	</div>
 			                <div class="txt-right">订单状态：<span>待入住</span></div>
 			            </div>
@@ -227,10 +256,114 @@
 						<dl>
 							<dt>用户昵称</dt>
 							<dd>
-								<input type="text" placeholder="">
+								<input type="text" placeholder="请设置您的昵称">
+								<span class="bank-card">您是银行卡会员，<a href="javascript:;">点击查看会员规则</a></span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>性别</dt>
+							<dd>
+								<div class="radio" name="sex" value="先生"><ins></ins><span class="">先生</span></div>
+		                        <div class="radio" name="sex" value="女士"><ins></ins><span class="">女士</span></div>
+							</dd>
+						</dl>
+						<dl>
+							<dt>出生日期</dt>
+							<dd>
+								<select>
+									<option>请选择</option>
+								</select>
+								<span>年</span>
+								<select>
+									<option>请选择</option>
+								</select>
+								<span>月</span>
+								<select>
+									<option>请选择</option>
+								</select>
+								<span>日</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>真实姓名</dt>
+							<dd>
+								<input type="text" placeholder="请输入您的真实姓名">
+							</dd>
+						</dl>
+						<dl>
+							<dt>联系电话</dt>
+							<dd>
+								<input type="text" placeholder="请输入您的联系电话">
+							</dd>
+						</dl>
+						<dl>
+							<dt>身份证号码</dt>
+							<dd>
+								<input type="text" placeholder="请输入您的身份证号码">
+							</dd>
+						</dl>
+						<dl>
+							<dt>邮箱</dt>
+							<dd>
+								<input type="text" placeholder="请输入邮箱地址">
+							</dd>
+						</dl>
+						<dl>
+							<dt>所在城市</dt>
+							<dd>
+								<select>
+									<option>请选择</option>
+								</select>
+								<select>
+									<option>请选择</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>所在故乡</dt>
+							<dd>
+								<select>
+									<option>请选择</option>
+								</select>
+								<select>
+									<option>请选择</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>血型</dt>
+							<dd>
+								<select>
+									<option>请选择</option>
+									<option>A型</option>
+									<option>B型</option>
+									<option>AB型</option>
+									<option>O型</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>工作</dt>
+							<dd>
+								<input class="job" type="text" placeholder="请填写职业">
+								<input class="job" type="text" placeholder="请填写职位名">
+							</dd>
+						</dl>
+						<dl>
+							<dt>教育</dt>
+							<dd>
+								<select>
+									<option>请选择学历</option>
+									<option>博士</option>
+									<option>本科</option>
+									<option>专科</option>
+									<option>高中</option>
+								</select>
+								<input class="school" type="text" placeholder="请填写学校">
 							</dd>
 						</dl>
 					</div>
+					<button class="save" type="submit">保存</button>
     			</div>
     		</div>
     	</div>
